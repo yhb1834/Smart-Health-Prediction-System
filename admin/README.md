@@ -9,7 +9,7 @@
 |Name|SID|Dept|githubID|
 |---|---|:---:|---|
 |김효진|20181940|SW|[hy57in](https://github.com/hy57in)
-|배소현|20190539|SW|[luminus7](https://github.com/sohyunbae1231)
+|배소현|20190539|SW|[sohyunbae1231](https://github.com/sohyunbae1231)
 
 ### Table of contents
 <!-- !toc (minlevel=2 omit="Table of Contents") -->
@@ -24,8 +24,9 @@
 
 ---
 #### 2. Tools
+- [Tools](./Tools.md)
 
 ---
 #### 3. User story
-
+- [User Story](./UserStory.md)
 ---
