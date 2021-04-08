@@ -1,4 +1,4 @@
-#User Story(Doctor)
+# User Story(Doctor)
 ---
 
 1. 자신의 의사 면허 인증을 통해 진료 가능 여부를 확인할 수 있어야 할 것이다.
