@@ -27,5 +27,5 @@
 
 ---
 #### 3. User story
-- [UserStories](./UserStory.md)
+- [User Story](./UserStory.md)
 ---
