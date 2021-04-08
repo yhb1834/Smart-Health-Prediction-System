@@ -15,7 +15,7 @@
 <!-- !toc (minlevel=2 omit="Table of Contents") -->
 - [Sub Meeting log](#Meeting-log)
 - [Tools](#Tools)
-- [User Story](#User-story) 
+- [User Story](./UserStory.md)
 <!-- toc! -->
 
 ---
@@ -27,5 +27,5 @@
 
 ---
 #### 3. User story
-- [UserStories](.userstory.md)
+- [UserStories](./UserStory.md)
 ---
