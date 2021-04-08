@@ -1,9 +1,9 @@
 # Smart Health Prediction System
 #### [소프트웨어 공학 1분반]
-####0. 프로젝트명 : Smart Health Prediction System  
+#### 0. 프로젝트명 : Smart Health Prediction System  
 (사이트 : https://nevonprojects.com/smart-health-prediction-using-data-mining/)
 
-####1. 팀원
+#### 1. 팀원
 
 |이름|학번|그룹 구분|
 |---|---|:---:|
@@ -15,7 +15,7 @@
 |홍주표|20195520|Doctor|
 
 
-####2. 프로젝트 소개
+#### 2. 프로젝트 소개
 
 - Smart Health Prediction 시스템은 사용자 지원 및 온라인 상담 프로젝트로,  
 사용자가 온라인상에서 의료 시스템을 통해 건강 문제에 대한 즉각적인 지침을 얻을 수 있는 시스템입니다.   
@@ -37,7 +37,7 @@
 - 따라서 이 시스템은 사용자가 자신의 질병 증상을 명확화할 때 적절한 지침을 제공합니다. 
 
 
-####3. 파트 분배 : admin login, patient login, doctor login
+#### 3. 파트 분배 : admin login, patient login, doctor login
 ```
 1) patient : my details, search disease, search doctor, feedback, logout
 2) doctor : my details, notification, view disease, view patient, logout
