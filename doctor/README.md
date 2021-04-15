@@ -30,6 +30,3 @@
 - [User Story](./UserStory.md)
 ---
 
-#### 3. Use case
-- [UC-Doctor](./UC-Doctor.md)
----
