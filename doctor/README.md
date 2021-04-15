@@ -31,5 +31,5 @@
 ---
 
 #### 3. Use case
-- [UseCase-Doctor](./UseCaseDoctor.md)
+- [UC-Doctor](./UseCaseDoctor.md)
 ---
