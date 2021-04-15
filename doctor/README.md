@@ -29,3 +29,7 @@
 #### 3. User story
 - [User Story](./UserStory.md)
 ---
+
+#### 3. Use case
+- [UseCase-Doctor](./UseCaseDoctor.md)
+---
