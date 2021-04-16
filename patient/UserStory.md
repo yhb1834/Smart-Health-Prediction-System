@@ -1,4 +1,4 @@
-# User Story(Doctor)
+# User Story(Patient)
 ---
 1. 환자는 진료를 받기 위하여 의사에게 원격으로 진료를 받을 수 있어야 한다.
 
