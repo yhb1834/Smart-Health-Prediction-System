@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-23T15:03:30.985Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="J_HKcSXFttpTAlIPobe2" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-23T15:04:43.628Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="1931c3UaKOBfUm9jzQRS" version="14.6.6" type="github">
   <diagram id="Nm7-c_R2Jto_HjvgW0n3" name="Page-1">
-    <mxGraphModel dx="1597" dy="1278" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1487" dy="1096" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,7 +25,7 @@
             <mxPoint x="578" y="299" as="sourcePoint" />
             <mxPoint x="458" y="280" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="428" y="399" />
+              <mxPoint x="428" y="410" />
               <mxPoint x="428" y="280" />
             </Array>
           </mxGeometry>
@@ -35,7 +35,7 @@
             <mxPoint x="558.0000000000001" y="208.55999999999995" as="sourcePoint" />
             <mxPoint x="458" y="260" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="428" y="133" />
+              <mxPoint x="428" y="130" />
               <mxPoint x="428" y="260" />
             </Array>
           </mxGeometry>
@@ -44,7 +44,7 @@
           <mxGeometry x="-21" y="240" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EXdC40T1VhCXhn1chX8P-4" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;의사 목록 요청" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="188" y="103" width="160" height="60" as="geometry" />
+          <mxGeometry x="188" y="100" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EXdC40T1VhCXhn1chX8P-5" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;의사 검색" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="188" y="190" width="160" height="60" as="geometry" />
@@ -63,7 +63,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="EXdC40T1VhCXhn1chX8P-9" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;질병 목록 요청" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="188" y="369" width="160" height="60" as="geometry" />
+          <mxGeometry x="188" y="380" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EXdC40T1VhCXhn1chX8P-10" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="EXdC40T1VhCXhn1chX8P-5" target="EXdC40T1VhCXhn1chX8P-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -146,6 +146,12 @@
         </mxCell>
         <mxCell id="WwnKC5MvHjCBORFGP8Sc-11" value="증상" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WwnKC5MvHjCBORFGP8Sc-10">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-13" value="의사 목록 조회" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="268" y="163" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-14" value="의사 목록 조회" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="268" y="350" width="80" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
