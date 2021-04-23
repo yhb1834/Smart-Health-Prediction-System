@@ -43,8 +43,28 @@
 2) doctor : my details, notification, view disease, view patient, logout
 3) admin : add doctor, add disease, view patient, view doctor, view disease, view feedback, logout
 ```
+
+
+#### 4. The 1st Checkpoint
+##### 1) Problem Statement
+- [Problem Statement](./ProblemStatement.docx)
+##### 2) User Story  
+- [Admin](admin/01.%20User%20Story/UserStory.md)  
+- [Doctor](doctor/01.%20User%20Story/UserStory.md)  
+- [Patient](patient/01.%20User%20Story/UserStory.md) 
+##### 3) Use Case model
+- [Admin](admin/02.%20Use%20Case%20%26%20Domain%20Model)  
+- [Doctor](doctor/02.%20Use%20Case%20%26%20Domain%20Model)  
+- [Patient](patient/02.%20Use%20Case%20%26%20Domain%20Model)  
+##### 4) Domain model
+- [Admin](admin/03.%20Domain%20Model%20Diagram)  
+- [Doctor](doctor/03.%20Domain%20Model%20Diagram)  
+- [Patient](patient/03.%20Domain%20Model%20Diagram)  
+##### 5) User Interface mockup  
+- [User Interface mockup](./)  
   
-#### 4. Meeting log
+  
+#### 5. Meeting log
 - [2021/04/12](meeting%20log/210412.md)
 - [2021/04/16](meeting%20log/210416.md)
 - [2021/04/17](meeting%20log/210417.md)
