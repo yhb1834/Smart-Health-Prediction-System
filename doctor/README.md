@@ -27,7 +27,7 @@
 
 ---
 #### 3. User story
-- [User Story](./UserStory.md)
+- [User Story](./1. User Stroy/UserStory.md)
 ---
 ### 4. Domain model
 - [Domain Model](./DomainModel.md)
