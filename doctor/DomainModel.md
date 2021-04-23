@@ -2,21 +2,21 @@
 ---
 ### 1. UC1
 
-<img src="./Domain model/UC2.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+<img src="./Domain model/UC1.png" width="80%" alt="UC1"></img>
 ---
 ### 2. UC2
 
-![Alt text](/Domain model/UC2.png)
+<img src="./Domain model/UC2.png" width="80%" alt="UC1"></img>
 ---
 ### 3. UC3
 
-![Alt text](/Domain model/UC3.png)
+<img src="./Domain model/UC3.png" width="80%" alt="UC1"></img>
 ---
 ### 4. UC4
 
-![Alt text](/Domain model/UC4.png)
+<img src="./Domain model/UC4.png" width="80%" alt="UC1"></img>
 ---
 ### 5. UC11
 
-![Alt text](/Domain model/UC11.png)
+<img src="./Domain model/UC5.png" width="80%" alt="UC1"></img>
 
