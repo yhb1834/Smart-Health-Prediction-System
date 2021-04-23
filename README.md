@@ -47,3 +47,5 @@
 #### 4. Meeting log
 - [2021/04/12](meeting%20log/210412.md)
 - [2021/04/16](meeting%20log/210416.md)
+- [2021/04/16](meeting%20log/210417.md)
+- [2021/04/16](meeting%20log/210423.md)
