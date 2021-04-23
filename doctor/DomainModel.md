@@ -1,7 +1,7 @@
 # Domain Mdoel(Doctor)
 ---
 ### 1. UC1
-(/Domain model/UC1.png)
+!(/Domain model/UC1.png)
 ---
 ### 2. UC2
 (/Domain model/UC2.png)
