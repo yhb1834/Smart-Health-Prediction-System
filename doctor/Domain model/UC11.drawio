@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-23T15:06:51.351Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="P6HEv7SwtNdeEYUCmG_F" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-23T15:56:58.408Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="PdRqAz6q5Wu0ZG0JAI4t" version="14.6.6" type="github">
   <diagram id="2snBoPdIVIojASlzs4ji" name="Page-1">
-    <mxGraphModel dx="946" dy="544" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="923" dy="544" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -53,10 +53,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="pNh5RsfMhSHscX6KeP78-6" value="&lt;&lt; entity &gt;&gt;&#xa;database connection" style="swimlane;startSize=40;" parent="1" vertex="1">
-          <mxGeometry x="414" y="390" width="146" height="40" as="geometry" />
+          <mxGeometry x="414" y="390" width="146" height="76" as="geometry" />
         </mxCell>
-        <mxCell id="pNh5RsfMhSHscX6KeP78-25" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" parent="pNh5RsfMhSHscX6KeP78-6" vertex="1">
-          <mxGeometry x="-15" y="-10" width="30" height="30" as="geometry" />
+        <mxCell id="9H2vDyvUipclMlkeoAgt-28" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;" vertex="1" parent="pNh5RsfMhSHscX6KeP78-6">
+          <mxGeometry x="-10" y="-18" width="25" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pNh5RsfMhSHscX6KeP78-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="pNh5RsfMhSHscX6KeP78-7" target="pNh5RsfMhSHscX6KeP78-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -127,9 +127,6 @@
         <mxCell id="pNh5RsfMhSHscX6KeP78-26" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" parent="9H2vDyvUipclMlkeoAgt-1" vertex="1">
           <mxGeometry x="-15" y="-10" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9H2vDyvUipclMlkeoAgt-4" value="receives" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="654" y="235" width="60" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="9H2vDyvUipclMlkeoAgt-6" value="prepares" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="222" y="310" width="60" height="20" as="geometry" />
         </mxCell>
@@ -150,6 +147,9 @@
         </mxCell>
         <mxCell id="9H2vDyvUipclMlkeoAgt-13" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=14;" vertex="1" parent="1">
           <mxGeometry x="500" y="70" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9H2vDyvUipclMlkeoAgt-29" value="의사ID, 피드백&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="438" width="84" height="18" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
