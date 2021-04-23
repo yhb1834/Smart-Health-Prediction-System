@@ -15,7 +15,7 @@
 <!-- !toc (minlevel=2 omit="Table of Contents") -->
 - [Sub Meeting log](#Meeting-log)
 - [Tools](#Tools)
-- [User Story](./1. User Stroy/UserStory.md)
+- [User Story](./UserStory/UserStory.md)
 <!-- toc! -->
 
 ---
@@ -27,7 +27,7 @@
 
 ---
 #### 3. User story
-- [User Story](./1. User Stroy/UserStory.md)
+- [User Story](./UserStory/UserStory.md)
 ---
 ### 4. Domain model
 - [Domain Model](./DomainModel.md)
