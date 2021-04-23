@@ -2,7 +2,7 @@
 ---
 ### 1. UC1
 
-<img src="/Domain model/UC2.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+<img src="./Domain model/UC2.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 ---
 ### 2. UC2
 
