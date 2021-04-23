@@ -15,18 +15,19 @@
 <!-- !toc (minlevel=2 omit="Table of Contents") -->
 - [Sub Meeting log](#Meeting-log)
 - [Tools](#Tools)
-- [User Story](./UserStory.md)
+- [User Story](./UserStory/UserStory.md)
 <!-- toc! -->
 
 ---
 #### 1. Meeting log
-- [2021/04/07](./210407.md)
+- [meetinglog](./meetinglog.md)
 
 ---
 #### 2. Tools
 
 ---
 #### 3. User story
-- [User Story](./UserStory.md)
+- [User Story](./UserStory/UserStory.md)
 ---
-
+### 4. Domain model
+- [Domain Model](./DomainModel.md)
