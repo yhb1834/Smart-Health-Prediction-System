@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" modified="2021-04-23T09:31:12.778Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="tUe7rNePMhXDPMItj2hB" version="14.6.6" type="github">
+  <diagram id="COMjNyVUd5fdEqpG4wd7" name="Page-1">
+    <mxGraphModel dx="946" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-1" target="Dtp3rhjISmE1_UI2CVRm-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="288" y="280" />
+              <mxPoint x="288" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-1" value="의사" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="240" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Dtp3rhjISmE1_UI2CVRm-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="105" as="sourcePoint" />
+            <mxPoint x="390" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-2" value="의사 매칭 시스템" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="70" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=block;endFill=1;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="880" y="280" />
+              <mxPoint x="880" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-3" target="Dtp3rhjISmE1_UI2CVRm-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="880" y="280" />
+              <mxPoint x="880" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-3" value="환자" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="900" y="250" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-11" value="&lt;&lt; controller &gt;&gt;&#xa;Controller" style="swimlane;startSize=60;" vertex="1" parent="1">
+          <mxGeometry x="430" y="240" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-14" target="Dtp3rhjISmE1_UI2CVRm-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-14" value="&lt;&lt; entity &gt;&gt;&#xa;의사 추천 목록" style="swimlane;startSize=70;" vertex="1" parent="1">
+          <mxGeometry x="440" y="50" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-15" value="의사 목록" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Dtp3rhjISmE1_UI2CVRm-14">
+          <mxGeometry x="60" y="80" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-22" value="의사 추천&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="180" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;entryX=1.014;entryY=0.414;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-23" target="Dtp3rhjISmE1_UI2CVRm-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="269" />
+              <mxPoint x="610" y="269" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-23" value="&lt;&lt; entity &gt;&gt;&#xa;문진표" style="swimlane;startSize=50;" vertex="1" parent="1">
+          <mxGeometry x="640" y="200" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-25" value="문진표 작성" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Dtp3rhjISmE1_UI2CVRm-23">
+          <mxGeometry x="40" y="60" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-29" value="&lt;&lt; entity &gt;&gt;&#xa;대기순서" style="swimlane;startSize=50;" vertex="1" parent="1">
+          <mxGeometry x="640" y="310" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-31" value="&lt;&lt; entity &gt;&gt;&#xa;채팅창" style="swimlane;startSize=50;" vertex="1" parent="1">
+          <mxGeometry x="425" y="360" width="150" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
