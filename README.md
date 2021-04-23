@@ -56,7 +56,9 @@
 - [Admin](admin/02.%20Use%20Case%20%26%20Domain%20Model)  
 - [Doctor](doctor/02.%20Use%20Case%20%26%20Domain%20Model)  
 - [Patient](patient/02.%20Use%20Case%20%26%20Domain%20Model)  
-##### 4) Domain model
+##### 4) UC Diagram
+- [UC Diagram](./UC-Diagram.JPG)
+##### 5) Domain model
 - [Admin](admin/03.%20Domain%20Model%20Diagram)  
 - [Doctor](doctor/03.%20Domain%20Model%20Diagram)  
 - [Patient](patient/03.%20Domain%20Model%20Diagram)  
