@@ -50,17 +50,17 @@
 - [Problem Statement](./ProblemStatement.docx)
 ##### 2) User Story  
 - [Admin](admin/01.%20User%20Story/UserStory.md)  
-- [Doctor](doctor/UserStory/UserStory.md.md)  
+- [Doctor](doctor/UserStory/UserStory.md)  
 - [Patient](patient/01.%20User%20Story/UserStory.md) 
 ##### 3) Use Case model
 - [Admin](admin/02.%20Use%20Case%20%26%20Domain%20Model)  
-- [Doctor](doctor/Domain model/UseCase-Doctor.docx)  
+- [Doctor](doctor/Domain%20model/UseCase-Doctor.docx)  
 - [Patient](patient/02.%20Use%20Case%20%26%20Domain%20Model)  
 ##### 4) UC Diagram
 - [UC Diagram](./UC-Diagram.JPG)
 ##### 5) Domain model
 - [Admin](admin/03.%20Domain%20Model%20Diagram)  
-- [Doctor](doctor/Domain model/)  
+- [Doctor](doctor/Domain%20model)  
 - [Patient](patient/03.%20Domain%20Model%20Diagram)  
 ##### 5) User Interface mockup  
 - [User Interface mockup](./)  
