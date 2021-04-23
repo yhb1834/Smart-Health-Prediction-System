@@ -46,6 +46,7 @@
 
 
 #### 4. The 1st Checkpoint
+```
 1) Problem Statement
 - [Problem Statement](./ProblemStatement.docx)
 2) User Story  
@@ -59,6 +60,7 @@
 4) Domain model
 - [Admin](admin/03.%20Domain%20Model%20Diagram)  
 5) User Interface mockups 
+```
 
   
 #### 5. Meeting log
