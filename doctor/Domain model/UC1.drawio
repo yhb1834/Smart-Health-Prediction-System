@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-23T15:06:47.304Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="aMGPnoU04onZARWWwUiD" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-23T15:29:30.834Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="mBoWugITAJnfSvCZKT8N" version="14.6.6" type="github">
   <diagram id="COMjNyVUd5fdEqpG4wd7" name="Page-1">
     <mxGraphModel dx="946" dy="544" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -144,10 +144,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Dtp3rhjISmE1_UI2CVRm-31" value="&lt;&lt; entity &gt;&gt;&#xa;page maker" style="swimlane;startSize=50;" parent="1" vertex="1">
-          <mxGeometry x="370" y="360" width="150" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="wn1Ma4d93fsSA7fBZUdU-31" value="prepares" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Dtp3rhjISmE1_UI2CVRm-31">
-          <mxGeometry x="45" y="55" width="60" height="20" as="geometry" />
+          <mxGeometry x="370" y="360" width="150" height="49" as="geometry" />
         </mxCell>
         <mxCell id="wn1Ma4d93fsSA7fBZUdU-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-37">
           <mxGeometry relative="1" as="geometry">
@@ -188,8 +185,9 @@
             <mxPoint x="915" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wn1Ma4d93fsSA7fBZUdU-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endArrow=block;endFill=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-63" target="Dtp3rhjISmE1_UI2CVRm-31">
+        <mxCell id="wn1Ma4d93fsSA7fBZUdU-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="Dtp3rhjISmE1_UI2CVRm-63">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="372" as="targetPoint" />
             <Array as="points">
               <mxPoint x="560" y="560" />
               <mxPoint x="560" y="380" />
@@ -197,10 +195,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Dtp3rhjISmE1_UI2CVRm-63" value="&lt;&lt; entity &gt;&gt;&#xa;database connection" style="swimlane;startSize=30;" parent="1" vertex="1">
-          <mxGeometry x="680" y="520" width="210" height="65" as="geometry" />
+          <mxGeometry x="680" y="520" width="210" height="66" as="geometry" />
         </mxCell>
-        <mxCell id="Dtp3rhjISmE1_UI2CVRm-78" value="병명 카테고리, 의사 전공, &lt;br&gt;환자 상태, 처방전" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Dtp3rhjISmE1_UI2CVRm-63" vertex="1">
-          <mxGeometry x="30" y="35" width="140" height="30" as="geometry" />
+        <mxCell id="Dtp3rhjISmE1_UI2CVRm-78" value="병명 카테고리, 의사 전공, &lt;br&gt;환자 상태, 처방전, 의사ID, 환자ID" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Dtp3rhjISmE1_UI2CVRm-63" vertex="1">
+          <mxGeometry x="14" y="34" width="172" height="32" as="geometry" />
         </mxCell>
         <mxCell id="wn1Ma4d93fsSA7fBZUdU-4" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=18;" vertex="1" parent="Dtp3rhjISmE1_UI2CVRm-63">
           <mxGeometry y="-10" width="30" height="40" as="geometry" />
