@@ -1,1 +1,83 @@
-<mxfile host="app.diagrams.net" modified="2021-04-23T10:20:06.358Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" version="14.6.6" etag="JF3dQY5vi884FlFlmWwo" type="github"><diagram id="vxmuDIaz38fqzsAZQks_">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-23T10:46:53.599Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="No1IEYyUoTaHIRO2R-P6" version="14.6.6" type="github">
+  <diagram id="vxmuDIaz38fqzsAZQks_" name="Page-1">
+    <mxGraphModel dx="946" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Y23VU7PuElIZQioHlM2i-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.39;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Y23VU7PuElIZQioHlM2i-1" target="Y23VU7PuElIZQioHlM2i-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-1" value="의사" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y23VU7PuElIZQioHlM2i-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="518.5" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y23VU7PuElIZQioHlM2i-4" target="Y23VU7PuElIZQioHlM2i-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-4" value="&lt;&lt; control &gt;&gt;&#xa;controller" style="swimlane;startSize=50;" vertex="1" parent="1">
+          <mxGeometry x="450" y="160" width="137" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.517;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="Y23VU7PuElIZQioHlM2i-5" target="Y23VU7PuElIZQioHlM2i-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-5" value="&lt;&lt; entity &gt;&gt;&#xa;Database connection" style="swimlane;startSize=50;" vertex="1" parent="1">
+          <mxGeometry x="284" y="320" width="130" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-7" value="의사계좌정보&lt;br&gt;의사 수입&lt;br&gt;환자 코인&lt;br&gt;진료비" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y23VU7PuElIZQioHlM2i-5">
+          <mxGeometry x="25" y="65" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-22" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="Y23VU7PuElIZQioHlM2i-5">
+          <mxGeometry x="-14" y="-10" width="29" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="Y23VU7PuElIZQioHlM2i-6" target="Y23VU7PuElIZQioHlM2i-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-6" value="&lt;&lt; entity &gt;&gt;&#xa;계산기" style="swimlane;startSize=50;" vertex="1" parent="1">
+          <mxGeometry x="453.5" y="270" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-8" value="환자 코인 차감&lt;br&gt;의사 수입 계산" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y23VU7PuElIZQioHlM2i-6">
+          <mxGeometry x="25" y="60" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-25" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="Y23VU7PuElIZQioHlM2i-6">
+          <mxGeometry x="-13.5" y="-10" width="29" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Y23VU7PuElIZQioHlM2i-9" target="Y23VU7PuElIZQioHlM2i-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-9" value="&lt;&lt; boundary &gt;&gt;&#xa;요청 페이지" style="swimlane;startSize=50;" vertex="1" parent="1">
+          <mxGeometry x="220" y="80" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-11" value="진료비 책정&lt;br&gt;수입 목록 요청&lt;br&gt;수입 송금 요청" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y23VU7PuElIZQioHlM2i-9">
+          <mxGeometry x="35" y="50" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-26" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="Y23VU7PuElIZQioHlM2i-9">
+          <mxGeometry x="-9" y="-10" width="29" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="Y23VU7PuElIZQioHlM2i-10" target="Y23VU7PuElIZQioHlM2i-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="240" />
+              <mxPoint x="170" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-10" value="&lt;&lt; boundary &gt;&gt;&#xa;viewer" style="swimlane;startSize=60;" vertex="1" parent="1">
+          <mxGeometry x="220" y="210" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-19" value="수입 목록" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y23VU7PuElIZQioHlM2i-10">
+          <mxGeometry x="40" y="60" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-24" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="Y23VU7PuElIZQioHlM2i-10">
+          <mxGeometry x="-10" y="-10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y23VU7PuElIZQioHlM2i-27" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="29" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
