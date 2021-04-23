@@ -46,19 +46,22 @@
 
 
 #### 4. The 1st Checkpoint
-1) Problem Statement
+##### 1) Problem Statement
 - [Problem Statement](./ProblemStatement.docx)
-2) User Story  
+##### 2) User Story  
 - [Admin](admin/01.%20User%20Story/UserStory.md)  
 - [Doctor](doctor/01.%20User%20Story/UserStory.md)  
 - [Patient](patient/01.%20User%20Story/UserStory.md) 
-3) Use Case model
+##### 3) Use Case model
 - [Admin](admin/02.%20Use%20Case%20%26%20Domain%20Model)  
 - [Doctor](doctor/02.%20Use%20Case%20%26%20Domain%20Model)  
 - [Patient](patient/02.%20Use%20Case%20%26%20Domain%20Model)  
-4) Domain model
+##### 4) Domain model
 - [Admin](admin/03.%20Domain%20Model%20Diagram)  
-5) User Interface mockups 
+- [Doctor](doctor/03.%20Domain%20Model%20Diagram)  
+- [Patient](patient/03.%20Domain%20Model%20Diagram)  
+##### 5) User Interface mockup  
+- [User Interface mockup](./)
 
   
 #### 5. Meeting log
