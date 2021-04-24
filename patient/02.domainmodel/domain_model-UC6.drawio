@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-23T15:05:59.431Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="THRG74ASEmwm4fuBKwA9" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-24T08:27:57.173Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="7qS0if2ctn1cADMtbiW2" version="14.6.6" type="github">
   <diagram id="Nm7-c_R2Jto_HjvgW0n3" name="Page-1">
-    <mxGraphModel dx="1597" dy="1183" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1540" dy="770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,13 +43,13 @@
         <mxCell id="EXdC40T1VhCXhn1chX8P-3" value="&#xa;&#xa;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(0, 0, 0); font-family: helvetica; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;Controller&lt;/span&gt;&#xa;&#xa;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-21" y="240" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EXdC40T1VhCXhn1chX8P-4" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;의사 목록" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="EXdC40T1VhCXhn1chX8P-4" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;의사 검색" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="188" y="100" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EXdC40T1VhCXhn1chX8P-5" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;의사 검색" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="EXdC40T1VhCXhn1chX8P-5" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;의사 목록" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="188" y="190" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EXdC40T1VhCXhn1chX8P-6" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;질병 검색" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="EXdC40T1VhCXhn1chX8P-6" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;질병 목록" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="188" y="280" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EXdC40T1VhCXhn1chX8P-8" value="" style="endArrow=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
@@ -62,7 +62,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="EXdC40T1VhCXhn1chX8P-9" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;질병 목록" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="EXdC40T1VhCXhn1chX8P-9" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;질병 검색" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="188" y="380" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EXdC40T1VhCXhn1chX8P-10" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="EXdC40T1VhCXhn1chX8P-5" target="EXdC40T1VhCXhn1chX8P-4" edge="1">
@@ -123,7 +123,7 @@
         <mxCell id="WwnKC5MvHjCBORFGP8Sc-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="1">
           <mxGeometry x="-21" y="220" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="WwnKC5MvHjCBORFGP8Sc-3" value="&lt;&lt;boundary&gt;&gt;&#xa;의사 검색 정보 제공" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-3" value="&lt;&lt;boundary&gt;&gt;&#xa;의사 검색 정보" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="-250" y="181" width="160" height="78" as="geometry" />
         </mxCell>
         <mxCell id="WwnKC5MvHjCBORFGP8Sc-4" value="전문 분야" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WwnKC5MvHjCBORFGP8Sc-3">
@@ -141,7 +141,7 @@
         <mxCell id="WwnKC5MvHjCBORFGP8Sc-9" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#000000;shape=mxgraph.mscae.enterprise.document" vertex="1" parent="1">
           <mxGeometry x="-270" y="262.5" width="30" height="37.5" as="geometry" />
         </mxCell>
-        <mxCell id="WwnKC5MvHjCBORFGP8Sc-10" value="&lt;&lt;boundary&gt;&gt;&#xa;질병 검색 정보 제공" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-10" value="&lt;&lt;boundary&gt;&gt;&#xa;질병 검색 정보" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="-250" y="284" width="160" height="52" as="geometry" />
         </mxCell>
         <mxCell id="WwnKC5MvHjCBORFGP8Sc-11" value="증상" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WwnKC5MvHjCBORFGP8Sc-10">
@@ -150,8 +150,58 @@
         <mxCell id="WwnKC5MvHjCBORFGP8Sc-13" value="의사 목록 조회" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="268" y="163" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="WwnKC5MvHjCBORFGP8Sc-14" value="의사 목록 조회" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-14" value="질병 목록 조회" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="268" y="350" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-15" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-56.37" y="197" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-17" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-56.37" y="328" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-18" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="257" y="169" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-19" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="257" y="356" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-20" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px ; color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250)&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;Interface page&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-250" y="370" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-21" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EXdC40T1VhCXhn1chX8P-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-160" y="460" as="sourcePoint" />
+            <mxPoint x="480" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="59" y="460" />
+              <mxPoint x="480" y="460" />
+              <mxPoint x="480" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-22" value="" style="endArrow=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="WwnKC5MvHjCBORFGP8Sc-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-280.15999999999985" y="381.39200000000005" as="sourcePoint" />
+            <mxPoint x="-340" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-340" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-23" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=-180;" vertex="1" parent="1">
+          <mxGeometry x="160" y="465" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-24" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="WwnKC5MvHjCBORFGP8Sc-20" target="EXdC40T1VhCXhn1chX8P-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-80.00000000000011" y="320" as="sourcePoint" />
+            <mxPoint x="-11" y="295" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="19" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WwnKC5MvHjCBORFGP8Sc-26" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=-180;" vertex="1" parent="1">
+          <mxGeometry x="-50.370000000000005" y="406" width="6" height="8" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
