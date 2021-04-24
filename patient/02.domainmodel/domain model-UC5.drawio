@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-24T08:36:18.852Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="lVe3rwPXoxf85nemr8HX" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-24T08:37:06.441Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="Mp7O0clRy__H52GfCArw" version="14.6.6" type="github">
   <diagram id="COMjNyVUd5fdEqpG4wd7" name="Page-1">
-    <mxGraphModel dx="862" dy="930" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1034" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -47,7 +47,7 @@
         </mxCell>
         <mxCell id="jwZGUhkXCygK-l2zZaAF-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SsTOA8I2RhOl6AxfoDHe-17">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="760" y="280" as="targetPoint" />
+            <mxPoint x="844" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SsTOA8I2RhOl6AxfoDHe-17" value="&lt;&lt; boundary &gt;&gt;&#xa;store feedback" style="swimlane;startSize=70;" parent="1" vertex="1">
@@ -121,6 +121,9 @@
               <mxPoint x="561" y="460" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="jwZGUhkXCygK-l2zZaAF-53" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/social-media-2125/80/smile-128.png" vertex="1" parent="1">
+          <mxGeometry x="495" y="300" width="50" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
