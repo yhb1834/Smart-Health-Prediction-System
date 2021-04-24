@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-04-24T09:58:48.454Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="biiY10UVhnO-YGF_viAp" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-24T10:03:36.358Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="qU15RnD8mD09Ck4t_uvA" version="14.6.6" type="github">
   <diagram id="Nm7-c_R2Jto_HjvgW0n3" name="Page-1">
     <mxGraphModel dx="1319" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Bs3N0DRWU6zoNiTPj7jI-5" value="Patient" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="-510" y="204" width="55" height="110" as="geometry" />
+        <mxCell id="Bs3N0DRWU6zoNiTPj7jI-5" value="의사" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="464" y="12" width="55" height="110" as="geometry" />
         </mxCell>
         <mxCell id="Bs3N0DRWU6zoNiTPj7jI-8" value="진료 시스템" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="464" y="204" width="55" height="110" as="geometry" />
@@ -122,10 +122,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-28" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px ; color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250)&quot;&gt;&lt;font face=&quot;helvetica&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;수납 금액/진료 확인&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="199" y="340" width="160" height="60" as="geometry" />
+          <mxGeometry x="170" y="340" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-29" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="139" y="375" width="6" height="8" as="geometry" />
+          <mxGeometry x="133" y="375" width="6" height="8" as="geometry" />
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-30" value="" style="endArrow=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="-Jvx2exfWqLnwWXXHpkM-28">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -138,7 +138,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-31" value="진료 기록 확인" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="370" y="375" width="80" height="20" as="geometry" />
+          <mxGeometry x="344" y="373" width="80" height="20" as="geometry" />
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-32" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;계좌" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-190" y="440" width="160" height="60" as="geometry" />
@@ -175,6 +175,36 @@
               <mxPoint x="-430" y="260" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-40" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="-423.5" y="340" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-42" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="180" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-43" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="1">
+          <mxGeometry x="-34" y="220" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-45" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#000000;shape=mxgraph.mscae.enterprise.document" vertex="1" parent="1">
+          <mxGeometry x="-200" y="420" width="30" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-47" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#000000;shape=mxgraph.mscae.enterprise.document" vertex="1" parent="1">
+          <mxGeometry x="160" y="325.25" width="30" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-48" value="Patient" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="214" width="55" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-49" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="491.47" y="196" as="sourcePoint" />
+            <mxPoint x="491.47" y="146" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-50" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="500" y="167" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-51" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="477" y="168" width="6" height="8" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
