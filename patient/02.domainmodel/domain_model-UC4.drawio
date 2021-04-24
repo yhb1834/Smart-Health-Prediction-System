@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-24T08:50:45.115Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="tg1QHDgJFXp4_cYn24xP" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-24T09:13:41.061Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="iVQIGacK7W9FVcqmk4Ce" version="14.6.6" type="github">
   <diagram id="Nm7-c_R2Jto_HjvgW0n3" name="Page-1">
     <mxGraphModel dx="1418" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -57,19 +57,40 @@
           <mxGeometry x="-109" y="835.5" width="6" height="8" as="geometry" />
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-16" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;금액 청구" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-186" y="110" width="160" height="60" as="geometry" />
+          <mxGeometry x="-190" y="115" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-17" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.248;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="-Jvx2exfWqLnwWXXHpkM-16" target="EXdC40T1VhCXhn1chX8P-3">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-30" y="490" as="sourcePoint" />
             <mxPoint x="20" y="440" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="19" y="140" />
+              <mxPoint x="19" y="145" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="-Jvx2exfWqLnwWXXHpkM-18" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;rotation=-180;" vertex="1" parent="1">
-          <mxGeometry x="-1" y="127" width="6" height="8" as="geometry" />
+          <mxGeometry y="150" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-19" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 14px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;/span&gt;수납 금액 결재" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-190" y="340" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-20" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="-Jvx2exfWqLnwWXXHpkM-19" target="EXdC40T1VhCXhn1chX8P-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-20" y="150" as="sourcePoint" />
+            <mxPoint x="28.679999999999836" y="250.7800000000001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="20" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-21" value="" style="triangle;whiteSpace=wrap;html=1;fontSize=8;strokeColor=#000000;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-7" y="375" width="6" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-22" value="수납" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-19" y="349" width="31" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-Jvx2exfWqLnwWXXHpkM-23" value="청구액 확인" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-21" y="122" width="53" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
