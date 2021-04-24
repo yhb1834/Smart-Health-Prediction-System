@@ -61,7 +61,7 @@
 ##### 5) Domain model
 - [Admin](admin/03.%20Domain%20Model%20Diagram)  
 - [Doctor](doctor/Domain%20model)  
-- [Patient](patient/03.%20Domain%20Model%20Diagram)  
+- [Patient](patient/02.domainmodel)  
 ##### 5) User Interface mockup  
 - [User Interface mockup](./)  
   
