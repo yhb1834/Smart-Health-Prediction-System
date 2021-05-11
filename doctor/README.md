@@ -13,7 +13,7 @@
 
 ### Table of contents
 <!-- !toc (minlevel=2 omit="Table of Contents") -->
-- [Sub Meeting log](#Meeting-log)
+- [Sub Meeting log](./meetinglog.md)
 - [Tools](#Tools)
 - [User Story](./UserStory/UserStory.md)
 <!-- toc! -->
