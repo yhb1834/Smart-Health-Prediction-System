@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-11T13:32:19.683Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="0_vqAKLnKYdU0ffhH-oR" version="14.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-11T13:40:14.392Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="CP8bVAX4z1Yzc-xAa-LF" version="14.6.9" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="2285" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -292,7 +292,7 @@
         <mxCell id="B3NwFyoEmRpR8BLVz1MY-13" value="Unpaid == True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="37.5" y="271.1304347826087" width="92.96875" height="22.60869565217391" as="geometry" />
         </mxCell>
-        <mxCell id="B3NwFyoEmRpR8BLVz1MY-45" value="reqLog" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=-0.033;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="B3NwFyoEmRpR8BLVz1MY-45" value="logTransaction(Did,&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=-0.033;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry x="-50" y="289" as="geometry">
             <mxPoint x="295" y="528" as="sourcePoint" />
             <mxPoint x="675.6700000000001" y="528.308" as="targetPoint" />
