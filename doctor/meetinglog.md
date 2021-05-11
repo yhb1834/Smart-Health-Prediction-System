@@ -25,3 +25,12 @@
 - 방법 : 카카오톡
 - Use case 일부 수정 및 Domain Model 
 --- 
+
+# 21. 05. 11 (월) Meeting Log
+
+---
+- 참석자 : 이한별, 홍주표
+- 시간 : 오후 15:00
+- 방법 : 카카오톡
+- Traceability Matrix(1)추가 및 System Sequence Diagram 작성
+--- 
