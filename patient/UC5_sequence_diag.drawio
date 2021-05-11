@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-11T12:04:13.098Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="cJtUCzt_01GWd1a3bqBj" version="14.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-11T12:04:45.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="HbG3udSSfyK3NV2q-cZ9" version="14.6.9" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
-    <mxGraphModel dx="1669" dy="357" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1574" dy="297" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -17,6 +17,12 @@
           <mxGeometry x="-50" y="270" width="50" height="50" as="geometry">
             <mxPoint x="210.57142857142856" y="570" as="sourcePoint" />
             <mxPoint x="279.1428571428571" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2WJHfaqeJIH-B89SLFSa-24" value="bill" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;exitX=-0.049;exitY=0.29;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.922;entryY=0.53;entryDx=0;entryDy=0;entryPerimeter=0;" parent="B3NwFyoEmRpR8BLVz1MY-33" edge="1" target="7baba1c4bc27f4b0-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="110" as="targetPoint" />
+            <mxPoint x="729.5100000000002" y="109.59999999999991" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-2" value=":controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
@@ -118,12 +124,12 @@
         <mxCell id="2WJHfaqeJIH-B89SLFSa-13" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
           <mxGeometry x="445" y="422" width="10" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="2WJHfaqeJIH-B89SLFSa-17" value="checkDiagrecord(ID)" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=1.1;exitY=0.611;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+        <mxCell id="2WJHfaqeJIH-B89SLFSa-17" value="checkDiagrecord(ID)" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=1.1;exitY=0.611;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.033;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="7baba1c4bc27f4b0-16">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="295" y="306.32000000000005" as="sourcePoint" />
             <mxPoint x="585" y="306" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="485" y="306" />
+              <mxPoint x="490" y="303" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -164,12 +170,6 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="687" y="353" as="targetPoint" />
             <mxPoint x="802" y="353" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="2WJHfaqeJIH-B89SLFSa-24" value="bill" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;exitX=-0.049;exitY=0.29;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="295" y="378" as="targetPoint" />
-            <mxPoint x="584.5100000000002" y="377.5999999999999" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2WJHfaqeJIH-B89SLFSa-27" value="&lt;span style=&quot;font-size: 8px&quot;&gt;bill amt 차감후 balance갱신&lt;br&gt;&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
