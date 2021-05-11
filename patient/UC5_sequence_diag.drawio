@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-11T14:38:32.444Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="ZApbBIjCxNBT9w6U7I9_" version="14.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-11T14:39:00.565Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="7OEA-dwLmK6afLkd83Gh" version="14.6.9" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="2522" dy="892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -193,13 +193,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2WJHfaqeJIH-B89SLFSa-27" value="&lt;span style=&quot;font-size: 8px&quot;&gt;bill amt 차감후 balance갱신&lt;br&gt;&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-130" y="330" width="115" height="30" as="geometry" />
+          <mxGeometry x="-255" y="334" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="2WJHfaqeJIH-B89SLFSa-28" value="&lt;span style=&quot;font-size: 8px&quot;&gt;결재할게 없는경우&lt;br&gt;&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-170" y="750" width="115" height="30" as="geometry" />
+          <mxGeometry x="-255" y="869.65" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="2WJHfaqeJIH-B89SLFSa-29" value="&lt;span style=&quot;font-size: 8px&quot;&gt;결재금액이 부족한 경우&lt;br&gt;&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-280" y="587.5" width="115" height="30" as="geometry" />
+          <mxGeometry x="-255" y="670.05" width="200" height="82.5" as="geometry" />
         </mxCell>
         <mxCell id="2WJHfaqeJIH-B89SLFSa-30" value="retrieve records" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=1.1;exitY=0.611;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
