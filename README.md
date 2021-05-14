@@ -64,11 +64,25 @@
 - [Patient](patient/02.domainmodel)  
 ##### 5) User Interface mockup  
 - [User Interface mockup](./)  
+
+
+#### 5. The 2nd Checkpoint
+##### 1) Sequence Diagram
+- [Admin](admin/04.%20Sequence%20Diagram)  
+- [Doctor](doctor/System%20Sequence%20Diagram)  
+- [Patient](patient/04.sequencediagram) 
+##### 2) Class Diagram
+- [Admin](admin/05.%20Class%20Diagram)  
+- [Doctor](doctor/class%20diagram)  
+- [Patient](patient/05.classdiagram)  
+ 
   
   
-#### 5. Meeting log
+#### 6. Meeting log
 - [2021/04/12](meeting%20log/210412.md)
 - [2021/04/16](meeting%20log/210416.md)
 - [2021/04/17](meeting%20log/210417.md)
 - [2021/04/23](meeting%20log/210423.md)
 - [2021/05/06](meeting%20log/210506.md)
+- [2021/05/11](meeting%20log/210511.md)
+- [2021/05/14](meeting%20log/210514.md)
