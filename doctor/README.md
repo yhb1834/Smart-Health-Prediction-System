@@ -29,16 +29,4 @@
 #### 3. User story
 - [User Story](./UserStory/UserStory.md)
 
----
-#### 4. Domain model
-- [Domain Model](./Domain model/DomainModel.md)
 
----
-#### 5. Sequence Diagram
-- [System Sequence Diagram](./System Sequence Diagram)
-
----
-#### 6. Class Diagram
-- [class diagram](./class diagram)
-
----
