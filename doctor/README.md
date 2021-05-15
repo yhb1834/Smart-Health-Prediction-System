@@ -30,4 +30,4 @@
 - [User Story](./UserStory/UserStory.md)
 ---
 ### 4. Domain model
-- [Domain Model](./DomainModel.md)
+- [Domain Model](./Domain model/DomainModel.md)
