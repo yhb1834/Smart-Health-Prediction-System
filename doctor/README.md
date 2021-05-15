@@ -31,7 +31,7 @@
 
 ---
 #### 4. Domain model
-- [DomainModel](./Domain model/DomainModel.md)
+- [Domain Model](./Domain model/DomainModel.md)
 
 ---
 #### 5. Sequence Diagram
