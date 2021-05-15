@@ -1,16 +1,36 @@
-<mxfile host="app.diagrams.net" modified="2021-05-15T05:30:14.024Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="gkhiycXiGCw3u6oR1ju2" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-15T05:32:59.361Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="J9qVZqqOy8I5Hfu0LD4N" version="14.6.13" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
-    <mxGraphModel dx="1450" dy="335" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1712" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="EWzgRD9cAnKHQx5F5y8_-23" value="possibleDoctors" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=0.156;exitY=0.485;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="154.72" y="541.1" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="279.72" y="541.1" />
+              <mxPoint x="254.59000000000003" y="541.31" />
+            </Array>
+            <mxPoint x="286.28" y="540.0000000000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EWzgRD9cAnKHQx5F5y8_-24" value="Show&lt;br&gt;possibleDiseases" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=0.156;exitY=0.485;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="19.72" y="556.6499999999997" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="144.72" y="556.65" />
+              <mxPoint x="119.59" y="556.86" />
+            </Array>
+            <mxPoint x="151.27999999999994" y="555.5500000000003" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="EWzgRD9cAnKHQx5F5y8_-20" value="getDoctorList()" style="html=1;verticalAlign=bottom;endArrow=block;entryX=-0.22;entryY=0.167;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0.693;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="292" y="472.99" as="sourcePoint" />
             <mxPoint x="584.8000000000002" y="473.02" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EWzgRD9cAnKHQx5F5y8_-9" value="PossibleDiseases" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=0.156;exitY=0.485;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+        <mxCell id="EWzgRD9cAnKHQx5F5y8_-9" value="possibleDiseases" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=0.156;exitY=0.485;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="155" y="372" as="targetPoint" />
             <Array as="points">
@@ -77,9 +97,6 @@
         <mxCell id="7baba1c4bc27f4b0-16" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
           <mxGeometry x="585" y="473" width="10" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="7baba1c4bc27f4b0-22" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="250" y="700" width="10" height="140" as="geometry" />
-        </mxCell>
         <mxCell id="7baba1c4bc27f4b0-11" value="checkDisease(* sym)" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="7baba1c4bc27f4b0-9" target="7baba1c4bc27f4b0-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="220" y="190" as="sourcePoint" />
@@ -88,19 +105,6 @@
         <mxCell id="7baba1c4bc27f4b0-14" value="getDiseaseList()" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="7baba1c4bc27f4b0-10" target="7baba1c4bc27f4b0-13" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="370" y="200" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="7baba1c4bc27f4b0-37" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="255" y="780" width="10" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="7baba1c4bc27f4b0-39" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;elbow=vertical;edgeStyle=orthogonalEdgeStyle;curved=1;entryX=1;entryY=0.286;entryPerimeter=0;exitX=1.038;exitY=0.345;exitPerimeter=0;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="260.3333333333335" y="761" as="sourcePoint" />
-            <mxPoint x="265.3333333333335" y="799.3333333333334" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="315" y="761" />
-              <mxPoint x="315" y="799" />
-            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-40" value="Note" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
@@ -172,9 +176,6 @@
             <mxPoint x="710" y="518" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2WJHfaqeJIH-B89SLFSa-27" value="&lt;span style=&quot;font-size: 8px&quot;&gt;bill amt 차감후 balance갱신&lt;br&gt;&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-220" y="275" width="115" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="EWzgRD9cAnKHQx5F5y8_-4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="1">
           <mxGeometry x="290" y="298" width="10" height="40" as="geometry" />
         </mxCell>
@@ -235,6 +236,9 @@
             <mxPoint x="296" y="533" as="targetPoint" />
             <mxPoint x="591.0000000000002" y="533.0000000000001" as="sourcePoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="EWzgRD9cAnKHQx5F5y8_-25" value="&lt;span style=&quot;font-size: 8px&quot;&gt;DB내에서 검색&lt;br&gt;&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="851" y="485" width="115" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
