@@ -1,9 +1,12 @@
-<h1 align="center"> SubProject - Admin</h1>
+<h1 align="center"> SubProject - Patient</h1>
 
 <div align="left">
 - Original project from
 	<a href="https://nevonprojects.com/smart-health-prediction-using-data-mining/"> Nevon Projects </a>
 </div>
+### OUTPUT OF 2_nd CHECKPOINT
+ - [2nd_checkpoint](./2nd_checkpoint.docx)
+
 
 ### Member of sub-group
 |Name|SID|Dept|githubID|
