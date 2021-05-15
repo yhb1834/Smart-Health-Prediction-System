@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-15T06:10:42.126Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="QO5bNXFlKKwk9_k9GOAW" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-15T06:11:19.462Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="uDnUfiKdZsOK5gIrvesN" version="14.6.13" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="733" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -116,27 +116,30 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="OyS-1-b4W0jsBxzDR7Cn-1" value="DsysConnection" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="608" y="360" width="182" height="164" as="geometry">
+          <mxGeometry x="710" y="361" width="182" height="190" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-5" value="- name_of_disease" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
+        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-6" value="- symptom_of_patient" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
           <mxGeometry y="26" width="182" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-6" value="- symptom_of_patient" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
+        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-5" value="- name_of_disease" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
           <mxGeometry y="52" width="182" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-18" value="- field_of_disease" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
+        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-19" value="- symptom_of_disease" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
           <mxGeometry y="78" width="182" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-18" value="- field_of_disease" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
+          <mxGeometry y="104" width="182" height="26" as="geometry" />
+        </mxCell>
         <mxCell id="OyS-1-b4W0jsBxzDR7Cn-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
-          <mxGeometry y="104" width="182" height="8" as="geometry" />
+          <mxGeometry y="130" width="182" height="8" as="geometry" />
         </mxCell>
         <mxCell id="OyS-1-b4W0jsBxzDR7Cn-8" value="+ retrieveDisease(symptom_p)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
-          <mxGeometry y="112" width="182" height="26" as="geometry" />
+          <mxGeometry y="138" width="182" height="26" as="geometry" />
         </mxCell>
         <mxCell id="OyS-1-b4W0jsBxzDR7Cn-9" value="+ getDiseaseRecord()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-1">
-          <mxGeometry y="138" width="182" height="26" as="geometry" />
+          <mxGeometry y="164" width="182" height="26" as="geometry" />
         </mxCell>
         <mxCell id="OyS-1-b4W0jsBxzDR7Cn-11" value="" style="endArrow=open;shadow=0;strokeWidth=1;rounded=0;endFill=1;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="0.5" y="41" relative="1" as="geometry">
@@ -151,6 +154,23 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="OyS-1-b4W0jsBxzDR7Cn-14" value="need" style="text;html=1;resizable=0;points=[];;align=center;verticalAlign=middle;labelBackgroundColor=none;rounded=0;shadow=0;strokeWidth=1;fontSize=12;" vertex="1" connectable="0" parent="OyS-1-b4W0jsBxzDR7Cn-11">
+          <mxGeometry x="0.5" y="49" relative="1" as="geometry">
+            <mxPoint x="-38" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-20" value="" style="endArrow=open;shadow=0;strokeWidth=1;rounded=0;endFill=1;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="0.5" y="41" relative="1" as="geometry">
+            <mxPoint x="579" y="410" as="sourcePoint" />
+            <mxPoint x="707" y="410" as="targetPoint" />
+            <mxPoint x="-40" y="32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-21" value="1" style="resizable=0;align=right;verticalAlign=bottom;labelBackgroundColor=none;fontSize=12;" connectable="0" vertex="1" parent="OyS-1-b4W0jsBxzDR7Cn-20">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-7" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyS-1-b4W0jsBxzDR7Cn-22" value="need" style="text;html=1;resizable=0;points=[];;align=center;verticalAlign=middle;labelBackgroundColor=none;rounded=0;shadow=0;strokeWidth=1;fontSize=12;" vertex="1" connectable="0" parent="OyS-1-b4W0jsBxzDR7Cn-20">
           <mxGeometry x="0.5" y="49" relative="1" as="geometry">
             <mxPoint x="-38" y="40" as="offset" />
           </mxGeometry>
