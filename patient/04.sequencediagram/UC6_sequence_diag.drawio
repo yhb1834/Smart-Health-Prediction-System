@@ -1,9 +1,15 @@
-<mxfile host="app.diagrams.net" modified="2021-05-15T05:27:14.001Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="hrjH55sseK60S1YxAkzI" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-15T05:30:14.024Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="gkhiycXiGCw3u6oR1ju2" version="14.6.13" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
-    <mxGraphModel dx="1834" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1450" dy="335" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="EWzgRD9cAnKHQx5F5y8_-20" value="getDoctorList()" style="html=1;verticalAlign=bottom;endArrow=block;entryX=-0.22;entryY=0.167;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0.693;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="292" y="472.99" as="sourcePoint" />
+            <mxPoint x="584.8000000000002" y="473.02" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="EWzgRD9cAnKHQx5F5y8_-9" value="PossibleDiseases" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=0.156;exitY=0.485;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="155" y="372" as="targetPoint" />
@@ -69,7 +75,7 @@
           <mxGeometry x="45" y="90" width="10" height="450" as="geometry" />
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-16" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="585" y="468" width="10" height="60" as="geometry" />
+          <mxGeometry x="585" y="473" width="10" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7baba1c4bc27f4b0-22" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
           <mxGeometry x="250" y="700" width="10" height="140" as="geometry" />
@@ -134,9 +140,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2WJHfaqeJIH-B89SLFSa-20" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1;fillColor=#FFFFFF;fontFamily=Verdana;fontSize=12;fontColor=#000000;align=center;" parent="1" vertex="1">
-          <mxGeometry x="715" y="478" width="10" height="40" as="geometry" />
+          <mxGeometry x="715" y="478" width="10" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="2WJHfaqeJIH-B89SLFSa-18" value="reqBill(ID)" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=1.1;exitY=0.611;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.035;entryY=0.088;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+        <mxCell id="2WJHfaqeJIH-B89SLFSa-18" value="getDoctor()" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=1.1;exitY=0.611;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.035;entryY=0.088;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="595" y="478.32000000000005" as="sourcePoint" />
             <mxPoint x="714.6500000000001" y="477.64000000000004" as="targetPoint" />
@@ -145,7 +151,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2WJHfaqeJIH-B89SLFSa-15" value="bill(diagID, amt)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;" parent="1" edge="1">
+        <mxCell id="2WJHfaqeJIH-B89SLFSa-15" value="Doc(name, field, ...)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="725" y="514" as="targetPoint" />
             <mxPoint x="849.5" y="514" as="sourcePoint" />
@@ -160,7 +166,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2WJHfaqeJIH-B89SLFSa-23" value="bill" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;exitX=-0.001;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="2WJHfaqeJIH-B89SLFSa-20" edge="1">
+        <mxCell id="2WJHfaqeJIH-B89SLFSa-23" value="Doctor" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;exitX=-0.014;exitY=0.962;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.983;entryY=0.916;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2WJHfaqeJIH-B89SLFSa-20" edge="1" target="7baba1c4bc27f4b0-16">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="595" y="518" as="targetPoint" />
             <mxPoint x="710" y="518" as="sourcePoint" />
@@ -222,6 +228,12 @@
             <Array as="points">
               <mxPoint x="119.84" y="455" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EWzgRD9cAnKHQx5F5y8_-21" value="DoctorList" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;exitX=-0.001;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="296" y="533" as="targetPoint" />
+            <mxPoint x="591.0000000000002" y="533.0000000000001" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
       </root>
