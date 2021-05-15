@@ -5,7 +5,7 @@
 	<a href="https://nevonprojects.com/smart-health-prediction-using-data-mining/"> Nevon Projects </a>
 </div>
 
-### OUTPUT OF 2nd CHECKPOINT
+### <span style="color:red">OUTPUT OF 2nd CHECKPOINT.</span>
 - [2ndcheckpoint](./2nd_checkpoint.docx)
 
 
