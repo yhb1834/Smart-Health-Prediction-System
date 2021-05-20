@@ -19,9 +19,9 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', views.main),
-    path('login/', views.login),
-    path('signup/', views.signup),
+    path('ad/main/', views.ad_main),
+    path('ad/login/', views.ad_login),
+    path('ad/signup/', views.ad_signup),
 
     # admin urls
     #path('admin/main', views.admin_main, name='admin_main'), # admin 메인 페이지
