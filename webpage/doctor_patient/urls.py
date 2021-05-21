@@ -23,6 +23,9 @@ urlpatterns = [
     path('ad/login/', views.ad_login),
     path('ad/signup/', views.ad_signup),
 
+    path('doctor/main/', views.doctor_main),
+    path('doctor/login/', views.doctor_login),
+    path('doctor/signup/', views.doctor_signup),
 
     path('patient/main', patient_views.pa_main),
     path('patient/login/', patient_views.pa_login),
