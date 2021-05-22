@@ -21,7 +21,7 @@ def pa_signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('index')
+            return redirect('pa_main')
     else:
         form = PatientUserForm()
     return render(request, 'patient/signup.html', {'form': form})
