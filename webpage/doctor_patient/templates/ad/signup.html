@@ -141,27 +141,17 @@
                 <div class="card card-signin my-5">
                   <div class="card-body">
                     <h5 class="card-title text-center">Sign Up</h5>
-                    <form class="form-signin">
-                      <div class="form-label-group">
-                        <input type="text" class="form-control" name="email" id="email" value="{{ form.email.value|default_if_none:'' }}">
-                        <label for="inputEmail">Email address</label>
+                    <form method="POST" class="form-signin">
+                      {% csrf_token %}
+                      {% for field in form %}
+                      <div class="form-group">
+                        <input type="{{ field.field.widget.input_type }}" class="form-control form-control-user" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}" />
                       </div>
-        
-                      <div class="form-label-group">
-                        <input type="password" class="form-control" name="password1" id="password1" value="{{ form.password1.value|default_if_none:'' }}">
-                        <label for="inputPassword">Password</label>
-                      </div>
-                      <div class="form-label-group">
-                        <input type="password" class="form-control" name="password2" id="password2" value="{{ form.password2.value|default_if_none:'' }}">
-                        <label for="inputPassword">Password Again</label>
-                      </div>
-        
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                      </div>
-                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign Up</button>
-                      
+                      {% if field.errors %}
+                      <span style="color: red">{{ field.errors }}</span>
+                      {% endif %}
+                      {% endfor %}
+                      <button type="submit" class="btn btn-primary btn-user btn-block">signup</button>
                     </form>
                   </div>
                 </div>

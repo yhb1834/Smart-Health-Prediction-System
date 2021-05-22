@@ -12,7 +12,7 @@ def ad_login(request):
 def ad_signup(request):
     #계정 생성
        if request.method == "POST":
-           form = UserForm(request.POST)
+           form = AdUserForm(request.POST)
            if form.is_valid():
                form.save()
                username = form.cleaned_data.get('username')
