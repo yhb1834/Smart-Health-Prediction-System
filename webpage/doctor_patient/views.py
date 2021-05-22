@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+from doctor_patient.forms import AdUserForm, PatientUserForm
 
 # Create your views here.
 def ad_main(request):
@@ -19,7 +21,7 @@ def ad_signup(request):
                login(request, user)
                return redirect('index')
        else:
-           form = UserForm()
+           form = AdUserForm()
        return render(request, 'ad/signup.html', {'form': form})
 
 
