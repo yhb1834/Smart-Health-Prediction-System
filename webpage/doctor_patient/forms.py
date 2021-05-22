@@ -1,9 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
-from .models import User, Question, Answer, Review
-from django.contrib.auth.hashers import check_password, make_password
-from django.contrib.admin.widgets import AdminTimeWidget
+from django.contrib.auth.models import User
 
 class AdSignupForm(UserCreationForm):
     # 회원가입 폼
@@ -18,6 +16,13 @@ class AdSignupForm(UserCreationForm):
             raise forms.ValidationError('비밀번호가 일치하지 않습니다.')
 
         return data['confirm_password']
+
+class PatientUserForm(UserCreationForm):
+    email = forms.EmailField(label="이메일")
+
+    class Meta:
+        model = User
+        fields = ("username", "email")
 
 
 #class LoginForm(AuthenticationForm):
