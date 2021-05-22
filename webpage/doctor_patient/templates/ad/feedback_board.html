@@ -46,8 +46,8 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="../static/assets/css/theme.css" rel="stylesheet" />
+    <link href="../static/assets/css/admin.css" rel="stylesheet" />
   </head>
-
   <body>
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -124,52 +124,135 @@
             margin-top: 20px;
           "
         ></div>
-        <!--/.bg-holder-->
+        
 
-            <div class="container-lg">
-          <div class="row justify-content-center">
-            <div class="col-3 text-center">
-              <h2 class="fw-bold">Admin login</h2>
-              <hr class="w-25 mx-auto text-dark" style="height: 2px" />
-            </div>
+<!-- 게시판-->
+<div class="container position-relative">
+  <div class="row align-items-center">
+  
+    <div class="container-lg">
+      <div class="row justify-content-center">
+        <div class="col-3 text-center">
+          <h2 class="fw-bold">Feedback board</h2>
+          <hr class="w-25 mx-auto text-dark" style="height: 2px" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <button type="button" class="btn btn-primary btn-lg">등록</button>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Title</th>
+                <th scope="col">Writer</th>
+                <th scope="col">Column heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <th scope="row">Active</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr>
+                <th scope="row">Default</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-primary">
+                <th scope="row">Primary</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row">Secondary</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row">Success</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-danger">
+                <th scope="row">Danger</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-warning">
+                <th scope="row">Warning</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">Info</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-light">
+                <th scope="row">Light</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="table-dark">
+                <th scope="row">Dark</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <button type="button" class="btn btn-primary">Write</button>
+            <button type="button" class="btn btn-danger">Delete</button>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="form-signin">
-                      <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Email address</label>
-                      </div>
-        
-                      <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
-                      </div>
-        
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                      </div>
-                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-                      
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <ul class="pagination pagination-sm">
+              <li class="page-item disabled">
+                <a class="page-link" href="#">&laquo;</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">5</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+              </li>
+            </ul>
           </div>
         </div>
-              </div>
-            </div>
+      </div>
+    </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+    </div>
+    </div>
+  
 
-      
+
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
