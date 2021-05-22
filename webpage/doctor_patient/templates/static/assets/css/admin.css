@@ -1,0 +1,71 @@
+/* UI Object */
+.tbl_type,
+.tbl_type th,
+.tbl_type td {
+  border: 0;
+}
+.tbl_type a {
+  color: #383838;
+  text-decoration: none;
+}
+.tbl_type {
+  width: 100%;
+  border-bottom: 1px solid #999;
+  color: #666;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.tbl_type caption,
+.tbl_type .frm label {
+  display: none;
+}
+.tbl_type th {
+  padding: 5px 0 4px;
+  border-top: solid 1px #999;
+  border-bottom: solid 1px #b2b2b2;
+  background-color: #f1f1f4;
+  color: #333;
+  font-weight: bold;
+  line-height: 18px;
+  vertical-align: top;
+}
+.tbl_type td {
+  padding: 8px 0 5px;
+  border-bottom: solid 1px #d2d2d2;
+  text-align: center;
+}
+.tbl_type .frm {
+  padding: 0;
+  text-align: center;
+}
+.tbl_type .frm input {
+  margin: 0;
+}
+.tbl_type .num,
+.tbl_type .date,
+.tbl_type .hit {
+  padding: 0;
+  font-family: Tahoma;
+  font-size: 11px;
+  line-height: normal;
+}
+.tbl_type .title {
+  text-align: left;
+}
+.tbl_type .title .pic,
+.tbl_type .title .new {
+  margin: 0 0 2px;
+  vertical-align: middle;
+}
+.tbl_type tr.reply .title a {
+  padding-left: 12px;
+  background: url(img/ic_reply.gif) 0 1px no-repeat;
+}
+.tbl_type tr.reply td a.comment {
+  padding: 0;
+  background: none;
+  color: #f00;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* //UI Object */
