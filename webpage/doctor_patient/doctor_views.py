@@ -49,7 +49,7 @@ def doctor_login(request):
 def doctor_signup(request):
     #계정 생성
     if request.method == "GET":
-        return render(request,'doctor/signup_temp.html')
+        return render(request,'doctor/signup.html')
 
     elif request.method == "POST":
         username = request.POST.get('username') #딕셔너리형태
@@ -66,7 +66,7 @@ def doctor_signup(request):
         else :
             doctor_user = Doctor_user(username=username, password=make_password(password))
             doctor_user.save()
-        return render(request, 'doctor/signup_temp.html', res_data) #register를 요청받으면 register.html 로 응답.
+        return render(request, 'doctor/signup.html', res_data) #register를 요청받으면 register.html 로 응답.
 
     #     form = UserForm(request.POST)
     #     if form.is_valid():
