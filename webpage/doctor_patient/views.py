@@ -21,3 +21,27 @@ def ad_signup(request):
        else:
            form = UserForm()
        return render(request, 'ad/signup.html', {'form': form})
+
+
+# 임시로 doctor_관련 view들 추가하여 작업중 (이상진)
+# doctor subgroup의 임의 수정가능.
+def doctor_main(request):
+    return render(request, 'doctor/main.html')
+
+def doctor_login(request):
+    return render(request, 'doctor/login.html')
+
+def doctor_signup(request):
+    #계정 생성
+       if request.method == "POST":
+           form = UserForm(request.POST)
+           if form.is_valid():
+               form.save()
+               username = form.cleaned_data.get('username')
+               raw_password = form.cleaned_data.get('password1')
+               user = authenticate(username=username, password=raw_password)
+               login(request, user)
+               return redirect('index')
+       else:
+           form = UserForm()
+       return render(request, 'doctor/signup.html', {'form': form})

@@ -15,13 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
+from . import views, patient_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ad/main/', views.ad_main),
     path('ad/login/', views.ad_login),
     path('ad/signup/', views.ad_signup),
+
+    path('doctor/main/', views.doctor_main),
+    path('doctor/login/', views.doctor_login),
+    path('doctor/signup/', views.doctor_signup),
+
+    path('patient/main', patient_views.pa_main),
+    path('patient/login/', patient_views.pa_login),
+    path('patient/signup/', patient_views.pa_signup),
 
     # admin urls
     #path('admin/main', views.admin_main, name='admin_main'), # admin 메인 페이지
