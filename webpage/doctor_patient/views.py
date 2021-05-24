@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from doctor_patient.forms import AdUserForm, PatientUserForm
+from doctor_patient.forms import AdUserForm
 
 # Create your views here.
 def ad_main(request):
