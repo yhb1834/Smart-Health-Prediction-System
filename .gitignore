@@ -130,3 +130,7 @@ dmypy.json
 
 # Pycharm
 .idea/
+
+
+#맥 부산물
+*.DS_Store

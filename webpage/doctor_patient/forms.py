@@ -17,13 +17,22 @@ class AdUserForm(UserCreationForm):
             raise forms.ValidationError('비밀번호가 일치하지 않습니다.')
         return data['confirm_password']
 
-class PatientUserForm(UserCreationForm):
-    email = forms.EmailField(label="이메일")
 
+class PatientUserForm(UserCreationForm):
+    #환자 회원가입 폼
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+    
     class Meta:
         model = User
-        fields = ("username", "email")
-
+        fields = ["username", "email"]
+    
+    def check_password(self):
+        data = self.cleaned_data
+        if data['password'] != data['check_password']:
+            raise forms.ValidationError('비밀번호가 일치하지 않습니다.')
+        return data['confirm_password']
+    
+    
 
 #class LoginForm(AuthenticationForm):
     # 로그인 폼
