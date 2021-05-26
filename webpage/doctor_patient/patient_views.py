@@ -24,4 +24,4 @@ def pa_signup(request):
             return redirect('pa_main')
     else:
         form = PatientUserForm()
-    return render(request, 'patient/signup.html', {'form': form})
+    return render(request, 'patient/signup_test.html', {'form': form})
