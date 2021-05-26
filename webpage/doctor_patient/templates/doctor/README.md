@@ -1,6 +1,5 @@
-#doctor팀 프런트 html 파일
+doctor팀 프런트 html 파일
 -----------------------
->
 -doctor/main(Doctor의 Main화면)
 -doctor/signup(회원가입창)
 -doctor/login(Doctor의 로그인창)
