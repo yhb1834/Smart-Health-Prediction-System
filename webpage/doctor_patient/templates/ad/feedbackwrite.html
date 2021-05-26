@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Admin::Login</title>
+    <title>Admin::Feedback Write</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -48,6 +48,7 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/admin.css' %}" rel="stylesheet" />
   </head>
 
   <body>
@@ -67,7 +68,7 @@
               class="d-inline-block me-3"
               src="{% static 'assets/img/icons/logo.png' %}"
               alt=""
-            />CAUnseling</a
+            />Smart Health Prediction System</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -128,10 +129,10 @@
         ></div>
         <!--/.bg-holder-->
 
-        <div class="container-lg">
+            <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">Admin login</h2>
+              <h2 class="fw-bold">Feedback</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
@@ -140,27 +141,30 @@
               <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                   <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="user" method="POST" action=".">
-                      {% csrf_token %}
-                      {% for field in form %}
-                      <div class="form-group">
-                        <input type="{{ field.field.widget.input_type }}" class="form-control form-control-user" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}" />
+                    <h5 class="card-title text-center">Feedback</h5>
+                    <form class="form-signin">
+                        <div class="form-label-group">
+                            <label for="inputEmail">Account type</label><br>
+                            <input type="radio" id="Patient" name="gender" value="Patient">
+                            <label for="Patient">Patient</label><br>
+                            <input type="radio" id="Doctor" name="gender" value="Doctor">
+                            <label for="Doctor">Doctor</label><br>
+                        </div>
+                        <br />
+                                                  <div class="form-label-group">
+                                                    <label for="inputEmail">Email</label>
+                                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email Adress." required autofocus>
+                                                  </div>
+
+                      <br />
+                      <div class="form-label-group">
+                        <label for="inputEmail">Feedback</label>
+                        <input type="text" id="inputFeedback" class="form-control" placeholder="Please feedback." required autofocus>
                       </div>
-                      {% if field.errors %}
-                      <span style="color: red">{{ field.errors }}</span>
-                      {% endif %}
-                      {% endfor %}
-                      {% if message %}
-                      <span style="color: red">{{ message }}</span>
-                      {% endif %}
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+
                       </div>
-                      <div style="text-align: center">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                      </div>
+                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Submit</button>
+                      
                     </form>
                   </div>
                 </div>
@@ -169,8 +173,6 @@
           </div>
         </div>
       </section>
-
-      
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
