@@ -8,7 +8,7 @@ class AdUserForm(UserCreationForm):
     email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
     class Meta:
         model = User
-        fields = ['email']
+        fields = ['username','email']
 
     def check_password(self):
         data = self.cleaned_data
@@ -25,10 +25,10 @@ class AdLoginForm(AuthenticationForm):
 # Patient 회원가입 폼
 class PatientUserForm(UserCreationForm):
     email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
-    
+
     class Meta:
         model = User
-        fields = ['email']
+        fields = ['username', 'email']
     
     def check_password(self):
         data = self.cleaned_data
