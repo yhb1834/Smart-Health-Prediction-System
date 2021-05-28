@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -18,36 +16,36 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
+      href="../static/assets/img/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{% static 'assets/img/favicons/favicon-32x32.png' %}"
+      href="../static/assets/img/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="{% static 'assets/img/favicons/favicon-16x16.png' %}"
+      href="../static/assets/img/favicons/favicon-16x16.png"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="{% static 'assets/img/favicons/favicon.ico' %}"
+      href="../static/assets/img/favicons/favicon.ico"
     />
-    <link rel="manifest" href="{% static 'assets/img/favicons/manifest.json' %}" />
+    <link rel="manifest" href="../static/assets/img/favicons/manifest.json" />
     <meta
       name="msapplication-TileImage"
-      content="{% static 'assets/img/favicons/mstile-150x150.png' %}"
+      content="../static/assets/img/favicons/mstile-150x150.png"
     />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
-    <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+    <link href="../static/assets/css/theme.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -65,9 +63,9 @@
             href="#"
             ><img
               class="d-inline-block me-3"
-              src="{% static 'assets/img/icons/logo.png' %}"
+              src="../static/assets/img/icons/logo.png"
               alt=""
-            />CAUnseling</a
+            />Caunseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -109,7 +107,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url({% static 'assets/img/illustrations/services-bg.png' %});
+            background-image: url(../static/assets/img/illustrations/services-bg.png);
             background-position: center left;
             background-size: auto;
           "
@@ -119,7 +117,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
+            background-image: url(../static/assets/img/illustrations/dot-2.png);
             background-position: center right;
             background-size: auto;
             margin-left: -180px;
@@ -157,10 +155,7 @@
                 <label for="exampleTextarea" class="form-label mt-2">Content</label>
                 <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
               </div>
-              <div class="form-group">
-                <label for="formFile" class="form-label mt-2">첨부 파일</label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
+
               <br>
               <div style="text-align: center">
                 <button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
@@ -169,13 +164,18 @@
             </fieldset>
           </form>
         </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
 
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
           style="
-            background-image: url({% static 'assets/img/illustrations/dot.png' %});
+            background-image: url(../static/assets/img/illustrations/dot.png);
             background-position: left bottom;
             background-size: auto;
             filter: contrast(1.5);
@@ -186,7 +186,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
+            background-image: url(../static/assets/img/illustrations/dot-2.png);
             background-position: right top;
             background-size: auto;
             margin-top: -75px;
@@ -200,9 +200,9 @@
               <a class="text-decoration-none" href="#"
                 ><img
                   class="img-fluid me-2"
-                  src="{% static 'assets/img/icons/footer-logo.png' %}"
+                  src="../static/assets/img/icons/footer-logo.png"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">Caunseling</span></a
               >
 
             </div>
