@@ -62,12 +62,11 @@
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="#"
+            href="../main"
             ><img
               class="d-inline-block me-3"
-              src="{% static 'assets/img/icons/logo.png' %}"
               alt=""
-            />CAUnseling</a
+            />2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -86,19 +85,13 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="#"
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
                   >Home</a
                 >
               </li>
+              <li class="nav-item"><a class="nav-link" href="../doctorcertify">Doctor certify</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Find a doctor</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Feedback</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="../feedback">Feedback</a>
               </li>
             </ul>
           </div>
@@ -129,7 +122,6 @@
                 <th scope="col" width="5%">No.</th>
                 <th scope="col" width="50%">Title</th>
                 <th scope="col" width="15%">Writer</th>
-                <th scope="col" width="15%">etc</th>
               </tr>
             </thead>
             <tbody>
@@ -137,18 +129,15 @@
                 <th scope="row">1</th>
                 <td>의사면허 등록에 문의가 있습니다.</td>
                 <td>의사</td>
-                <td>문의대기</td>
               </tr>
               
               <tr class="table-active">
                 <th scope="row">2</th>
                 <td>항상 잘 이용하고 있어요.</td>
                 <td>환자</td>
-                <td></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>Column content</td>
                 <td>Column content</td>
                 <td>Column content</td>
               </tr>
@@ -156,11 +145,9 @@
                 <th scope="row">4</th>
                 <td>Column content</td>
                 <td>Column content</td>
-                <td>Column content</td>
               </tr>
               <tr>
                 <th scope="row">5</th>
-                <td>Column content</td>
                 <td>Column content</td>
                 <td>Column content</td>
               </tr>
@@ -168,11 +155,9 @@
                 <th scope="row">6</th>
                 <td>Column content</td>
                 <td>Column content</td>
-                <td>Column content</td>
               </tr>
               <tr>
                 <th scope="row">7</th>
-                <td>Column content</td>
                 <td>Column content</td>
                 <td>Column content</td>
               </tr>
@@ -180,13 +165,12 @@
                 <th scope="row">8</th>
                 <td>Column content</td>
                 <td>Column content</td>
-                <td>Column content</td>
               </tr>
               
             </tbody>
           </table>
           <div style="text-align: right">
-            <button type="button" class="btn btn-primary btn-lg">Write</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="location.href='../feedbackwrite'">Write</button>
             <button type="button" class="btn btn-danger btn-lg">Delete</button>
           </div>
           <div class="justify-content-center" style="text-align: center">

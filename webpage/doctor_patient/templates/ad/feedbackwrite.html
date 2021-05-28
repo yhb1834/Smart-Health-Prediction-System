@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Admin::Feedback Write</title>
+    <title>Doctor::Feedback</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -48,7 +48,6 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/admin.css' %}" rel="stylesheet" />
   </head>
 
   <body>
@@ -66,9 +65,8 @@
             href="#"
             ><img
               class="d-inline-block me-3"
-              src="{% static 'assets/img/icons/logo.png' %}"
               alt=""
-            />Smart Health Prediction System</a
+            />2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -87,19 +85,13 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="#"
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
                   >Home</a
                 >
               </li>
+              <li class="nav-item"><a class="nav-link" href="../doctorcertify">Doctor certify</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Find a doctor</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Feedback</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="../feedback">Feedback</a>
               </li>
             </ul>
           </div>
@@ -136,43 +128,42 @@
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Feedback</h5>
-                    <form class="form-signin">
-                        <div class="form-label-group">
-                            <label for="inputEmail">Account type</label><br>
-                            <input type="radio" id="Patient" name="gender" value="Patient">
-                            <label for="Patient">Patient</label><br>
-                            <input type="radio" id="Doctor" name="gender" value="Doctor">
-                            <label for="Doctor">Doctor</label><br>
-                        </div>
-                        <br />
-                                                  <div class="form-label-group">
-                                                    <label for="inputEmail">Email</label>
-                                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email Adress." required autofocus>
-                                                  </div>
-
-                      <br />
-                      <div class="form-label-group">
-                        <label for="inputEmail">Feedback</label>
-                        <input type="text" id="inputFeedback" class="form-control" placeholder="Please feedback." required autofocus>
-                      </div>
-
-                      </div>
-                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Submit</button>
-                      
-                    </form>
-                  </div>
+          <form>
+            <fieldset>
+               <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Admin ID</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="teamuser">
                 </div>
               </div>
-            </div>
-          </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">DATE</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="2021-06-07">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="form-label mt-2">TITLE</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea" class="form-label mt-2">Content</label>
+                <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="formFile" class="form-label mt-2">첨부 파일</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <br>
+              <div style="text-align: center">
+                <button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
+              </div>
+                  <br>
+            </fieldset>
+          </form>
         </div>
       </section>
+
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
@@ -206,8 +197,8 @@
                   alt=""
                 /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
               >
-              
+
             </div>
-            
+
   </body>
 </html>

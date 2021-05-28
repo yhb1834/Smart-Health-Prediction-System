@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -16,36 +18,36 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../static/assets/img/favicons/apple-touch-icon.png"
+      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../static/assets/img/favicons/favicon-32x32.png"
+      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../static/assets/img/favicons/favicon-16x16.png"
+      href="{% static 'assets/img/favicons/favicon-16x16.png' %}"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="../static/assets/img/favicons/favicon.ico"
+      href="{% static 'assets/img/favicons/favicon.ico' %}"
     />
-    <link rel="manifest" href="../static/assets/img/favicons/manifest.json" />
+    <link rel="manifest" href="{% static 'assets/img/favicons/manifest.json' %}" />
     <meta
       name="msapplication-TileImage"
-      content="../static/assets/img/favicons/mstile-150x150.png"
+      content="{% static 'assets/img/favicons/mstile-150x150.png' %}"
     />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
-    <link href="../static/assets/css/theme.css" rel="stylesheet" />
+    <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
   </head>
 
   <body>
@@ -60,12 +62,11 @@
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="#"
+            href="../main"
             ><img
               class="d-inline-block me-3"
-              src="../static/assets/img/icons/logo.png"
               alt=""
-            />CAUnseling</a
+            />2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -84,21 +85,13 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="#"
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
                   >Home</a
                 >
               </li>
+              <li class="nav-item"><a class="nav-link" href="../doctorcertify">Doctor certify</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Search doctor</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Search patient</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Testimonials</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">Feedback</a>
+                <a class="nav-link" href="../feedback">Feedback</a>
               </li>
             </ul>
           </div>
@@ -108,7 +101,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/dot.png);
+            background-image: url({% static 'assets/img/illustrations/dot.png' %});
             background-position: left;
             background-size: auto;
             margin-top: -105px;
@@ -121,7 +114,7 @@
             <div class="col-md-5 col-lg-6 order-md-1 pt-8">
               <img
                 class="img-fluid"
-                src="../static/assets/img/illustrations/hero-header.png"
+                src="{% static 'assets/img/illustrations/hero-header.png' %}"
                 alt=""
               />
             </div>
@@ -131,13 +124,13 @@
               <h1 class="mb-4 display-3 fw-bold">Admin</h1>
               <a
                 class="btn btn-lg btn-primary rounded-pill hover-top"
-                href="#"
+                href="../login"
                 role="button"
                 >Log In</a
               >
               <a
                 class="btn btn-lg btn-primary rounded-pill hover-top"
-                href="#"
+                href="../signup"
                 role="button"
                 >Sign Up</a
               >
@@ -149,7 +142,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/services-bg.png);
+            background-image: url({% static 'assets/img/illustrations/services-bg.png' %});
             background-position: center left;
             background-size: auto;
           "
@@ -159,7 +152,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/dot-2.png);
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
             background-position: center right;
             background-size: auto;
             margin-left: -180px;
@@ -178,7 +171,7 @@
                   <div class="py-3">
                     <img
                       class="img-fluid"
-                      src="../static/assets/img/illustrations/search.png"
+                      src="{% static 'assets/img/illustrations/search.png' %}"
                       height="90"
                       alt=""
                     />
@@ -201,7 +194,7 @@
                   <div class="py-3">
                     <img
                       class="img-fluid"
-                      src="../static/assets/img/illustrations/online-pharmacy.png"
+                      src="{% static 'assets/img/illustrations/online-pharmacy.png' %}"
                       height="90"
                       alt=""
                     />
@@ -224,7 +217,7 @@
                   <div class="py-3">
                     <img
                       class="img-fluid"
-                      src="../static/assets/img/illustrations/consultation.png"
+                      src="{% static 'assets/img/illustrations/consultation.png' %}"
                       height="90"
                       alt=""
                     />
@@ -256,7 +249,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/dot.png);
+            background-image: url({% static 'assets/img/illustrations/dot.png' %});
             background-position: left bottom;
             background-size: auto;
             filter: contrast(1.5);
@@ -267,7 +260,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/dot-2.png);
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
             background-position: right top;
             background-size: auto;
             margin-top: -75px;
@@ -281,12 +274,13 @@
               <a class="text-decoration-none" href="#"
                 ><img
                   class="img-fluid me-2"
-                  src="../static/assets/img/icons/footer-logo.png"
+                  src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
                 /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
               <p class="mt-3 text-white">
-                Trafalgar provides progressive, and affordable healthcare,
+              <p class="mt-3 text-white">
+                We provide progressive, and affordable healthcare,
                 accessible on mobile and online for everyone
               </p>
             </div>
