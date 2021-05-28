@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from django.forms.fields import EmailField
 
 # Admin 회원가입 폼
 class AdUserForm(UserCreationForm):
@@ -36,6 +37,10 @@ class PatientUserForm(UserCreationForm):
             raise forms.ValidationError('비밀번호가 일치하지 않습니다.')
         return data['confirm_password']
 
+#Patient 로그인 폼
+class PatientLoginForm(AuthenticationForm):
+    email = forms.CharField(label='email',max_length=255)
+    password = forms.CharField(label='password',widget=forms.PasswordInput)
 
 #class QuestionForm(forms.ModelForm):
     # 질문 작성 폼
