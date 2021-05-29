@@ -87,3 +87,12 @@ class Question(models.Model):
 
     def __str__(self):
         return self.title
+
+class Pa_apllicationForm(models.Model):
+    name = models.CharField(max_length=200)
+    personalNuber = models.CharField(max_length=13)
+    phoneNumber = models.PhoneNumberField(null=False, blank=False)
+    address = models.CharField(max_length=200)
+
+    def __str__(self):
+        return "<%d %s %s>" % (self.pk, self.name, self.personalNuber)
