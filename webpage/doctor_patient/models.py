@@ -35,7 +35,7 @@ class UserManager(BaseUserManager):
         )
         return user
 
-
+'''
 class User(AbstractUser):
     email = models.EmailField(error_messages={'unique': "This email has already been registered."},
                               verbose_name='email', max_length=255, unique=True)
@@ -77,7 +77,19 @@ class User(AbstractUser):
 
     def is_active(self):
         return self.active
+'''
 
+class User(AbstractUser):
+    is_admin = models.BooleanField(null=False, blank=False, default=False)
+    is_doctor = models.BooleanField(null=False, blank=False, default=False)
+    is_patient = models.BooleanField(null=False, blank=False, default=False)
+
+    def setAdmin(self):
+        self.is_admin = True
+        self.save()
+
+    def __str__(self):
+        return self.username
 
 class Question(models.Model):
     title = models.CharField(max_length=200)
@@ -90,9 +102,8 @@ class Question(models.Model):
 
 class Pa_apllicationForm(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    personalNuber = models.CharField(max_length=13)
-    phoneNumber = models.PhoneNumberField(null=False, blank=False)
-    address = models.CharField(max_length=200)
+    symptom = models.CharField(max_length=200, default='')
+    doctor = models.CharField( default='',max_length=50)
     create_date = models.DateTimeField()
 
     def __str__(self):
