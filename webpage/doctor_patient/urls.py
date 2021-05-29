@@ -40,6 +40,8 @@ urlpatterns = [
     path('patient/login/', patient_views.pa_login),
     path('patient/signup/', patient_views.pa_signup),
     path('patient/feedback/', patient_views.pa_feedback),
+    path('patient/appllication/', patient_views.pa_application),
+
 
 
 
