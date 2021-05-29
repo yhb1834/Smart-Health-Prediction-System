@@ -55,6 +55,10 @@ def pa_signup(request):
         form = PatientUserForm()
     return render(request, 'patient/signup.html', {'form': form})
 
+
+def pa_application(request):
+    return render(request, 'patient/application.html')
+
 def pa_feedback(request):
     #나중에 피드백 저장 모델 하고 폼 만들기
     return render(request, 'patient/feedback.html')
