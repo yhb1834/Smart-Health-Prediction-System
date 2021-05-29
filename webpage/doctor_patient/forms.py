@@ -3,7 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.forms.fields import EmailField
-from .models import Question
+from django.forms.models import model_to_dict
+from .models import Question, Pa_apllicationForm
 
 # Admin 회원가입 폼
 class AdUserForm(UserCreationForm):
@@ -42,6 +43,12 @@ class PatientUserForm(UserCreationForm):
 class PatientLoginForm(AuthenticationForm):
     email = forms.CharField(label='email',max_length=255)
     password = forms.CharField(label='password',widget=forms.PasswordInput)
+
+#환자 신청 폼 
+class PatientApplicationForm(forms.ModelForm):
+    class Meta:
+        model = Pa_apllicationForm
+        fields = ['personalNuber','phoneNumber','address']
 
 class QuestionForm(forms.ModelForm):
     class Meta:

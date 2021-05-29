@@ -1,7 +1,8 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.backends import RemoteUserBackend
 from django.shortcuts import render, redirect
-from .forms import PatientUserForm, PatientLoginForm
+from .forms import PatientUserForm, PatientLoginForm, Pa_apllicationForm
+from django.utils import timezone
 from django.contrib.auth.models import Group, User
 
 def pa_main(request):
@@ -56,7 +57,22 @@ def pa_signup(request):
     return render(request, 'patient/signup.html', {'form': form})
 
 
+#어플리케이션 폼 나중에 html하고 연결 
 def pa_application(request):
+    if not request.user.is_authenticated:
+        return redirect('../login')
+    
+    if request.method == 'POST':
+        form = Pa_apllicationForm(request.POST)
+        if form.is_valid():
+            appl = form.save(commit=False)
+            appl.create_date = timezone.now()
+            appl.save()
+    
+    form = Pa_apllicationForm()
+    context = {
+        'form' : form,
+    }
     return render(request, 'patient/application.html')
 
 def pa_feedback(request):
