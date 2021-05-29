@@ -36,13 +36,18 @@ urlpatterns = [
     path('doctor/main/', views.doctor_main),
     path('doctor/login/', views.doctor_login),
     path('doctor/signup/', views.doctor_signup),
+    path('doctor/patient-list/', views.doctor_patient_list),
+    path('doctor/prescription/', views.doctor_prescription),
+    path('doctor/reservation/', views.doctor_reservation),
+    path('doctor/feedback/', views.doctor_feedback),
+
 
     #patient urls
     path('patient/main/', patient_views.pa_main),
     path('patient/login/', patient_views.pa_login),
     path('patient/signup/', patient_views.pa_signup),
     path('patient/feedback/', patient_views.pa_feedback),
-    path('patient/appllication/', patient_views.pa_application),
+    path('patient/application/', patient_views.pa_application),
 
 
 

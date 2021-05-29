@@ -61,14 +61,14 @@ def pa_signup(request):
 def pa_application(request):
     if not request.user.is_authenticated:
         return redirect('../login')
-    
+
     if request.method == 'POST':
         form = Pa_apllicationForm(request.POST)
         if form.is_valid():
             appl = form.save(commit=False)
             appl.create_date = timezone.now()
             appl.save()
-    
+
     form = Pa_apllicationForm()
     context = {
         'form' : form,
