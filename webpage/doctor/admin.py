@@ -6,8 +6,8 @@ from .models import Doctor_user
 @admin.register(Doctor_user)
 class Doctor_user_admin(admin.ModelAdmin):
     list_display = (
-        'user_id',
-        'user_password',
+        'username',
+        'password',
         'registered_date',
-        'user_email'
+        'email'
     )
