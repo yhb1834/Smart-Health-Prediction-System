@@ -24,6 +24,7 @@ def ad_signup(request):
        if request.method == "POST":
            form = AdUserForm(request.POST)
            if form.is_valid():
+               #form.setAdmin() is_admin 값 어떻게 바꾸냐???? 일단 이건 안되는데
                form.save()
                username = form.cleaned_data.get('username')
                raw_password = form.cleaned_data.get('password1')

@@ -1,7 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
+from .models import User
 from django.forms.fields import EmailField
 from django.forms.models import model_to_dict
 from .models import Question, Pa_apllicationForm
@@ -48,7 +49,7 @@ class PatientLoginForm(AuthenticationForm):
 class PatientApplicationForm(forms.ModelForm):
     class Meta:
         model = Pa_apllicationForm
-        fields = ['personalNuber','phoneNumber','address']
+        fields = ['symptom','doctor']
 
 class QuestionForm(forms.ModelForm):
     class Meta:
