@@ -4,9 +4,16 @@ from doctor_patient.forms import AdUserForm, AdLoginForm, QuestionForm # 여기 
 from django.utils import timezone
 
 # Create your views here.
+
+# 랜딩페이지
+def home(request):
+    return render(request, 'home.html')
+
+# admin main 페이지
 def ad_main(request):
     return render(request, 'ad/main.html')
 
+# admin 로그인 페이지
 def ad_login(request):
     if request.method =='POST':
         user_form = AdLoginForm(request,request.POST)
@@ -19,6 +26,7 @@ def ad_login(request):
         user_form = AdLoginForm()
     return render(request, 'ad/login.html',{'form': user_form})
 
+# admin 회원가입 페이지
 def ad_signup(request):
     #계정 생성
        if request.method == "POST":
@@ -35,12 +43,15 @@ def ad_signup(request):
            form = AdUserForm()
        return render(request, 'ad/signup.html', {'form': form})
 
+# admin 의사 자격 확인 페이지
 def ad_doctor_certify(request):
     return render(request, 'ad/doctorcertify.html')
 
+# admin feedback 리스트 페이지
 def ad_feedback(request):
     return render(request, 'ad/feedback.html')
 
+# admin feedback 쓰기 페이지
 def ad_feedback_write(request):
     if request.method == "POST":
         form = QuestionForm(request.POST)

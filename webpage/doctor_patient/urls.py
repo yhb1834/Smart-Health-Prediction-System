@@ -20,6 +20,8 @@ from . import views, patient_views
 urlpatterns = [
     #admin urls
     path('admin/', admin.site.urls),
+    path('home/', views.home), # admin 메인 페이지
+
     path('ad/main/', views.ad_main), # admin 메인 페이지
     path('ad/login/', views.ad_login), # admin 로그인
     path('ad/signup/', views.ad_signup), # admin 회원가입
