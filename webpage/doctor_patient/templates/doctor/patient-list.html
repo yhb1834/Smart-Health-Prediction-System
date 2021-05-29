@@ -139,7 +139,7 @@
                <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Doctor ID</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="dkdkd">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value={{doctor_name}}>
                 </div>
               </div>
               <div class="form-group row">
@@ -149,71 +149,33 @@
                 </div>
               </div>
 <br>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col" style="text-align: center">순서</th>
-            <th scope="col" style="text-align: center">환자 이름</th>
-            <th scope="col" style="text-align: center">날짜 및 시간</th>
-            <th scope="col" style="text-align: center">증상</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            <th scope="row" style="text-align: center">1</th>
-            <td style="text-align: center">백준</td>
-            <td style="text-align: center">2021년 5월 31일 3시 00분</td>
-            <td>가벼운 진료
-          <tr class="table-active">
-            <th scope="row" style="text-align: center">3</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">4</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-        <tr class="table-active">
-            <th scope="row" style="text-align: center">5</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">6</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-        <tr class="table-active">
-            <th scope="row" style="text-align: center">7</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">8</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-         <tr class="table-active">
-            <th scope="row" style="text-align: center">9</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">10</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="row mt-5">
+  <div class="col-12">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" style="text-align: center">순서</th>
+          <th scope="col" style="text-align: center">환자 이름</th>
+          <th scope="col" style="text-align: center">날짜 및 시간</th>
+          <th scope="col" style="text-align: center">증상</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for patient in patient_list %}
+        <tr>
+          <th scope="row">{{ patient.id }}</th>
+          <td>{{ patient.patient_name }}</td>
+          <td>{{ patient.date }}</td>
+          <td>{{ patient.symptom }}</td>
+          
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
       <div class="text-center">
         <ul class="pagination ">
           <li class="page-item disabled">
