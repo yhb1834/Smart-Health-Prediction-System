@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>2021SWE::Smart Health Prediction System</title>
+    <title>Patient::Search</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -48,6 +48,7 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/admin.css' %}" rel="stylesheet" />
   </head>
 
   <body>
@@ -65,9 +66,8 @@
             href="#"
             ><img
               class="d-inline-block me-3"
-              src="{% static 'assets/img/icons/logo.png' %}"
               alt=""
-            />Smart Health Prediction System</a
+            />2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -93,12 +93,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Find a doctor</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Feedback</a>
+                <a class="nav-link" href="#testimonial">Application form</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="#testimonial">Report</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">My page</a>
               </li>
             </ul>
           </div>
@@ -109,7 +114,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(assets/img/illustrations/services-bg.png);
+            background-image: url({% static 'assets/img/illustrations/dot.png' %});
             background-position: center left;
             background-size: auto;
           "
@@ -131,34 +136,45 @@
             <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">Admin Sign Up</h2>
+              <h2 class="fw-bold">Search</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
+              <div class="col-sm-12 col-md-10 col-lg-6 mx-auto">
+                <div class="card card-signin my-8">
                   <div class="card-body">
-                    <h5 class="card-title text-center">Sign Up</h5>
-                    <form method="POST" class="form-signin">
-                      {% csrf_token %}
-                      {% for field in form %}
-                      <div class="form-group">
-                        <input type="{{ field.field.widget.input_type }}" class="form-control form-control-user" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}" />
-                      </div>
-                      {% if field.errors %}
-                      <span style="color: red">{{ field.errors }}</span>
-                      {% endif %}
-                      {% endfor %}
-                      <button type="submit" class="btn btn-primary btn-user btn-block">signup</button>
-                    </form>
+                    <h4 class="card-title text-center">Find a doctor</h4>
+                    <h6><br/></h6>
+                    <div>
+                      <center>
+                        <form class = 'search'>
+                          <select class = 'SelectSearch' name = 'WhichSearch' style="width:140px;height:35px;">
+                                <option id = 'familymedicine' value = 'familymedicine'>가정의학과</option>
+                                <option id = 'physician' value = 'physician'>내과</option>
+                                <option id = 'anesthesia' value = 'anesthesia'>마취통증의학과</option>
+                                <option id = 'obstetrician' value = 'obstetrician'>산부인과</option>
+                                <option id = 'pediatrician' value = 'pediatrician'>소아과</option>
+                                <option id = 'psychiatry' value = 'psychiatry'>정신의학과</option>
+                                <option id = 'plasticsurgeon' value = 'plasticsurgeon'>성형외과</option>
+                                <option id = 'surgeon' value = 'surgeon'>외과</option>
+                                <option id = 'orthopedist' value = 'orthopedist'>정형외과</option>
+                                <option id = 'physiatrist' value = 'physiatrist'>재활의학과</option>
+                                <option id = 'thoracicsurgeon' value = 'thoracicsurgeon'>흉부외과</option>
+                                <option id = 'oculist' value = 'oculist'>안과</option>
+                                <option id = 'noseandthroat' value = 'noseandthroat'>이비인후과
+                                <option id = 'urologist' value = 'urologist'>비뇨의학과</option>
+                                <option id = 'dermatologist' value = 'dermatologist'>피부과</option>
+                                <option id = 'dentist' value = 'dentist'>치과</option>
+                            </select>
+                            <input type="text" placeholder="의사명 입력" style="width:250px;height:35px;">
+                            <input type="button" class="btn btn-primary" value="Search" onclick="doctor_search()">
+                        </form>
+                      </center>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
               </div>
             </div>
           </div>
@@ -195,9 +211,9 @@
                   class="img-fluid me-2"
                   src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
-              
+
             </div>
             
   </body>

@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Patient::Sign Up</title>
+    <title>Patient::Application Form</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -48,6 +48,7 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/admin.css' %}" rel="stylesheet" />
   </head>
 
   <body>
@@ -62,7 +63,7 @@
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="../main"
+            href="#"
             ><img
               class="d-inline-block me-3"
               alt=""
@@ -132,10 +133,10 @@
         ></div>
         <!--/.bg-holder-->
 
-        <div class="container-lg">
+            <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">Patient Sign Up</h2>
+              <h2 class="fw-bold">Application</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
@@ -144,29 +145,33 @@
               <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                   <div class="card-body">
-                    <h5 class="card-title text-center">Sign Up</h5>
-                    <form method="POST" class="form-signin">
-                      {% csrf_token %}
-                      {% for field in form %}
-                      <div class="form-group">
-                        <input type="{{ field.field.widget.input_type }}" class="form-control form-control-user" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}" />
+                    <h5 class="card-title text-center">Application form</h5>
+                    <form class="form-signin">
+                        <br />
+                          <div class="form-label-group">
+                            <label for="inputName">Doctor name</label>
+                            <input type="text" id="inputName" class="form-control" placeholder="Enter the name of doctor you prefer." required autofocus>
+                          </div>
+
+                      <br />
+                      <div class="form-label-group">
+                        <label for="inputSymptom">Symptom</label>
+                        <input type="text" id="inputSymptom" class="form-control" placeholder="Please enter your symptoms briefly." required autofocus>
                       </div>
-                      {% if field.errors %}
-                      <span style="color: red">{{ field.errors }}</span>
-                      {% endif %}
-                      {% endfor %}
-                      <div style="text-align: center">
-                        <button type="submit" class="btn btn-primary btn-user btn-block">Sign up</button>
+
+
+
                       </div>
+                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Submit</button>
+                      
                     </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
@@ -198,9 +203,9 @@
                   class="img-fluid me-2"
                   src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
-              
+
             </div>
             
   </body>
