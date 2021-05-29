@@ -41,8 +41,6 @@ urlpatterns = [
     path('patient/signup/', patient_views.pa_signup),
     path('patient/feedback/', patient_views.pa_feedback),
 
-    # doctor urls
 
-    # patient urls
 
 ]

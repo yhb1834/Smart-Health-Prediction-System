@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from doctor_patient.forms import AdUserForm, AdLoginForm # 여기 부분에 forms.py에 넣어져 있는 것들 꼭 추가!!!
+from doctor_patient.forms import AdUserForm, AdLoginForm, QuestionForm # 여기 부분에 forms.py에 넣어져 있는 것들 꼭 추가!!!
+from django.utils import timezone
 
 # Create your views here.
 def ad_main(request):
@@ -40,7 +41,17 @@ def ad_feedback(request):
     return render(request, 'ad/feedback.html')
 
 def ad_feedback_write(request):
-    return render(request, 'ad/feedbackwrite.html')
+    if request.method == "POST":
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            feedback = form.save(commit=False)
+            feedback.create_date = timezone.now()
+            feedback.save()
+            return redirect('../feedback')
+    else:
+        form = QuestionForm()
+    context = {"form": form}
+    return render(request, 'ad/feedbackwrite.html', context)
 
 
 # 임시로 doctor_관련 view들 추가하여 작업중 (이상진)

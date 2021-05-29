@@ -105,104 +105,38 @@
 <!-- 게시판-->
 <div class="container position-relative">
   <div class="row align-items-center">
-  
-    <div class="container-lg">
-      <div class="row justify-content-center">
-        <div class="col-3 text-center">
-          <h2 class="fw-bold">Feedback board</h2>
-          <hr class="w-25 mx-auto text-dark" style="height: 2px" />
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          
-          <table class="table table-hover">
-            <thead>
-              <tr class="table-dark">
-                <th scope="col" width="5%">No.</th>
-                <th scope="col" width="50%">Title</th>
-                <th scope="col" width="15%">Writer</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>의사면허 등록에 문의가 있습니다.</td>
-                <td>의사</td>
-              </tr>
-              
-              <tr class="table-active">
-                <th scope="row">2</th>
-                <td>항상 잘 이용하고 있어요.</td>
-                <td>환자</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Column content</td>
-                <td>Column content</td>
-              </tr>
-              <tr class="table-active">
-                <th scope="row">4</th>
-                <td>Column content</td>
-                <td>Column content</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Column content</td>
-                <td>Column content</td>
-              </tr>
-              <tr class="table-active">
-                <th scope="row">6</th>
-                <td>Column content</td>
-                <td>Column content</td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td>Column content</td>
-                <td>Column content</td>
-              </tr>
-              <tr class="table-active">
-                <th scope="row">8</th>
-                <td>Column content</td>
-                <td>Column content</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <div style="text-align: right">
+    <div class="container my-3">
+      <table class="table">
+          <thead>
+          <tr class="thead-dark">
+              <th>번호</th>
+              <th>제목</th>
+              <th>작성일시</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% if question_list %}
+          {% for question in question_list %}
+          <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>
+                  <a href="{% url 'review:detail' question.id %}">{{ question.subject }}</a>
+              </td>
+              <td>{{ question.create_date }}</td>
+          </tr>
+          {% endfor %}
+          {% else %}
+          <tr>
+              <td colspan="3" 질문이 없습니다.></td>
+          </tr>
+          {% endif %}
+          </tbody>
+      </table>
+      <div style="text-align: right">
             <button type="button" class="btn btn-primary btn-lg" onclick="location.href='../feedbackwrite'">Write</button>
             <button type="button" class="btn btn-danger btn-lg">Delete</button>
-          </div>
-          <div class="justify-content-center" style="text-align: center">
-            <ul class="pagination pagination-sm">
-              <li class="page-item disabled">
-                <a class="page-link" href="#">&laquo;</a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">4</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">5</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">&raquo;</a>
-              </li>
-            </ul>
-
-          </div>
-        </div>
       </div>
-    </div>
-    </div>
+  </div>
 </div>
 
       <section class="py-6 pt-7 bg-primary-gradient">

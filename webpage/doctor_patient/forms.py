@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.forms.fields import EmailField
+from .models import Question
 
 # Admin 회원가입 폼
 class AdUserForm(UserCreationForm):
@@ -42,11 +43,14 @@ class PatientLoginForm(AuthenticationForm):
     email = forms.CharField(label='email',max_length=255)
     password = forms.CharField(label='password',widget=forms.PasswordInput)
 
-#class QuestionForm(forms.ModelForm):
-    # 질문 작성 폼
-    #class Meta:
-        #model = Question
-        #fields = ['title', 'content']
+class QuestionForm(forms.ModelForm):
+    class Meta:
+        model = Question
+        fields = ['title', 'content']
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'content': forms.Textarea(attrs={'class': 'form-control', 'rows': 10}),
+        }
 
 
 #class AnswerForm(forms.ModelForm):

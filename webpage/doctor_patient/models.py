@@ -34,3 +34,56 @@ class UserManager(BaseUserManager):
             confirmedEmail=False,
         )
         return user
+
+
+class User(AbstractUser):
+    email = models.EmailField(error_messages={'unique': "This email has already been registered."},
+                              verbose_name='email', max_length=255, unique=True)
+    username = models.CharField(max_length=30)
+    active = models.BooleanField(default=True)
+    admin = models.BooleanField(default=False)
+    staff = models.BooleanField(default=False)
+    confirmedEmail = models.BooleanField(default=False)
+    dateRegistered = models.DateTimeField(
+        auto_now_add=True)
+    objects = UserManager()
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
+
+    mail_alarm_time_hour = models.IntegerField(null=True)
+    mail_alarm_time_minute = models.IntegerField(null=True)
+
+    def __str__(self):
+        return "<%d %s>" % (self.pk, self.email)
+
+    def has_perm(self, perm, obj=None):
+        return True
+
+    def has_module_perms(self, app_label):
+        return True
+
+    def get_username(self):
+        return self.username
+
+    def get_email(self):
+        return self.email
+
+    @property
+    def is_staff(self):
+        return self.staff
+
+    def is_admin(self):
+        return self.admin
+
+    def is_active(self):
+        return self.active
+
+
+class Question(models.Model):
+    title = models.CharField(max_length=200)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    content = models.TextField()
+    create_date = models.DateTimeField()
+
+    def __str__(self):
+        return self.title
