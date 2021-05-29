@@ -126,31 +126,29 @@
                                 <div class="card card-signin my-5">
                                     <div class="card-body">
                                         <h5 class="card-title text-center">Log In</h5>
-                                        <form class="form-signin"  method="POST">
-                                          {% csrf_token %}
-                                            <div class="form-label-group">
-                                                <input
-                                                name="email"
-                                                    type="email"
-                                                    id="inputEmail"
-                                                    class="form-control"
-                                                    placeholder="Email address"
-                                                    required="required"
-                                                    autofocus="autofocus">
-                                                <label for="inputEmail">Email address</label>
+                                        <div class="row mt-5">
+                                            <div class="col-12">
+                                                {{error}}
                                             </div>
+                                        </div>
+                                        <form class="form-signin" method="POST">
+                                            {% csrf_token %}
 
-                                            <div class="form-label-group">
-                                                <input
-                                                name="password"
-                                                    type="password"
-                                                    id="inputPassword"
-                                                    class="form-control"
-                                                    placeholder="Password"
-                                                    required="required">
-                                                <label for="inputPassword">Password</label>
-                                            </div>
+                                            {% for field in form %}
+                                                <div class="form-group">
 
+                                                    <input
+                                                        type="{{ field.field.widget.input_type }}"
+                                                        class="form-control"
+                                                        id="{{ field.id_for_label }}"
+                                                        placeholder="{{ field.label }}"
+                                                        name="{{ field.name }}"/>
+                                                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                                </div>
+                                                {% if field.errors %}
+                                                    <span style="color: red;">{{ field.errors }}</span>
+                                                {% endif %}
+                                            {% endfor %}
                                             <div class="custom-control custom-checkbox mb-3">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                                                 <label class="custom-control-label" for="customCheck1">Remember password</label>

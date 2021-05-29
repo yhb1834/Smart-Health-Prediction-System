@@ -126,8 +126,13 @@
                                 <div class="card card-signin my-5">
                                     <div class="card-body">
                                         <h5 class="card-title text-center">Sign Up</h5>
+                                        <div class="row mt-5">
+                                            <div class="col-12">
+                                              {{error}}
+                                            </div>
+                                          </div>
                                         <div class="form-group">
-                                            <form class="form-signin" method="POST">
+                                            <form class="form-signin" method="POST" action=".">
                                                 {% csrf_token %}
                                                 <label class="form-label mt-4"></label>
                                                 <div class="form-floating mb-3">
