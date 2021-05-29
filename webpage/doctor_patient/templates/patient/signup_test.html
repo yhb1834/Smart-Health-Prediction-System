@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Admin::Login</title>
+    <title>2021SWE::Smart Health Prediction System</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -24,7 +24,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
+      href="{% static 'assets/img/favicons/favicon-32x32.png' %}"
     />
     <link
       rel="icon"
@@ -62,11 +62,12 @@
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="../main"
+            href="#"
             ><img
               class="d-inline-block me-3"
+              src="{% static 'assets/img/icons/logo.png' %}"
               alt=""
-            />2021SWE::CAUnseling</a
+            />Smart Health Prediction System</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -85,13 +86,19 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="../main"
+                <a class="nav-link fw-bold active" aria-current="page" href="#"
                   >Home</a
                 >
               </li>
-              <li class="nav-item"><a class="nav-link" href="../doctorcertify">Doctor certify</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="../feedback">Feedback</a>
+                <a class="nav-link" href="#">Find a doctor</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About us</a>
               </li>
             </ul>
           </div>
@@ -102,7 +109,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url({% static 'assets/img/illustrations/services-bg.png' %});
+            background-image: url(assets/img/illustrations/services-bg.png);
             background-position: center left;
             background-size: auto;
           "
@@ -121,10 +128,10 @@
         ></div>
         <!--/.bg-holder-->
 
-        <div class="container-lg">
+            <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">Admin login</h2>
+              <h2 class="fw-bold">Admin Sign Up</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
@@ -133,8 +140,8 @@
               <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                   <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="user" method="POST" action=".">
+                    <h5 class="card-title text-center">Sign Up</h5>
+                    <form method="POST" class="form-signin">
                       {% csrf_token %}
                       {% for field in form %}
                       <div class="form-group">
@@ -144,16 +151,7 @@
                       <span style="color: red">{{ field.errors }}</span>
                       {% endif %}
                       {% endfor %}
-                      {% if message %}
-                      <span style="color: red">{{ message }}</span>
-                      {% endif %}
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                      </div>
-                      <div style="text-align: center">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                      </div>
+                      <button type="submit" class="btn btn-primary btn-user btn-block">signup</button>
                     </form>
                   </div>
                 </div>
@@ -161,9 +159,11 @@
             </div>
           </div>
         </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-
-      
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"

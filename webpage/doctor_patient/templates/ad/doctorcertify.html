@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Admin::Login</title>
+    <title>Admin::Doctor Certificate</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -24,7 +24,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
+      href="{% static 'assets/img/favicons/favicon-32x32.png' %}"
     />
     <link
       rel="icon"
@@ -121,49 +121,39 @@
         ></div>
         <!--/.bg-holder-->
 
-        <div class="container-lg">
+            <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">Admin login</h2>
+              <h2 class="fw-bold">Doctor Certificate</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="user" method="POST" action=".">
-                      {% csrf_token %}
-                      {% for field in form %}
-                      <div class="form-group">
-                        <input type="{{ field.field.widget.input_type }}" class="form-control form-control-user" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}" />
-                      </div>
-                      {% if field.errors %}
-                      <span style="color: red">{{ field.errors }}</span>
-                      {% endif %}
-                      {% endfor %}
-                      {% if message %}
-                      <span style="color: red">{{ message }}</span>
-                      {% endif %}
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                      </div>
-                      <div style="text-align: center">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+          <div class="card mb-3">
+            <h3 class="card-header">의사 면허 확인</h3>
+            <div class="card-body">
+              <h5 class="card-title">의사 면허 진위 여부를 확인 중입니다.</h5>
+              <h6 class="card-subtitle text-muted">확인 중</h6>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+              <rect width="100%" height="100%" fill="#868e96"></rect>
+              <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Doctor 면허증</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">CAUnseling은 의사의 개인정보를 보호합니다.</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="card-link">의사프로필</a>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+            <div style="text-align: right">
+              <button type="button" class="btn btn-danger btn-lg">Cancel</button>
+              <button type="button" class="btn btn-primary btn-lg">Confirm</button>
             </div>
           </div>
         </div>
       </section>
-
-      
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
@@ -195,7 +185,7 @@
                   class="img-fluid me-2"
                   src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
               
             </div>

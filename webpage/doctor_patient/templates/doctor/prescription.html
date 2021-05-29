@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Admin::Login</title>
+    <title>Doctor::처방전</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -24,7 +24,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
+      href="{% static 'assets/img/favicons/favicon-32x32.png' %}"
     />
     <link
       rel="icon"
@@ -62,11 +62,12 @@
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="../main"
+            href="#"
             ><img
               class="d-inline-block me-3"
+              src="{% static 'assets/img/icons/logo.png' %}"
               alt=""
-            />2021SWE::CAUnseling</a
+            />Caunseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -85,13 +86,19 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="../main"
+                <a class="nav-link fw-bold active" aria-current="page" href="#"
                   >Home</a
                 >
               </li>
-              <li class="nav-item"><a class="nav-link" href="../doctorcertify">Doctor certify</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="../feedback">Feedback</a>
+                <a class="nav-link" href="#">Find a doctor</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About us</a>
               </li>
             </ul>
           </div>
@@ -121,49 +128,58 @@
         ></div>
         <!--/.bg-holder-->
 
-        <div class="container-lg">
+            <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">Admin login</h2>
+              <h2 class="fw-bold">처방전</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="user" method="POST" action=".">
-                      {% csrf_token %}
-                      {% for field in form %}
-                      <div class="form-group">
-                        <input type="{{ field.field.widget.input_type }}" class="form-control form-control-user" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}" />
-                      </div>
-                      {% if field.errors %}
-                      <span style="color: red">{{ field.errors }}</span>
-                      {% endif %}
-                      {% endfor %}
-                      {% if message %}
-                      <span style="color: red">{{ message }}</span>
-                      {% endif %}
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                      </div>
-                      <div style="text-align: center">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                      </div>
-                    </form>
-                  </div>
+          <form>
+            <fieldset>
+               <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Doctor ID</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="dkdkd">
                 </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Patient ID</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="dkdkd">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">DATE</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="2021-05-26">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="form-label mt-2">증상</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea" class="form-label mt-2">진단</label>
+                <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
+              </div>
+
+              <br>
+              <div style="text-align: center">
+                <button type="submit" class="btn btn-primary" style="text-align: center">진단서 발급</button>
+                <button type="submit" class="btn btn-primary" style="text-align: center">추가예약</button>
+              </div>
+                  <br>
+            </fieldset>
+          </form>
+        </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      
+
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
@@ -195,10 +211,10 @@
                   class="img-fluid me-2"
                   src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">Caunseling</span></a
               >
-              
+
             </div>
-            
+
   </body>
 </html>

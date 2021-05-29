@@ -23,9 +23,10 @@ urlpatterns = [
     path('ad/main/', views.ad_main), # admin 메인 페이지
     path('ad/login/', views.ad_login), # admin 로그인
     path('ad/signup/', views.ad_signup), # admin 회원가입
-    #path('adm/doctor-certify', views.ad_doctor_certify), # admin 의사 인증
+    path('ad/doctorcertify/', views.ad_doctor_certify), # admin 의사 인증
+    path('ad/feedback/', views.ad_feedback), # admin feedback
+    path('ad/feedbackwrite/', views.ad_feedback_write), # admin feedback
     #path('ad/disease', views.admin_disease), # admin 질병 DB 관리
-    #path('ad/feedback', views.admin_feedback), # admin feedback
     #path('ad/doctor-profile', views.admin_doctor_profile), # admin 의사 프로필 DB 관리
     #path('ad/patient-profile', views.admin_patient_profile), # admin 환자 프로필 DB 관리
 
@@ -35,9 +36,10 @@ urlpatterns = [
     path('doctor/signup/', views.doctor_signup),
 
     #patient urls
-    path('patient/main', patient_views.pa_main),
+    path('patient/main/', patient_views.pa_main),
     path('patient/login/', patient_views.pa_login),
     path('patient/signup/', patient_views.pa_signup),
+    path('patient/feedback/', patient_views.pa_feedback),
 
     # doctor urls
 

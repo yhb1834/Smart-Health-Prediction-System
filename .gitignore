@@ -150,3 +150,6 @@ dmypy.json
 
 # swap file(linux)
 *.swp
+
+#맥 부산물
+*.DS_Store

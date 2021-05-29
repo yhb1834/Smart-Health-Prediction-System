@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>2021SWE::Smart Health Prediction System</title>
+    <title>Admin::Sign Up</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -62,12 +62,11 @@
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="#"
+            href="../main"
             ><img
               class="d-inline-block me-3"
-              src="{% static 'assets/img/icons/logo.png' %}"
               alt=""
-            />Smart Health Prediction System</a
+            />2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -86,19 +85,13 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="#"
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
                   >Home</a
                 >
               </li>
+              <li class="nav-item"><a class="nav-link" href="../doctorcertify">Doctor certify</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Find a doctor</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Feedback</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="../feedback">Feedback</a>
               </li>
             </ul>
           </div>
@@ -109,7 +102,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(assets/img/illustrations/services-bg.png);
+            background-image: url({% static 'assets/img/illustrations/services-bg.png' %});
             background-position: center left;
             background-size: auto;
           "
@@ -128,7 +121,7 @@
         ></div>
         <!--/.bg-holder-->
 
-            <div class="container-lg">
+        <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
               <h2 class="fw-bold">Admin Sign Up</h2>
@@ -151,19 +144,18 @@
                       <span style="color: red">{{ field.errors }}</span>
                       {% endif %}
                       {% endfor %}
-                      <button type="submit" class="btn btn-primary btn-user btn-block">signup</button>
+                      <div style="text-align: center">
+                        <button type="submit" class="btn btn-primary btn-user btn-block">Sign up</button>
+                      </div>
                     </form>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
+
+      
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"

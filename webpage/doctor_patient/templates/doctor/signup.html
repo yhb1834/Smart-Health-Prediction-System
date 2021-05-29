@@ -1,154 +1,224 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ===============================================-->
+        <!-- Document Title-->
+        <!-- ===============================================-->
+        <title>Doctor::Sign Up</title>
 
+        <!-- ===============================================-->
+        <!-- Favicons-->
+        <!-- ===============================================-->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"/>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="{% static 'assets/img/favicons/favicon-32x32.png' %}"/>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="{% static 'assets/img/favicons/favicon-16x16.png' %}"/>
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="{% static 'assets/img/favicons/favicon.ico' %}"/>
+        <link rel="manifest" href="{% static 'assets/img/favicons/manifest.json' %}"/>
+        <meta
+            name="msapplication-TileImage"
+            content="{% static 'assets/img/favicons/mstile-150x150.png' %}"/>
+        <meta name="theme-color" content="#ffffff"/>
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>Trafalgar | Landing, Corporate &amp; Business Templatee</title>
+        <!-- ===============================================-->
+        <!-- Stylesheets-->
+        <!-- ===============================================-->
+        <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet"/>
+    </head>
 
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="../static/assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="../static/assets/img/favicons/mstile-150x150.png">
-    <meta name="theme-color" content="#ffffff">
-
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="../static/assets/css/theme.css" rel="stylesheet" />
-
-  </head>
-
-
-  <body>
-
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="#"><img class="d-inline-block me-3" src="../static/assets/img/icons/logo.png" alt="" />Trafalgar</a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
-              <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a doctor</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
-              <li class="nav-item"><a class="nav-link" href="#testimonial">Feedback</a></li>
-              <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <section class="py-0">
-        <div class="bg-holder" style="background-image:url(../static/assets/img/illustrations/dot.png);background-position:left;background-size:auto;margin-top:-105px;">
-        </div>
-        <!--/.bg-holder-->
-
-         <div class="container position-relative">
-          <div class="row align-items-center">
-            <div class="col-md-12 col-lg-8 text-center text-md-start pt-5 pt-md-9">
-              <h1 class="mb-4 display-3 fw-bold"><center>Doctor Sign Up</center></h1>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-holder" style="background-image:url(../static/assets/img/illustrations/dot-2.png);background-position:center right;background-size:auto;margin-left:-180px;margin-top:20px;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container-lg">
-          <div class="row justify-content-center h-100 pt-7 g-4">
-            <div class="col-sm-9 col-md-4">
-              <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
-                <div class="card-body text-center text-md-start">
-                  <div class="py-3"><img class="img-fluid" src="../static/assets/img/illustrations/online-pharmacy.png" height="90" alt="" /></div>
-                  <div class="py-3">
-                    <h4 class="fw-bold card-title">Doctor</h4>
-                    <p class="card-text">Buy your medicines with our mobile application with a simple delivery system</p>
-                    <form class="form-signin">
-                      <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Email address</label>
-                      </div>
-
-                      <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
-                      </div>
-                      <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
-                      </div>
-                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-
-                    </form>
-                  </div>
+    <body>
+        <!-- ===============================================-->
+        <!-- Main Content-->
+        <!-- ===============================================-->
+        <main class="main" id="top">
+            <nav
+                class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+                data-navbar-on-scroll="data-navbar-on-scroll">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="#"><img
+                        class="d-inline-block me-3"
+                        src="{% static 'assets/img/icons/logo.png' %}"
+                        alt=""/>Caunseling</a >
+                    <button
+                        class="navbar-toggler collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold active" aria-current="page" href="#">Home</a >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Find a doctor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Find a patient</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonial">Feedback</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About us</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
+            </nav>
+
+            <section class="py-8">
+                <div
+                    class="bg-holder"
+                    style="
+            background-image: url({% static 'assets/img/illustrations/services-bg.png' %});
+            background-position: center left;
+            background-size: auto;
+          "></div>
+                <!--/.bg-holder-->
+
+                <div
+                    class="bg-holder"
+                    style="
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
+            background-position: center right;
+            background-size: auto;
+            margin-left: -180px;
+            margin-top: 20px;
+          "></div>
+                <!--/.bg-holder-->
+
+                <div class="container-lg">
+                    <div class="row justify-content-center">
+                        <div class="col-3 text-center">
+                            <h2 class="fw-bold">Doctor Sign Up</h2>
+                            <hr class="w-25 mx-auto text-dark" style="height: 2px"/>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                                <div class="card card-signin my-5">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Sign Up</h5>
+                                        <div class="row mt-5">
+                                            <div class="col-12">
+                                              {{error}}
+                                            </div>
+                                          </div>
+                                        <div class="form-group">
+                                            <form class="form-signin" method="POST" action=".">
+                                                {% csrf_token %}
+                                                <label class="form-label mt-4"></label>
+                                                <div class="form-floating mb-3">
+                                                    <input
+                                                        name="username"
+                                                        type="username"
+                                                        class="form-control"
+                                                        id="username"
+                                                        placeholder="username">
+                                                        <label for="username">username</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input
+                                                        name="email"
+                                                        type="email"
+                                                        class="form-control"
+                                                        id="floatingInput"
+                                                        placeholder="name@example.com">
+                                                        <label for="floatingInput">Email address</label>
+                                                    </div>
+                                                    <div class="form-floating">
+                                                        <input
+                                                            name="password1"
+                                                            type="password"
+                                                            class="form-control"
+                                                            id="floatingPassword"
+                                                            placeholder="Password">
+                                                            <label for="floatingPassword">Password</label>
+                                                        </div>
+                                                        <br/>
+                                                        <div class="form-floating">
+                                                            <input
+                                                                name="password2"
+                                                                type="password"
+                                                                class="form-control"
+                                                                id="floatingPassword"
+                                                                placeholder="Password Again">
+                                                                <label for="floatingPassword">Password Again</label>
+                                                            </div>
+                                                        </div>
+                                                        <br/>
+                                                        <div style="text-align: center">
+                                                            <button type="button" class="btn btn-primary">Cancel</button>
+                                                            <button type="submit" class="btn btn-danger">Sign Up</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container position-relative">
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-6 py-lg-8" id="about">
-        <div class="bg-holder" style="background-image:url(../static/assets/img/illustrations/dot.png);background-position:right bottom;background-size:auto;margin-top:50px;">
-        </div>
-        <!--/.bg-holder-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-      <section class="py-8" id="testimonial">
-        <div class="container">
-          <div class="bg-holder z-index-1" style="background-image:url(../static/assets/img/illustrations/dot.png);background-position:right top;background-size:auto;margin-left:-30px;margin-top:10px;filter:contrast(1.5);">
-          </div>
-          <!--/.bg-holder-->
-
-          <div class="bg-holder z-index-1" style="background-image:url(../static/assets/img/illustrations/dot-2.png);background-position:left bottom;background-size:auto;margin-left:-35px;margin-top:-65px;filter:contrast(1.5);">
-          </div>
-          <!--/.bg-holder-->
-
-
-
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
-
-
-
-
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="vendors/@popperjs/popper.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="../static/assets/js/theme.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&amp;display=swap" rel="stylesheet">
-  </body>
-
-</html>
+        </section>
+        <section class="py-6 pt-7 bg-primary-gradient">
+            <div
+                class="bg-holder"
+                style="
+            background-image: url({% static 'assets/img/illustrations/dot.png' %});
+            background-position: left bottom;
+            background-size: auto;
+            filter: contrast(1.5);
+          "></div>
+            <!--/.bg-holder-->
+            <div
+                class="bg-holder"
+                style="
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
+            background-position: right top;
+            background-size: auto;
+            margin-top: -75px;
+          "></div>
+            <!--/.bg-holder-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 order-0 order-sm-0 pe-6">
+                        <a class="text-decoration-none" href="#"><img
+                            class="img-fluid me-2"
+                            src="{% static 'assets/img/icons/footer-logo.png' %}"
+                            alt=""/>
+                            <span class="fw-bold fs-1 text-light">Caunseling</span>
+                        </a >
+                    </div>
+                </body>
+            </html>

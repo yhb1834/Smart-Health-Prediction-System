@@ -2,10 +2,10 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from django.forms.fields import EmailField
 
-
+# Admin 회원가입 폼
 class AdUserForm(UserCreationForm):
-    # 회원가입 폼
     email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
     class Meta:
         model = User
@@ -17,19 +17,30 @@ class AdUserForm(UserCreationForm):
             raise forms.ValidationError('비밀번호가 일치하지 않습니다.')
         return data['confirm_password']
 
+# Admin 로그인 폼
+class AdLoginForm(AuthenticationForm):
+    email = forms.CharField(label='email',max_length=255)
+    password = forms.CharField(label='password',widget=forms.PasswordInput)
+
+
+# Patient 회원가입 폼
 class PatientUserForm(UserCreationForm):
-    email = forms.EmailField(label="이메일")
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
 
     class Meta:
         model = User
-        fields = ("username", "email")
+        fields = ['username', 'email']
+    
+    def check_password(self):
+        data = self.cleaned_data
+        if data['password'] != data['check_password']:
+            raise forms.ValidationError('비밀번호가 일치하지 않습니다.')
+        return data['confirm_password']
 
-
-#class LoginForm(AuthenticationForm):
-    # 로그인 폼
-    # email = forms.CharField(label='email',max_length=255)     
-    #password = forms.CharField(label='password',widget=forms.PasswordInput)
-
+#Patient 로그인 폼
+class PatientLoginForm(AuthenticationForm):
+    email = forms.CharField(label='email',max_length=255)
+    password = forms.CharField(label='password',widget=forms.PasswordInput)
 
 #class QuestionForm(forms.ModelForm):
     # 질문 작성 폼
