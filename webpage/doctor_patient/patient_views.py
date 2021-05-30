@@ -4,6 +4,9 @@ from django.shortcuts import render, redirect
 from .forms import PatientUserForm, PatientLoginForm, PatientApplicationForm, PatientDetailsForm, PatientReportForm, QuestionForm
 from django.utils import timezone
 from .models import User, Pa_details, Pa_report
+import sys,os
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from doctor.models import Doctor_user
 
 def pa_main(request):
     context = {
@@ -20,7 +23,7 @@ def pa_search(request):
 
     if q:
         #일단 q로 가져오는 것 까지는 성공
-        doctor_list=User.objects.all().order_by('username')
+        doctor_list=Doctor_user.objects.all().order_by('username')
         search = doctor_list.filter(username__icontains=q)
         print(len(search))
         for i in search:
