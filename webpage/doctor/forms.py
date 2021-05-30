@@ -34,3 +34,5 @@ class LoginForm(forms.Form):
                 self.add_error('password', '비밀번호가 다릅니다!')
             else:
                 self.user_id = member.id
+                
+                

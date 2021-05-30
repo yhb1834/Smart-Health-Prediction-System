@@ -61,6 +61,19 @@ class QuestionForm(forms.ModelForm):
         }
 
 
+class DoctorUserForm(UserCreationForm):
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+
+    def check_password(self):
+        data = self.cleaned_data
+        if data['password'] != data['check_password']:
+            raise forms.ValidationError('비밀번호가 일치하지 않습니다.')
+        return data['confirm_password']
+
 #class AnswerForm(forms.ModelForm):
     # 답변 작성 폼
     #class Meta:

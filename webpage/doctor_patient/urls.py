@@ -20,6 +20,8 @@ from . import views, patient_views
 urlpatterns = [
     #admin urls
     path('admin/', admin.site.urls),
+    path('home/', views.home), # admin 메인 페이지
+
     path('ad/main/', views.ad_main), # admin 메인 페이지
     path('ad/login/', views.ad_login), # admin 로그인
     path('ad/signup/', views.ad_signup), # admin 회원가입
@@ -34,6 +36,11 @@ urlpatterns = [
     path('doctor/main/', views.doctor_main),
     path('doctor/login/', views.doctor_login),
     path('doctor/signup/', views.doctor_signup),
+    path('doctor/patient-list/', views.doctor_patient_list),
+    path('doctor/prescription/', views.doctor_prescription),
+    path('doctor/reservation/', views.doctor_reservation),
+    path('doctor/feedback/', views.doctor_feedback),
+
 
     #patient urls
     path('patient/main/', patient_views.pa_main),
