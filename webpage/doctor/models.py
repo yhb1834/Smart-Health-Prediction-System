@@ -48,6 +48,7 @@ class Prescription(models.Model):
     diagnosis  = models.TextField(verbose_name="symptom",blank=True)
     symptom  = models.TextField(verbose_name="symptom",blank=True)
     date = models.DateTimeField(auto_now_add=True,verbose_name='date') 
+    medical_expenses = models.IntegerField(blank=True,verbose_name='medical_expenses')
 
     def __str__(self):
         return str(self.doctor_name)
