@@ -155,3 +155,5 @@ dmypy.json
 *.DS_Store
 
 webpage/doctor_patient/migrations/
+
+webpage/doctor/migrations/
