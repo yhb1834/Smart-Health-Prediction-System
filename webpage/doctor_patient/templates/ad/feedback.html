@@ -110,6 +110,7 @@
           <thead>
           <tr class="thead-dark">
               <th>번호</th>
+              <th>작성자</th>
               <th>제목</th>
               <th>작성일시</th>
           </tr>
@@ -118,7 +119,8 @@
           {% if feedback_list %}
           {% for feedback in feedback_list %}
           <tr>
-            <th scope="row">{{ feedback.username }}</th>
+            <th scope="row">{{ feedback.id }}</th>
+            <td>{{ feedback.username }}</td>
             <td>{{ feedback.title }}</td>
             <td>{{ feedback.date }}</td>
             <td>{{ feedback.position }}</td>
