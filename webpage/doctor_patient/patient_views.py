@@ -8,22 +8,26 @@ from .models import User, Pa_details, Pa_report
 def pa_main(request):
     return render(request,'patient/main.html')
 
-def home(request):
+def pa_search(request):
     #home이라 생각하고 여기에 검색 기능이 있어야 하지 않을까? 아니면 나중에 main 하고 합치던지
     #일단 main.html로 연결해 놓는데  나중에 검색결과 페이지를 따로 만들어서 그 검색결과 페이지를 렌더 해야 합니다
 
     #이게 검색 기능 나중에 html에 연결
     q = request.POST.get('q', "")
+    print(q)
     if q:
         doctor_list=User.objects.all().order_by('username')
         search = doctor_list.filter(UsernameField=q)
+        print(search, '이게 서치다')
+        for i in search:
+            print(i)
         context ={
             'doctors':search,
         }
         #검색된 사람들의 정보를 넘겨줌
-        return render(request, 'patient/main.html', context)
+        return render(request, 'patient/search.html', context)
 
-    return render(request,'patient/main.html')
+    return render(request,'patient/search.html')
 
 #이거 프론트하고 연결 해야 합니다.
 def pa_login(request):
@@ -31,12 +35,12 @@ def pa_login(request):
         form = PatientLoginForm(request, request.POSST)
         if form.is_valid():
             login(request, form.get_user(), backend='django.contrib.auth.backends.ModelBackend')
-            return redirect('../home')
+            return redirect('../main')
         else:
             return render(request,"patient/login.html", {'form': form,"message": "Please check your email and password again"})
     else:
         form = PatientLoginForm()
-    return render(request, 'patient/login.html')
+    return render(request, 'patient/login.html', {'form': form})
 
 def pa_signup(request):
     """
