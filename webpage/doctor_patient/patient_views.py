@@ -1,9 +1,9 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.backends import RemoteUserBackend
 from django.shortcuts import render, redirect
-from .forms import PatientUserForm, PatientLoginForm, PatientApplicationForm, PatientDetailsForm, PatientReport
+from .forms import PatientUserForm, PatientLoginForm, PatientApplicationForm, PatientDetailsForm, PatientReportForm, QuestionForm
 from django.utils import timezone
-from django.contrib.auth.models import Group, User
+from .models import User, Pa_details, Pa_report
 
 def pa_main(request):
     return render(request,'patient/main.html')
@@ -25,13 +25,13 @@ def home(request):
 
     return render(request,'patient/main.html')
 
-
+#이거 프론트하고 연결 해야 합니다.
 def pa_login(request):
     if request.method == 'POST':
         form = PatientLoginForm(request, request.POSST)
         if form.is_valid():
             login(request, form.get_user(), backend='django.contrib.auth.backends.ModelBackend')
-            return redirect('../main')
+            return redirect('../home')
         else:
             return render(request,"patient/login.html", {'form': form,"message": "Please check your email and password again"})
     else:
@@ -73,37 +73,65 @@ def pa_application(request):
     context = {
         'form' : form,
     }
-    return render(request, 'patient/application.html')
+    return render(request, 'patient/application.html', context)
 
 def pa_feedback(request):
-    '''
+    
     if not request.user.is_authenticated:
         return redirect('../login')
 
     if request.method == 'POST':
-        form = pa_feedback(request.POST)
+        form = QuestionForm(request.POST)
         if form.is_valid():
-            appl = form.save(commit=False)
-            appl.create_date = timezone.now()
-            appl.save()
+            feed = form.save(commit=False)
+            feed.create_date = timezone.now()
+            feed.save()
 
-    form = Pa_apllicationForm()
+    form = QuestionForm()
     context = {
         'form' : form,
     }
-    '''
-    return render(request, 'patient/feedback.html')
+    
+    return render(request, 'patient/feedback.html', context)
 
-#아직 작업중인 부분
+#아직 작업중인 부분 
 def pa_details(request):
     #환자 세부 정보를 작성 하는 부분
+    if not request.user.is_authenticated:
+        return redirect('../login')
 
-    return render(request, 'patient/details.html')
+    if request.method == 'POST':
+        form = PatientDetailsForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    form = PatientDetailsForm()
+    context = {
+        'form' : form,
+    }
+    return render(request, 'patient/details.html', context)
 
 def pa_report(request):
     #환자 증상을 기술하는 부분
-    return render(request, 'patient/report.html')
+    if not request.user.is_authenticated:
+        return redirect('../login')
+    if request.method == 'POST':
+        form = PatientReportForm(request.POST)
+        if form.is_valid():
+            form.save()
 
-def pa_prescription(request):
+    form = PatientReportForm()
+    context = {
+        'form' : form,
+    }
+
+    return render(request, 'patient/report.html', context)
+
+def pa_prescription(request, id):
     #환자가 작성한 reportfrom을 보여주는 부분
-    return render(request, 'patient/prescription.html')
+    prediscription = Pa_report.objects.all(userid = id)
+    form = prediscription
+    context = {
+        'form' : form,
+    }
+    return render(request, 'patient/prescription.html', context)
