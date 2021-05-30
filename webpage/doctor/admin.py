@@ -33,7 +33,7 @@ class Prescription_Admin(admin.ModelAdmin):
  
 class Feedback_Admin(admin.ModelAdmin):
     list_display = (
-        'doctor_name',              
+        'username',              
             'title', 
             'content',
             'date'

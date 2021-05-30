@@ -156,7 +156,7 @@ def doctor_feedback(request):
         return render(request, 'doctor/feedback.html')
     return render(request, 'doctor/no-permission.html')
     '''
-    user_id = request.session.get('user')
+    #user_id = request.session.get('user')
     
     if user_id:
         
@@ -179,6 +179,7 @@ def doctor_feedback(request):
                 feedback.doctor_name = doctor_user
                 feedback.content = form.cleaned_data['content']
                 feedback.title = form.cleaned_data['title']
+                feedback.position = "doctor"
                 feedback.save()
                 return redirect('../patient-list')
             else:

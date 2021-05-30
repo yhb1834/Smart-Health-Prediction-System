@@ -24,11 +24,11 @@ class Doctor_user(models.Model):
         db_table = 'doctor_user'
         verbose_name = 'doctor_user'
         verbose_name_plural = 'doctor_user'
-      
+
 #환자 대기목록 
 class Patient_list(models.Model):
     doctor_name = models.ForeignKey('doctor.doctor_user', on_delete=models.CASCADE, verbose_name="doctor_name")
-    #patient_name = models.ForeignKey('doctor_patient.User', on_delete=models.CASCADE, verbose_name="patient")
+    patient_name = models.ForeignKey('User', on_delete=models.CASCADE, verbose_name="patient")
     patient_name = models.CharField(max_length=20, verbose_name="patient",blank=True)
     symptom  = models.TextField(verbose_name="symptom",blank=True)
     date = models.DateTimeField(verbose_name="date",blank=True)
@@ -60,13 +60,14 @@ class Prescription(models.Model):
         
 #피드백
 class Feedback(models.Model):
-    doctor_name = models.ForeignKey('doctor.doctor_user', on_delete=models.CASCADE, verbose_name="doctor_name")
+    username = models.CharField(max_length=30,blank=True, verbose_name="username")
     title = models.CharField(max_length=30, verbose_name="tile",blank=True)
     content  = models.TextField(verbose_name="content",blank=True)
     date = models.DateTimeField(auto_now_add=True,verbose_name='date') 
+    position = models.CharField(max_length=10,blank=True, verbose_name="position")
 
     def __str__(self):
-        return str(self.doctor_name)
+        return str(self.username)
 
     class Meta:
         db_table            = 'feedback'
