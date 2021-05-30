@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.backends import RemoteUserBackend
 from django.shortcuts import render, redirect
 from .forms import PatientUserForm, PatientLoginForm, PatientApplicationForm, PatientDetailsForm, PatientReportForm, QuestionForm
@@ -33,7 +33,7 @@ def pa_search(request):
 #이거 프론트하고 연결 해야 합니다.
 def pa_login(request):
     if request.method == 'POST':
-        form = PatientLoginForm(request, request.POSST)
+        form = PatientLoginForm(request, request.POST)
         if form.is_valid():
             login(request, form.get_user(), backend='django.contrib.auth.backends.ModelBackend')
             return redirect('../main')
@@ -42,6 +42,11 @@ def pa_login(request):
     else:
         form = PatientLoginForm()
     return render(request, 'patient/login.html', {'form': form})
+
+def pa_logout(request):
+    #로그아웃
+    logout(request)
+    return redirect('../main')
 
 def pa_signup(request):
     """

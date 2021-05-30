@@ -49,4 +49,6 @@ urlpatterns = [
     path('patient/prescription/', patient_views.pa_prescription),
     path('patient/search/', patient_views.pa_search),
 
+
+    path('patient/logout/', patient_views.pa_logout),
 ]
