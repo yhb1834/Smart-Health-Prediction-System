@@ -26,7 +26,7 @@ def pa_search(request):
             'doctors':search,
         }
         #검색된 사람들의 정보를 넘겨줌
-        return render(request, 'patient/search.html', context)
+        return render(request, 'patient/searchlist.html', context)
 
     return render(request,'patient/search.html')
 
