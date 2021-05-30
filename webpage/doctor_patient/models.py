@@ -101,7 +101,7 @@ class Question(models.Model):
         return self.title
 
 #환자 관련 모델
-class Pa_apllicationForm(models.Model):
+class Pa_apllication(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     symptom = models.CharField(max_length=200, default='')
     doctor = models.CharField( default='',max_length=50)

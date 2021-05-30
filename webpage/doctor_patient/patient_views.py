@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.backends import RemoteUserBackend
 from django.shortcuts import render, redirect
-from .forms import PatientUserForm, PatientLoginForm, Pa_apllicationForm
+from .forms import PatientUserForm, PatientLoginForm, PatientApplicationForm, PatientDetailsForm, PatientReport
 from django.utils import timezone
 from django.contrib.auth.models import Group, User
 
@@ -63,7 +63,25 @@ def pa_application(request):
         return redirect('../login')
 
     if request.method == 'POST':
-        form = Pa_apllicationForm(request.POST)
+        form = PatientApplicationForm(request.POST)
+        if form.is_valid():
+            appl = form.save(commit=False)
+            appl.create_date = timezone.now()
+            appl.save()
+
+    form = PatientApplicationForm()
+    context = {
+        'form' : form,
+    }
+    return render(request, 'patient/application.html')
+
+def pa_feedback(request):
+    '''
+    if not request.user.is_authenticated:
+        return redirect('../login')
+
+    if request.method == 'POST':
+        form = pa_feedback(request.POST)
         if form.is_valid():
             appl = form.save(commit=False)
             appl.create_date = timezone.now()
@@ -73,19 +91,19 @@ def pa_application(request):
     context = {
         'form' : form,
     }
-    return render(request, 'patient/application.html')
-
-def pa_feedback(request):
-    #나중에 피드백 저장 모델 하고 폼 만들기
+    '''
     return render(request, 'patient/feedback.html')
 
 #아직 작업중인 부분
 def pa_details(request):
+    #환자 세부 정보를 작성 하는 부분
 
     return render(request, 'patient/details.html')
 
 def pa_report(request):
+    #환자 증상을 기술하는 부분
     return render(request, 'patient/report.html')
 
 def pa_prescription(request):
+    #환자가 작성한 reportfrom을 보여주는 부분
     return render(request, 'patient/prescription.html')

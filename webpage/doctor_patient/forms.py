@@ -5,7 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from .models import Pa_details, Pa_report, User
 from django.forms.fields import EmailField
 from django.forms.models import model_to_dict
-from .models import Question, Pa_apllicationForm
+from .models import Question, Pa_apllication
 
 # Admin 회원가입 폼
 class AdUserForm(UserCreationForm):
@@ -48,7 +48,7 @@ class PatientLoginForm(AuthenticationForm):
 #환자 신청 폼 
 class PatientApplicationForm(forms.ModelForm):
     class Meta:
-        model = Pa_apllicationForm
+        model = Pa_apllication
         fields = ['symptom','doctor']
 
 #환자 디테일 폼
@@ -58,7 +58,7 @@ class PatientDetailsForm(forms.ModelForm):
         fields = ['birthday','sex','personalID']
 
 #환자 피로트 폼
-class PatientReport(forms.ModelForm):
+class PatientReportForm(forms.ModelForm):
     class Meta:
         model = Pa_report
         fields = ['context']
