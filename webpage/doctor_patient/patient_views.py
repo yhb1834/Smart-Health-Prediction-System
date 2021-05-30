@@ -13,12 +13,13 @@ def pa_search(request):
     #일단 main.html로 연결해 놓는데  나중에 검색결과 페이지를 따로 만들어서 그 검색결과 페이지를 렌더 해야 합니다
 
     #이게 검색 기능 나중에 html에 연결
-    q = request.POST.get('q', "")
-    print(q)
+    q = request.GET.get('q')
+
     if q:
+        #일단 q로 가져오는 것 까지는 성공
         doctor_list=User.objects.all().order_by('username')
-        search = doctor_list.filter(UsernameField=q)
-        print(search, '이게 서치다')
+        search = doctor_list.filter(username__icontains=q)
+        print(len(search))
         for i in search:
             print(i)
         context ={
@@ -80,6 +81,7 @@ def pa_application(request):
     return render(request, 'patient/application.html', context)
 
 def pa_feedback(request):
+    
     if not request.user.is_authenticated:
         return redirect('../login')
 

@@ -160,8 +160,16 @@
                                 <option id = 'dermatologist' value = 'dermatologist'>피부과</option>
                                 <option id = 'dentist' value = 'dentist'>치과</option>
                             </select>
-                            <input type="text" placeholder="의사명 입력" style="width:250px;height:35px;">
-                            <input type="button" class="btn btn-primary" value="Search" onclick="doctor_search()">
+                            <form >
+                        <div class="input-group" action = "" method="get">
+                        {% csrf_token %}
+                            <input class="form-control bg-light border-0 small" type="search" placeholder="Search" aria-label="Search" name="q" value="{{q}}">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-l" type="submit"><span class="mx-2" ><i class="fas fa-fw fa-search"></i>Search</span></button>
+                            </div>
+                        </div>
+                    </form>
+                            
                         </form>
                       </center>
                     </div>
