@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Doctor::Feedback</title>
+    <title>Admin::Feedback</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -56,13 +56,13 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav
-        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+        class="navbar navbar-expand-lg navbar-light fixed-top py-4"
         data-navbar-on-scroll="data-navbar-on-scroll"
       >
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="#"
+            href="../../home"
             ><img
               class="d-inline-block me-3"
               alt=""
@@ -121,46 +121,31 @@
         ></div>
         <!--/.bg-holder-->
 
-            <div class="container-lg">
+        <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
               <h2 class="fw-bold">Feedback</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
+          <div class="container">
+            <h5 class="my-3 border-bottom pb-2">질문등록</h5>
+            <form method="post" class="post-form my-3">
+              <fieldset>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Admin ID</label>
+                  <div class="col-sm-10">
+                    <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="teamuser">
+                  </div>
+                </div>
+                </div>
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                </div>
+                <div style="text-align: center">
+                  <button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
+                </div>
+            </form>
           </div>
-          <form>
-            <fieldset>
-               <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Admin ID</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="teamuser">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">DATE</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="2021-06-07">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1" class="form-label mt-2">TITLE</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="exampleTextarea" class="form-label mt-2">Content</label>
-                <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="formFile" class="form-label mt-2">첨부 파일</label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
-              <br>
-              <div style="text-align: center">
-                <button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
-              </div>
-                  <br>
-            </fieldset>
-          </form>
         </div>
       </section>
 
@@ -195,7 +180,7 @@
                   class="img-fluid me-2"
                   src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
 
             </div>

@@ -76,9 +76,14 @@
 - [Doctor](doctor/class%20diagram)  
 - [Patient](patient/05.classdiagram)  
  
+
+#### 6. The 3rd Checkpoint
+- [Admin](admin/06.%203rd%20checkpoint)  
+- [Doctor](doctor/06.%203rd%20checkpoint)  
+- [Patient](patient/06.%203rd%20checkpoint)  
   
   
-#### 6. Meeting log
+#### 7. Meeting log
 - [2021/04/12](meeting%20log/210412.md)
 - [2021/04/16](meeting%20log/210416.md)
 - [2021/04/17](meeting%20log/210417.md)
@@ -89,3 +94,4 @@
 - [2021/05/18](meeting%20log/210518.md)
 - [2021/05/22](meeting%20log/210522.md)
 - [2021/05/26](meeting%20log/210526.md)
+- [2021/05/29](meeting%20log/210529.md)

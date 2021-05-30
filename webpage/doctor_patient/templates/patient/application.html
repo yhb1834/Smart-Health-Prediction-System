@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -8,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Doctor::Feedback</title>
+    <title>Patient::Application Form</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -16,36 +18,37 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../static/assets/img/favicons/apple-touch-icon.png"
+      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../static/assets/img/favicons/favicon-32x32.png"
+      href="{% static 'assets/img/favicons/favicon-32x32.png' %}"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../static/assets/img/favicons/favicon-16x16.png"
+      href="{% static 'assets/img/favicons/favicon-16x16.png' %}"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="../static/assets/img/favicons/favicon.ico"
+      href="{% static 'assets/img/favicons/favicon.ico' %}"
     />
-    <link rel="manifest" href="../static/assets/img/favicons/manifest.json" />
+    <link rel="manifest" href="{% static 'assets/img/favicons/manifest.json' %}" />
     <meta
       name="msapplication-TileImage"
-      content="../static/assets/img/favicons/mstile-150x150.png"
+      content="{% static 'assets/img/favicons/mstile-150x150.png' %}"
     />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
-    <link href="../static/assets/css/theme.css" rel="stylesheet" />
+    <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/admin.css' %}" rel="stylesheet" />
   </head>
 
   <body>
@@ -63,9 +66,8 @@
             href="#"
             ><img
               class="d-inline-block me-3"
-              src="../static/assets/img/icons/logo.png"
               alt=""
-            />Smart Health Prediction System</a
+            />2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -84,19 +86,16 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="#"
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
                   >Home</a
                 >
               </li>
+              <li class="nav-item"><a class="nav-link" href="../search">Find a doctor</a></li>
+              <li class="nav-item"><a class="nav-link" href="../application">Application form</a></li>
+              <li class="nav-item"><a class="nav-link" href="../report">Diagnosis Report</a></li>
+              <li class="nav-item"><a class="nav-link" href="../details">My page</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Find a doctor</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Feedback</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="../feedback">Feedback</a>
               </li>
             </ul>
           </div>
@@ -107,7 +106,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/services-bg.png);
+            background-image: url({% static 'assets/img/illustrations/services-bg.png' %});
             background-position: center left;
             background-size: auto;
           "
@@ -117,7 +116,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/dot-2.png);
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
             background-position: center right;
             background-size: auto;
             margin-left: -180px;
@@ -129,56 +128,47 @@
             <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">Feedback</h2>
+              <h2 class="fw-bold">Application</h2>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
-          <form>
-            <fieldset>
-               <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Doctor ID</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="dkdkd">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Application form</h5>
+                    <form class="form-signin">
+                        <br />
+                          <div class="form-label-group">
+                            <label for="inputName">Doctor name</label>
+                            <input type="text" id="inputName" class="form-control" placeholder="Enter the name of doctor you prefer." required autofocus>
+                          </div>
+
+                      <br />
+                      <div class="form-label-group">
+                        <label for="inputSymptom">Symptom</label>
+                        <input type="text" id="inputSymptom" class="form-control" placeholder="Please enter your symptoms briefly." required autofocus>
+                      </div>
+
+
+
+                      </div>
+                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Submit</button>
+                      
+                    </form>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">DATE</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="2021-05-26">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1" class="form-label mt-2">TITLE</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="exampleTextarea" class="form-label mt-2">Content</label>
-                <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="formFile" class="form-label mt-2">첨부 파일</label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
-              <br>
-              <div style="text-align: center">
-                <button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
-              </div>
-                  <br>
-            </fieldset>
-          </form>
-        </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-
       <section class="py-6 pt-7 bg-primary-gradient">
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/dot.png);
+            background-image: url({% static 'assets/img/illustrations/dot.png' %});
             background-position: left bottom;
             background-size: auto;
             filter: contrast(1.5);
@@ -189,7 +179,7 @@
         <div
           class="bg-holder"
           style="
-            background-image: url(../static/assets/img/illustrations/dot-2.png);
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
             background-position: right top;
             background-size: auto;
             margin-top: -75px;
@@ -203,12 +193,12 @@
               <a class="text-decoration-none" href="#"
                 ><img
                   class="img-fluid me-2"
-                  src="../static/assets/img/icons/footer-logo.png"
+                  src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
 
             </div>
-
+            
   </body>
 </html>

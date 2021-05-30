@@ -55,18 +55,14 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav
-        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+        class="navbar navbar-expand-lg navbar-light fixed-top py-4"
         data-navbar-on-scroll="data-navbar-on-scroll"
       >
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="#"
-            ><img
-              class="d-inline-block me-3"
-              src="{% static 'assets/img/icons/logo.png' %}"
-              alt=""
-            />Caunseling</a
+            href="../../home"
+            >2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -85,19 +81,15 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="#"
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
                   >Home</a
                 >
               </li>
+              <li class="nav-item"><a class="nav-link" href="../patient-list">Patient list</a></li>
+              <li class="nav-item"><a class="nav-link" href="../prescription">Prescription</a></li>
+              <li class="nav-item"><a class="nav-link" href="../reservation">Reservation</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Find a doctor</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Feedback</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="../feedback">Feedback</a>
               </li>
             </ul>
           </div>
@@ -130,7 +122,7 @@
             <div class="container-lg">
           <div class="row justify-content-center">
             <div class="col-3 text-center">
-              <h2 class="fw-bold">현재 환자 대기목록</h2>
+              <h3 class="fw-bold">현재 환자 대기목록</h3>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
@@ -139,7 +131,7 @@
                <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Doctor ID</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="dkdkd">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value={{doctor_name}}>
                 </div>
               </div>
               <div class="form-group row">
@@ -149,71 +141,33 @@
                 </div>
               </div>
 <br>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col" style="text-align: center">순서</th>
-            <th scope="col" style="text-align: center">환자 이름</th>
-            <th scope="col" style="text-align: center">날짜 및 시간</th>
-            <th scope="col" style="text-align: center">증상</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            <th scope="row" style="text-align: center">1</th>
-            <td style="text-align: center">백준</td>
-            <td style="text-align: center">2021년 5월 31일 3시 00분</td>
-            <td>가벼운 진료
-          <tr class="table-active">
-            <th scope="row" style="text-align: center">3</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">4</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-        <tr class="table-active">
-            <th scope="row" style="text-align: center">5</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">6</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-        <tr class="table-active">
-            <th scope="row" style="text-align: center">7</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">8</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-         <tr class="table-active">
-            <th scope="row" style="text-align: center">9</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <th scope="row" style="text-align: center">10</th>
-            <td style="text-align: center">Column content</td>
-            <td style="text-align: center">Column content</td>
-            <td>Column content</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="row mt-5">
+  <div class="col-12">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" style="text-align: center">순서</th>
+          <th scope="col" style="text-align: center">환자 이름</th>
+          <th scope="col" style="text-align: center">날짜 및 시간</th>
+          <th scope="col" style="text-align: center">증상</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for patient in patient_list %}
+        <tr>
+          <th scope="row">{{ patient.id }}</th>
+          <td>{{ patient.patient_name }}</td>
+          <td>{{ patient.date }}</td>
+          <td>{{ patient.symptom }}</td>
+          
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
       <div class="text-center">
         <ul class="pagination ">
           <li class="page-item disabled">
@@ -282,7 +236,7 @@
                   class="img-fluid me-2"
                   src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Caunseling</span></a
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
 
             </div>

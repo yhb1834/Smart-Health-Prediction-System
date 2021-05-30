@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Doctor::Feedback</title>
+    <title>Patient::Feedback</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -56,18 +56,14 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav
-        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+        class="navbar navbar-expand-lg navbar-light fixed-top py-4"
         data-navbar-on-scroll="data-navbar-on-scroll"
       >
         <div class="container">
           <a
             class="navbar-brand d-flex align-items-center fw-bold fs-2"
-            href="#"
-            ><img
-              class="d-inline-block me-3"
-              src="{% static 'assets/img/icons/logo.png' %}"
-              alt=""
-            />CAUnseling</a
+            href="../../home"
+            >2021SWE::CAUnseling</a
           >
           <button
             class="navbar-toggler collapsed"
@@ -86,19 +82,16 @@
           >
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
-                <a class="nav-link fw-bold active" aria-current="page" href="#"
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
                   >Home</a
                 >
               </li>
+              <li class="nav-item"><a class="nav-link" href="../search">Find a doctor</a></li>
+              <li class="nav-item"><a class="nav-link" href="../application">Application form</a></li>
+              <li class="nav-item"><a class="nav-link" href="../report">Diagnosis Report</a></li>
+              <li class="nav-item"><a class="nav-link" href="../details">My page</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Find a doctor</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Find a patient</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Feedback</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="../feedback">Feedback</a>
               </li>
             </ul>
           </div>
@@ -138,7 +131,7 @@
           <form>
             <fieldset>
                <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Doctor ID</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Patient ID</label>
                 <div class="col-sm-10">
                   <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="dkdkd">
                 </div>
@@ -202,7 +195,7 @@
                   class="img-fluid me-2"
                   src="{% static 'assets/img/icons/footer-logo.png' %}"
                   alt=""
-                /><span class="fw-bold fs-1 text-light">Smart Health Prediction System</span></a
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
 
             </div>
