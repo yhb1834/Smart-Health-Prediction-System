@@ -10,7 +10,7 @@
         <!-- ===============================================-->
         <!-- Document Title-->
         <!-- ===============================================-->
-        <title>Doctor::Sign Up</title>
+        <title>Doctor::Earnings</title>
 
         <!-- ===============================================-->
         <!-- Favicons-->
@@ -54,7 +54,7 @@
                 class="navbar navbar-expand-lg navbar-light fixed-top py-3"
                 data-navbar-on-scroll="data-navbar-on-scroll">
                 <div class="container">
-                    <a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="../main"><img
+                    <a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="#"><img
                         class="d-inline-block me-3"
                         src="{% static 'assets/img/icons/logo.png' %}"
                         alt=""/>Caunseling</a >
@@ -73,7 +73,7 @@
                         id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link fw-bold active" aria-current="page" href="../main">Home</a >
+                                <a class="nav-link fw-bold active" aria-current="page" href="#">Home</a >
                             </li>
                             <li class="nav-item"><a class="nav-link" href="../patient-list">Patient list</a></li>
                               <li class="nav-item"><a class="nav-link" href="../prescription">Prescription</a></li>
@@ -111,7 +111,7 @@
                 <div class="container-lg">
                     <div class="row justify-content-center">
                         <div class="col-3 text-center">
-                            <h2 class="fw-bold">Doctor Sign Up</h2>
+                            <h2 class="fw-bold">Doctor Earnings</h2>
                             <hr class="w-25 mx-auto text-dark" style="height: 2px"/>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                                 <div class="card card-signin my-5">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center">Sign Up</h5>
+                                        <h5 class="card-title text-center">수익</h5>
                                         <div class="row mt-5">
                                             <div class="col-12">
                                               {{error}}
@@ -147,32 +147,31 @@
                                                         class="form-control"
                                                         id="floatingInput"
                                                         placeholder="name@example.com">
-                                                        <label for="floatingInput">Email address</label>
+                                                        <label for="floatingInput">계좌번호</label>
                                                     </div>
                                                     <div class="form-floating">
                                                         <input
                                                             name="password1"
-                                                            type="password"
+                                                            type="text"
                                                             class="form-control"
                                                             id="floatingPassword"
                                                             placeholder="Password">
-                                                            <label for="floatingPassword">Password</label>
+                                                            <label for="floatingPassword">총 코인</label>
                                                         </div>
                                                         <br/>
                                                         <div class="form-floating">
                                                             <input
                                                                 name="password2"
-                                                                type="password"
+                                                                type="text"
                                                                 class="form-control"
                                                                 id="floatingPassword"
                                                                 placeholder="Password Again">
-                                                                <label for="floatingPassword">Password Again</label>
+                                                                <label for="floatingPassword">받을 코인</label>
                                                             </div>
                                                         </div>
                                                         <br/>
                                                         <div style="text-align: center">
-                                                            <a type="button" class="btn btn-primary" href="../main">Cancel</a>
-                                                            <button type="submit" class="btn btn-danger">Sign Up</button>
+                                                            <button type="submit" class="btn btn-danger">송금 요청</button>
                                                         </div>
                                                     </form>
                                                 </div>
