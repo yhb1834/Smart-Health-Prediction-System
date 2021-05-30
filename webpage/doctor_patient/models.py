@@ -114,8 +114,8 @@ class Pa_details(models.Model):
     #환자 세부 정보 모델
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     birthday = models.IntegerField(default=0)
-    
-
+    sex = models.CharField(max_length=50)
+    '''
     MAN = 'MAN'
     WOMAN = 'WOMAN'
     SEX = [
@@ -127,7 +127,7 @@ class Pa_details(models.Model):
         choices=SEX,
         default=MAN,
     )
-
+    '''
     personalID = models.CharField(max_length=13)
 
 
