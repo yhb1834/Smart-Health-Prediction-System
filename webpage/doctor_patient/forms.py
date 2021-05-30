@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 #from django.contrib.auth.models import User
-from .models import User
+from .models import Pa_details, Pa_report, User
 from django.forms.fields import EmailField
 from django.forms.models import model_to_dict
 from .models import Question, Pa_apllicationForm
@@ -50,6 +50,20 @@ class PatientApplicationForm(forms.ModelForm):
     class Meta:
         model = Pa_apllicationForm
         fields = ['symptom','doctor']
+
+#환자 디테일 폼
+class PatientDetailsForm(forms.ModelForm):
+    class Meta:
+        model = Pa_details
+        fields = ['birthday','sex','personalID']
+
+#환자 피로트 폼
+class PatientReport(forms.ModelForm):
+    class Meta:
+        model = Pa_report
+        fields = ['context']
+
+
 
 class QuestionForm(forms.ModelForm):
     class Meta:
