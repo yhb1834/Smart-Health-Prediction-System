@@ -6,7 +6,10 @@ from django.utils import timezone
 from .models import User, Pa_details, Pa_report
 
 def pa_main(request):
-    return render(request,'patient/main.html')
+    context = {
+        'patient_name': request.user.username,
+    }
+    return render(request,'patient/main.html', context)
 
 def pa_search(request):
     #home이라 생각하고 여기에 검색 기능이 있어야 하지 않을까? 아니면 나중에 main 하고 합치던지
