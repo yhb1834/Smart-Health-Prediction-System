@@ -35,3 +35,18 @@ class LoginForm(forms.Form):
             else:
                 self.user_id = member.id
 
+
+class PrescriptionForm(forms.Form):
+    diagnosis = forms.CharField(error_messages={'required': '진단 내용을 입력하세요.'}, 
+                                widget=forms.Textarea, 
+                                label="진단")
+
+
+class FeedbackForm(forms.Form):
+    title = forms.CharField(error_messages={'required': '타이틀을 입력하세요.'}, 
+                                max_length=30,
+                                label="Title")
+    
+    content = forms.CharField(error_messages={'required': '내용을 입력하세요.'}, 
+                                widget=forms.Textarea, 
+                                label="Content")

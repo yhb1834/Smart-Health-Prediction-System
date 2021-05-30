@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Doctor_user#의사 모델.py
-from .models import Patient_list
+from .models import Doctor_user, Feedback, Prescription,Patient_list
+from .forms import UserForm,PrescriptionForm, FeedbackForm
+
 #응답에 대한 메타정보를 포함한 객체
 #로그인 완료시에 "로그인 완료" 라는 text를 띄우기 위해 임포트
 from django.http import HttpResponse
@@ -10,7 +11,7 @@ from django.contrib.auth import logout
 #check_password(a,b) : a,b가 일치하는지 확인, 반환 
 from django.contrib.auth.hashers import make_password, check_password
 
-from .forms import UserForm
+
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login
@@ -22,7 +23,7 @@ import sys,os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from doctor_patient.models import User
 
-#계정 생성 페이지
+#계정 생성 페이지(완료)
 def doctor_signup(request):
     if request.method == "GET":
         return render(request, 'doctor/signup.html')
@@ -48,22 +49,7 @@ def doctor_signup(request):
         return render(request, 'doctor/signup.html',res_data)
     return render(request, 'doctor/signup.html')
 
-
-# def doctor_signup(request):
-#     if request.method == "POST":
-#         form = UserForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data.get('username')
-#             raw_password = form.cleaned_data.get('password1')
-#             user = authenticate(username=username, password=raw_password)
-#             login(request, user)
-#             return redirect('doctor/main.html')
-#     else:
-#         form = UserForm()
-#     return render(request, 'doctor/signup.html',{'form': form})
-
-#로그인 페이지
+#로그인 페이지(완료)
 def doctor_login(request):
     if request.method == "POST":
         form = LoginForm(request.POST)
@@ -75,61 +61,20 @@ def doctor_login(request):
         form = LoginForm()
 
     return render(request, 'doctor/login.html', {'form': form})
-'''
-def doctor_login(request):
-    if request.method == "GET":
-        return render(request, 'doctor/login.html')
-    elif request.method == "POST":
-        email = request.POST.get('email', None)
-        password = request.POST.get('password', None)
-        
-        res_data = {}
-        if not (email and password):
-            res_data['error'] = '모든 값을 입력하세요!'
-            
-        else:
-            doctor_user = Doctor_user.objects.get(email = email)
-            
-            if check_password(password, doctor_user.password):
-                request.session['user'] = doctor_user.id
-                return redirect('../../doctor/patient-list')
-        
-            else:# 비밀번호가 다른 경우
-                res_data['error'] = 'Please enter a valid email or password'
-        
-        return render(request, 'doctor/login.html', res_data)         
-    '''
-    
-    
-            
-# def doctor_login(request):
-#     if request.method == 'POST':
-#         form = LoginForm(request.POST)
-#         email = request.POST['email']
-#         password = request.POST['password']
-#         user = authenticate(email = email, password = password)
-#         if user is not None:
-#             login(request, user)
-#             return redirect('doctor/main.html')
-#         else:
-#             return HttpResponse('Login failed. Try again.')
-#     else:
-#         form = LoginForm()
-#         return render(request, 'doctor/login.html')
 
-#로그아웃
+#로그아웃(완료)
 def doctor_logout(request):
     if request.session.get('user'):
         del(request.session['user'])
 
     return render(request, 'doctor/logout.html')
 
-#메인 페이지
+#메인 페이지(완료)
 def doctor_main(request):
     return render(request, 'doctor/main.html')
 
 
-#환자 리스트 보여주는 페이지
+#환자 리스트 보여주는 페이지(완료 ,유저 db 연결 필요)
 def doctor_patient_list(request):
     user_id = request.session.get('user')
     
@@ -140,18 +85,50 @@ def doctor_patient_list(request):
     
     return render(request, 'doctor/no-permission.html')
     
-
-#처방전 작성 보여주는 페이지
+    
+#처방전 작성 보여주는 페이지(완료 ,유저 db 연결 필요)
 def doctor_prescription(request):
     user_id = request.session.get('user')
     
     if user_id:
-        doctor_user = Doctor_user.objects.get(pk=user_id)
-        #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
-        patient_name=""
-        return render(request, 'doctor/prescription.html',{"patient_name":patient_name,"doctor_name": doctor_user.username})
-    
+        
+        if request.method == "GET":
+            doctor_user = Doctor_user.objects.get(pk=user_id)
+            #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+            patient_name="abc"
+            symptom = str("몸이아파영ㅠㅠ")
+            form = PrescriptionForm()
+            return render(request, 'doctor/prescription.html',{"patient_name":patient_name,
+                                                            "doctor_name": doctor_user.username,
+                                                            "symptom" : symptom,
+                                                            "form" : form
+                                                            })
+            
+        elif request.method == "POST":
+            form = PrescriptionForm(request.POST)
+            doctor_user = Doctor_user.objects.get(pk=user_id)
+            #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+            patient_name="abc"
+            symptom = str("몸이아파영ㅠㅠ")
+            if form.is_valid():
+                
+                prescription = Prescription()
+                prescription.doctor_name = doctor_user
+                prescription.patient_name = patient_name
+                prescription.symptom = symptom
+                prescription.diagnosis = form.cleaned_data['diagnosis']
+                prescription.save()
+                return redirect('../patient-list')
+            else:
+                return render(request, 'doctor/prescription.html',{"patient_name":patient_name,
+                                                            "doctor_name": doctor_user.username,
+                                                            "symptom" : symptom,
+                                                            "form" : form
+                                                            })
+
+                
     return render(request, 'doctor/no-permission.html')
+
 
 #실시간 상담 및 예약 보여주는 페이지
 def doctor_reservation(request):
@@ -169,12 +146,48 @@ def doctor_medical_expense(request):
     #return render(request, 'doctor/-list.html')
     pass
 
-#피드백
+#피드백 페이지
 def doctor_feedback(request):
     user_id = request.session.get('user')
-    
+    '''
     if user_id:
         doctor_user = Doctor_user.objects.get(pk=user_id)
         patient_list = Patient_list.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
         return render(request, 'doctor/feedback.html')
     return render(request, 'doctor/no-permission.html')
+    '''
+    user_id = request.session.get('user')
+    
+    if user_id:
+        
+        if request.method == "GET":
+            doctor_user = Doctor_user.objects.get(pk=user_id)
+            #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+            form = FeedbackForm()
+            return render(request, 
+                        'doctor/feedback.html',
+                        {"doctor_name": doctor_user.username,
+                        "form" : form})
+            
+        elif request.method == "POST":
+            form = FeedbackForm(request.POST)
+            doctor_user = Doctor_user.objects.get(pk=user_id)
+            #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+            if form.is_valid():
+                
+                feedback = Feedback()
+                feedback.doctor_name = doctor_user
+                feedback.content = form.cleaned_data['content']
+                feedback.title = form.cleaned_data['title']
+                feedback.save()
+                return redirect('../patient-list')
+            else:
+                return render(request, 
+                        'doctor/feedback.html',
+                        {"doctor_name": doctor_user.username,
+                        "form" : form})
+
+                
+    return render(request, 'doctor/no-permission.html')
+
+

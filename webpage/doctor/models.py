@@ -56,3 +56,29 @@ class Prescription(models.Model):
         db_table            = 'prescription'
         verbose_name        = 'prescription'
         verbose_name_plural = 'prescription'
+        
+        
+#피드백
+class Feedback(models.Model):
+    doctor_name = models.ForeignKey('doctor.doctor_user', on_delete=models.CASCADE, verbose_name="doctor_name")
+    title = models.CharField(max_length=30, verbose_name="tile",blank=True)
+    content  = models.TextField(verbose_name="content",blank=True)
+    date = models.DateTimeField(auto_now_add=True,verbose_name='date') 
+
+    def __str__(self):
+        return str(self.doctor_name)
+
+    class Meta:
+        db_table            = 'feedback'
+        verbose_name        = 'feedback'
+        verbose_name_plural = 'feedback'
+        
+#예약
+'''
+의사
+환자
+날짜
+유형
+내용
+'''
+
