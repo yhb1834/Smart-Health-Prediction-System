@@ -18,6 +18,9 @@ from .forms import LoginForm
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
 
+import sys,os
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from doctor_patient.models import User
 
 #계정 생성 페이지
 def doctor_signup(request):
@@ -30,9 +33,9 @@ def doctor_signup(request):
         re_password = request.POST.get('password2', None)
         res_data = {}
         if password != re_password:
-            res_data['error'] = '비밀번호가 다릅니다.'
+            res_data['error'] = '비밀번호가 다릅니다!'
         elif not (username and email and password and re_password):
-            res_data['error'] = '모든 값을 입력해야 합니다'
+            res_data['error'] = '모든 값을 입력해야 합니다!'
         else:
             doctor_user = Doctor_user(
                 username=username,
@@ -119,7 +122,7 @@ def doctor_logout(request):
     if request.session.get('user'):
         del(request.session['user'])
 
-    return redirect('../../doctor/main')
+    return render(request, 'doctor/logout.html')
 
 #메인 페이지
 def doctor_main(request):
@@ -135,16 +138,31 @@ def doctor_patient_list(request):
         patient_list = Patient_list.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
         return render(request, 'doctor/patient-list.html', {"patient_list":patient_list,"doctor_name": doctor_user.username})
     
-    return HttpResponse('Home!')
+    return render(request, 'doctor/no-permission.html')
     
 
 #처방전 작성 보여주는 페이지
 def doctor_prescription(request):
-    return render(request, 'doctor/prescription.html')
+    user_id = request.session.get('user')
+    
+    if user_id:
+        doctor_user = Doctor_user.objects.get(pk=user_id)
+        #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+        patient_name=""
+        return render(request, 'doctor/prescription.html',{"patient_name":patient_name,"doctor_name": doctor_user.username})
+    
+    return render(request, 'doctor/no-permission.html')
 
 #실시간 상담 및 예약 보여주는 페이지
 def doctor_reservation(request):
-    return render(request, 'doctor/reservation.html')
+    user_id = request.session.get('user')
+    
+    if user_id:
+        doctor_user = Doctor_user.objects.get(pk=user_id)
+        patient_list = Patient_list.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+        return render(request, 'doctor/reservation.html')
+    return render(request, 'doctor/no-permission.html')
+    
 
 #돈 받는 페이지
 def doctor_medical_expense(request):
@@ -153,5 +171,10 @@ def doctor_medical_expense(request):
 
 #피드백
 def doctor_feedback(request):
-    return render(request, 'doctor/feedback.html')
-    pass
+    user_id = request.session.get('user')
+    
+    if user_id:
+        doctor_user = Doctor_user.objects.get(pk=user_id)
+        patient_list = Patient_list.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+        return render(request, 'doctor/feedback.html')
+    return render(request, 'doctor/no-permission.html')
