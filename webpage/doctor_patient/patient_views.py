@@ -78,3 +78,14 @@ def pa_application(request):
 def pa_feedback(request):
     #나중에 피드백 저장 모델 하고 폼 만들기
     return render(request, 'patient/feedback.html')
+
+#아직 작업중인 부분
+def pa_details(request):
+
+    return render(request, 'patient/details.html')
+
+def pa_report(request):
+    return render(request, 'patient/report.html')
+
+def pa_prescription(request):
+    return render(request, 'patient/prescription.html')
