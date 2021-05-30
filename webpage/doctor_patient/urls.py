@@ -42,11 +42,11 @@ urlpatterns = [
     path('patient/feedback/', patient_views.pa_feedback),
     path('patient/appllication/', patient_views.pa_application),
     
-    
+    '''
     path('patient/details/', patient_views.pa_details),
     path('patient/report/', patient_views.pa_report),
     path('patient/prescription/', patient_views.pa_prescription),
-
+'''
 
 
 ]
