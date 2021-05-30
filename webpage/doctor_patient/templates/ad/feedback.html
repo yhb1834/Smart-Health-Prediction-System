@@ -115,14 +115,14 @@
           </tr>
           </thead>
           <tbody>
-          {% if question_list %}
-          {% for question in question_list %}
+          {% if feedback_list %}
+          {% for feedback in feedback_list %}
           <tr>
-              <td>{{ forloop.counter }}</td>
-              <td>
-                  <a href="{% url 'review:detail' question.id %}">{{ question.subject }}</a>
-              </td>
-              <td>{{ question.create_date }}</td>
+            <th scope="row">{{ feedback.username }}</th>
+            <td>{{ feedback.title }}</td>
+            <td>{{ feedback.date }}</td>
+            <td>{{ feedback.position }}</td>
+            
           </tr>
           {% endfor %}
           {% else %}
