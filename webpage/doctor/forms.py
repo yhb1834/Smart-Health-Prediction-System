@@ -52,3 +52,4 @@ class FeedbackForm(forms.Form):
     content = forms.CharField(error_messages={'required': '내용을 입력하세요.'}, 
                                 widget=forms.Textarea, 
                                 label="Content")
+    

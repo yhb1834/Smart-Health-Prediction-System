@@ -14,6 +14,6 @@ urlpatterns = [
     path('patient-list/', views.doctor_patient_list),
     path('prescription/', views.doctor_prescription),
     path('reservation/', views.doctor_reservation),
-    path('medical-expense/', views.doctor_medical_expense),
     path('feedback/', views.doctor_feedback),
+    path('earnings/',views.doctor_earnings)
 ]

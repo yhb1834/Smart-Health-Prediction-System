@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Doctor_user, Feedback, Prescription,Patient_list
+from .models import Doctor_user, Feedback, Prescription,Patient_list,Reservation
 from .forms import UserForm,PrescriptionForm, FeedbackForm
 
 #응답에 대한 메타정보를 포함한 객체
@@ -18,7 +18,9 @@ from django.contrib.auth import login
 from .forms import LoginForm
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
-
+import sys,os
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from doctor_patient.settings import AUTH_USER_MODEL
 import sys,os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from doctor_patient.models import User
@@ -64,13 +66,20 @@ def doctor_login(request):
 
 #로그아웃(완료)
 def doctor_logout(request):
-    if request.session.get('user'):
-        del(request.session['user'])
-
-    return render(request, 'doctor/logout.html')
+    user_id = request.session.get('user')
+    
+    if user_id:
+        if request.session.get('user'):
+            del(request.session['user'])
+            return render(request, 'doctor/logout.html')
+        
 
 #메인 페이지(완료)
 def doctor_main(request):
+    user_id = request.session.get('user')
+    
+    if user_id:
+        return render(request, 'doctor/main.html',{'login':1})
     return render(request, 'doctor/main.html')
 
 
@@ -134,15 +143,38 @@ def doctor_reservation(request):
     
     if user_id:
         doctor_user = Doctor_user.objects.get(pk=user_id)
-        patient_list = Patient_list.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
-        return render(request, 'doctor/reservation.html')
-    return render(request, 'doctor/no-permission.html')
+        if request.method == "GET":#페이지 보여주는 곳
+            return render(request, 'doctor/reservation.html',{
+                                                            "doctor_name": doctor_user.username,
+                                                            "login":1,
+                                                            })
+        
+        elif request.method == "POST":
+            date = request.POST.get('date', None)
+            time = request.POST.get('time', None)
+            patient_name = request.POST.get('patient_name', None)
+            type = request.POST.get('type', None)
+            content = request.POST.get('content', None)
+            res_data = {}
+            if not (type and time and content and patient_name and date):
+                res_data['error'] = '아직 작성하지 않은 부분이 있습니다!'
+            else:
+                patient_name = User.objects.get(username=patient_name)
+                reservation = Reservation(
+                    doctor_name = doctor_user,
+                    date=date,
+                    patient_name=patient_name,
+                    type=type,
+                    content=content,
+                    time=time
+                )
+                reservation.save()
+                return redirect('../../doctor/main')
+            res_data['doctor_name'] = doctor_user.username
+            res_data['login'] = 1
+            return render(request, 'doctor/reservation.html',res_data)
     
-#돈 받는 페이지
-def doctor_medical_expense(request):
-    #return render(request, 'doctor/-list.html')
-    pass
-
+    return render(request, 'doctor/no-permission.html')
 
 #피드백 페이지
 def doctor_feedback(request):
@@ -177,3 +209,39 @@ def doctor_feedback(request):
                         {"doctor_name": doctor_user.username,
                         "form" : form})  
     return render(request, 'doctor/no-permission.html')
+
+    
+#돈 받는 페이지
+def doctor_earnings(request):
+    user_id = request.session.get('user')
+    
+    if user_id:
+        if request.method == "GET":
+            doctor_user = Doctor_user.objects.get(pk=user_id)
+            #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+            form = FeedbackForm()
+            return render(request, 
+                        'doctor/feedback.html',
+                        {"doctor_name": doctor_user.username,
+                        "form" : form})
+            
+        elif request.method == "POST":
+            form = FeedbackForm(request.POST)
+            doctor_user = Doctor_user.objects.get(pk=user_id)
+            #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
+            if form.is_valid():
+                
+                feedback = Feedback()
+                feedback.username = doctor_user
+                feedback.content = form.cleaned_data['content']
+                feedback.title = form.cleaned_data['title']
+                feedback.position = "doctor"
+                feedback.save()
+                return redirect('../patient-list')
+            else:
+                return render(request, 
+                        'doctor/feedback.html',
+                        {"doctor_name": doctor_user.username,
+                        "form" : form})  
+    return render(request, 'doctor/earnings.html')
+    return render(request, 'doctor/earnings.html')
