@@ -83,8 +83,7 @@
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <li class="nav-item">
                 <a class="nav-link fw-bold active" aria-current="page" href="../main"
-                  >Home</a
-                >
+                  >Home</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="../patient-list">Patient list</a></li>
               <li class="nav-item"><a class="nav-link" href="../prescription">Prescription</a></li>
@@ -93,6 +92,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="../feedback">Feedback</a>
               </li>
+              {% if login %}
+              <button type="button" onclick="location.href='../logout'" class="btn btn-outline-dark btn-sm ">Logout</button>
+              {% else %}
+              <button type="button" onclick="location.href='../login'" class="btn btn-outline-dark btn-sm">Login</button>
+              {% endif %}
             </ul>
           </div>
         </div>
@@ -232,7 +236,9 @@
                 </div>
               </div>
             </div>
+            
 
+            {% if login %}
             <div class="text-center py-4">
               <button
                 class="btn btn-lg btn-outline-primary rounded-pill"
@@ -242,6 +248,7 @@
                 Log out
               </button>
             </div>
+            {% endif %}
           </div>
         </div>
       </section>
