@@ -100,8 +100,7 @@ class Question(models.Model):
     def __str__(self):
         return self.title
 
-#환자 관련 모델
-class Pa_apllication(models.Model):
+class Pa_apllicationForm(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     symptom = models.CharField(max_length=200, default='')
     doctor = models.CharField( default='',max_length=50)
@@ -109,30 +108,4 @@ class Pa_apllication(models.Model):
 
     def __str__(self):
         return "<%d %s %s>" % (self.pk, self.name, self.personalNuber)
-
-class Pa_details(models.Model):
-    #환자 세부 정보 모델
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    birthday = models.IntegerField(default=0)
-    sex = models.CharField(max_length=50)
-    '''
-    MAN = 'MAN'
-    WOMAN = 'WOMAN'
-    SEX = [
-        (MAN, 'man'),
-        (WOMAN, 'woman'),
-    ]
-    sex = models.CharField(
-        max_length=50,
-        choices=SEX,
-        default=MAN,
-    )
-    '''
-    personalID = models.CharField(max_length=13)
-
-
-
-class Pa_report(models.Model):
-    #증상 작성하는 모델
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    context = models.TextField()
+    
