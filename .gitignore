@@ -153,3 +153,5 @@ dmypy.json
 
 #맥 부산물
 *.DS_Store
+
+webpage/doctor_patient/migrations/
