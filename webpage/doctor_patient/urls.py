@@ -33,13 +33,7 @@ urlpatterns = [
     #path('ad/patient-profile', views.admin_patient_profile), # admin 환자 프로필 DB 관리
 
     #doctor urls
-    path('doctor/main/', views.doctor_main),
-    path('doctor/login/', views.doctor_login),
-    path('doctor/signup/', views.doctor_signup),
-    path('doctor/patient-list/', views.doctor_patient_list),
-    path('doctor/prescription/', views.doctor_prescription),
-    path('doctor/reservation/', views.doctor_reservation),
-    path('doctor/feedback/', views.doctor_feedback),
+    path('doctor/', include('doctor.urls')),
 
 
     #patient urls

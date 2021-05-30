@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import check_password
 
+#?
 class UserForm(UserCreationForm):
     email = forms.EmailField(label="email")
     #position = forms.CharField(label="position",default = "doctor",max_length =10)
@@ -12,6 +13,7 @@ class UserForm(UserCreationForm):
         fields = ("username","email","password1","password2")
         
 
+#로그인 용
 class LoginForm(forms.Form):
     # 입력받을 값 두개
     email = forms.CharField(error_messages={
@@ -35,13 +37,13 @@ class LoginForm(forms.Form):
             else:
                 self.user_id = member.id
 
-
+#처방전 용
 class PrescriptionForm(forms.Form):
     diagnosis = forms.CharField(error_messages={'required': '진단 내용을 입력하세요.'}, 
                                 widget=forms.Textarea, 
                                 label="진단")
 
-
+#피드백용
 class FeedbackForm(forms.Form):
     title = forms.CharField(error_messages={'required': '타이틀을 입력하세요.'}, 
                                 max_length=30,

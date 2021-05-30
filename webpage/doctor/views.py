@@ -125,8 +125,6 @@ def doctor_prescription(request):
                                                             "symptom" : symptom,
                                                             "form" : form
                                                             })
-
-                
     return render(request, 'doctor/no-permission.html')
 
 
@@ -140,26 +138,17 @@ def doctor_reservation(request):
         return render(request, 'doctor/reservation.html')
     return render(request, 'doctor/no-permission.html')
     
-
 #돈 받는 페이지
 def doctor_medical_expense(request):
     #return render(request, 'doctor/-list.html')
     pass
 
+
 #피드백 페이지
 def doctor_feedback(request):
     user_id = request.session.get('user')
-    '''
-    if user_id:
-        doctor_user = Doctor_user.objects.get(pk=user_id)
-        patient_list = Patient_list.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
-        return render(request, 'doctor/feedback.html')
-    return render(request, 'doctor/no-permission.html')
-    '''
-    #user_id = request.session.get('user')
     
     if user_id:
-        
         if request.method == "GET":
             doctor_user = Doctor_user.objects.get(pk=user_id)
             #patient_list = User.objects.select_related('doctor_name').filter(doctor_name__username = doctor_user.username)
@@ -176,7 +165,7 @@ def doctor_feedback(request):
             if form.is_valid():
                 
                 feedback = Feedback()
-                feedback.doctor_name = doctor_user
+                feedback.username = doctor_user
                 feedback.content = form.cleaned_data['content']
                 feedback.title = form.cleaned_data['title']
                 feedback.position = "doctor"
@@ -186,9 +175,5 @@ def doctor_feedback(request):
                 return render(request, 
                         'doctor/feedback.html',
                         {"doctor_name": doctor_user.username,
-                        "form" : form})
-
-                
+                        "form" : form})  
     return render(request, 'doctor/no-permission.html')
-
-
