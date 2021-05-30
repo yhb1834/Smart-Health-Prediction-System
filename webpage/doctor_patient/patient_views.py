@@ -76,7 +76,6 @@ def pa_application(request):
     return render(request, 'patient/application.html', context)
 
 def pa_feedback(request):
-    
     if not request.user.is_authenticated:
         return redirect('../login')
 

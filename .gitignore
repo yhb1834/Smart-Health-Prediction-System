@@ -131,6 +131,25 @@ dmypy.json
 # Pycharm
 .idea/
 
+# vscode
+*/.vscode/*
+*/.vscode/settings.json
+*/.vscode/tasks.json
+*/.vscode/launch.json
+*/.vscode/extensions.json
+*/*.code-workspace
+
+#/webpage/.vscode/*
+#/webpage/.vscode/settings.json
+#/webpage/.vscode/tasks.json
+#/webpage/.vscode/launch.json
+#/webpage/.vscode/extensions.json
+
+# Local History for Visual Studio Code
+.history/
+
+# swap file(linux)
+*.swp
 
 #맥 부산물
 *.DS_Store
