@@ -94,6 +94,7 @@ def pa_feedback(request):
 
     form = QuestionForm()
     context = {
+        'patient_name': request.user.username,
         'form' : form,
     }
     
