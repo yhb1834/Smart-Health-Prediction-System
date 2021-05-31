@@ -25,7 +25,8 @@
 ![04-2  의사 인증 취소](https://user-images.githubusercontent.com/69781815/120157990-95a78500-c22e-11eb-8e7c-b1a30a3f8a97.JPG)  
   
   
-## 05. ad/feedback : admin의 feedback 페이지이다. 의사와 환자가 쓴 feedback 리스트가 뜨게 되며, 이 리스트를 클릭하면 글을 읽어볼 수 있다.  
+## 05. ad/feedback : admin의 feedback 페이지이다.  
+의사와 환자가 쓴 feedback 리스트가 뜨게 되며, 이 리스트를 클릭하면 글을 읽어볼 수 있다.  
 ![05  ad-feedback](https://user-images.githubusercontent.com/69781815/120157996-96d8b200-c22e-11eb-924b-b7d185d39d0a.png)  
 
 
