@@ -78,8 +78,8 @@
 - Before you check 3rd checkpoint, please read 장고 환경 세팅 방법.docx
 - [랜딩페이지](admin/06.%203rd%20checkpoint/landing_page.md)
 - [Admin](admin/06.%203rd%20checkpoint/admin_3rd.md)  
-- [Doctor](doctor/06.%203rd%20checkpoint)  
-- [Patient](patient/06.%203rd%20checkpoint)  
+- [Doctor](doctor/06.%203rd%20checkpoint/doctor_3rd.md)  
+- [Patient](patient/06.%203rd%20checkpoint/patient_3rd.md)  
   
   
 #### 7. Meeting log
