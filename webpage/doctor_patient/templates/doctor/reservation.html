@@ -89,9 +89,11 @@
               <li class="nav-item"><a class="nav-link" href="../patient-list">Patient list</a></li>
               <li class="nav-item"><a class="nav-link" href="../prescription">Prescription</a></li>
               <li class="nav-item"><a class="nav-link" href="../reservation">Reservation</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="../feedback">Feedback</a>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="../earnings">Earnings</a></li>
+              <li class="nav-item"><a class="nav-link" href="../feedback">Feedback</a></li>
+
+              <button type="button" onclick="location.href='../logout'" class="btn btn-outline-dark btn-sm ">Logout</button>
+
             </ul>
           </div>
         </div>
@@ -119,58 +121,78 @@
           "
         ></div>
         <!--/.bg-holder-->
+        <script type="text/javascript">
+          window.onload = function () {
+              var dt = new Date();
+              var Year = dt.getFullYear();
+              var Month = "" + (
+                  dt.getMonth() + 1
+              );
+              var Day = "" + dt.getDate();
 
+              if (Month.length < 2) 
+                  Month = "0" + Month;
+              if (Day.length < 2) 
+                  Day = "0" + Day;
+              
+              var Today = Year.toString() + "년 " + Month + "월 " + Day + "일";
+
+              document
+                  .getElementById("TODAY")
+                  .value = Today;
+          }
+      </script>
             <div class="container-lg">
           <div class="row justify-content-center">
-            <div class="col-3 text-center">
+            <div class=" text-center">
               <h3 class="fw-bold">예약 및 내원 요청</h3>
               <hr class="w-25 mx-auto text-dark" style="height: 2px" />
             </div>
           </div>
-          <form>
+          <div class="row justify-content-center">
+            <div class=" text-center">
+              <h5 class="fw-bold" style="color:red;">{{error}}</h5>
+            </div>
+          </div>
+
+          <form method="POST" action=".">
+            {% csrf_token %}
             <fieldset>
                <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Doctor ID</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Doctor Name</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="dkdkd">
+                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="{{doctor_name}}">
                 </div>
               </div>
+              
               <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Patient ID</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Patient Name</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="wwww">
+                  <input type="text" name = "patient_name" class="form-control-plaintext" placeholder="Please enter a patient's name" id="staticEmail" value="">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">DATE</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="2021-05-30">
+                  <input type="text" readonly="" class="form-control-plaintext" id="TODAY" value="">
                 </div>
               </div>
 
               <fieldset class="form-group">
                 <legend class="mt-4">유형</legend>
+                
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                  <label class="form-check-label" for="flexCheckDefault">예약</label>
+                  <label><input class="form-check-input" id="flexCheckDefault" type="radio" name="type" value="예약"> 예약</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
-                  <label class="form-check-label" for="flexCheckChecked">내원 치료</label>
+                  <label><input class="form-check-input" id="flexCheckDefault" type="radio" name="type" value="내원 치료"> 내원 치료</label>
                 </div>
               </fieldset>
-              
-              <form name="해당 폼의 이름" action="값을 보낼 주소" method="post">
-                  <input type='date' name='Reservation' value='2021-05-30'/>
-              </form>
-              <br>
-              <form>
-                  <br><p><input type="time"></p>
-              </form>
-
+              <p><input type='date' name='date' value='2021-05-30'/></p>
+              <p><input type="time" name='time'></p>
               <div class="form-group">
                 <label for="exampleTextarea" class="form-label mt-4">내용</label>
-                <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
+                <textarea class="form-control" id="exampleTextarea" rows="10" name = 'content'></textarea>
               </div>
 
               <br>

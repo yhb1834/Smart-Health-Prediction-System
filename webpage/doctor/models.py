@@ -48,7 +48,7 @@ class Prescription(models.Model):
     diagnosis  = models.TextField(verbose_name="symptom",blank=True)
     symptom  = models.TextField(verbose_name="symptom",blank=True)
     date = models.DateTimeField(auto_now_add=True,verbose_name='date') 
-    medical_expenses = models.IntegerField(blank=True,verbose_name='medical_expenses')
+    medical_expenses = models.IntegerField(blank=True,verbose_name='medical_expenses',default=0)
 
     def __str__(self):
         return str(self.doctor_name)
@@ -76,11 +76,24 @@ class Feedback(models.Model):
         verbose_name_plural = 'feedback'
         
 #예약
-'''
-의사
-환자
-날짜
-유형
-내용
-'''
+import sys,os
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from doctor_patient.settings import AUTH_USER_MODEL
+
+class Reservation(models.Model):
+    doctor_name = models.ForeignKey('doctor.doctor_user', on_delete=models.CASCADE, verbose_name="doctor_name")
+    patient_name = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.DO_NOTHING, verbose_name="patient_name")
+    date = models.DateField(verbose_name='date',blank=True)
+    time = models.TimeField(verbose_name='time',blank=True)
+    type = models.CharField(verbose_name='type',blank=True,max_length=10)
+    content  = models.TextField(verbose_name="content",blank=True)
+    def __str__(self):
+        return str(self.doctor_name)
+
+    class Meta:
+        db_table            = 'reservation'
+        verbose_name        = 'reservation'
+        verbose_name_plural = 'reservation'
+
+
 

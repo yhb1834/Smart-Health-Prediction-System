@@ -1,12 +1,18 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.backends import RemoteUserBackend
 from django.shortcuts import render, redirect
 from .forms import PatientUserForm, PatientLoginForm, PatientApplicationForm, PatientDetailsForm, PatientReportForm, QuestionForm
 from django.utils import timezone
 from .models import User, Pa_details, Pa_report
+import sys,os
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from doctor.models import Doctor_user
 
 def pa_main(request):
-    return render(request,'patient/main.html')
+    context = {
+        'patient_name': request.user.username,
+    }
+    return render(request,'patient/main.html', context)
 
 def pa_search(request):
     #home이라 생각하고 여기에 검색 기능이 있어야 하지 않을까? 아니면 나중에 main 하고 합치던지
@@ -17,7 +23,7 @@ def pa_search(request):
 
     if q:
         #일단 q로 가져오는 것 까지는 성공
-        doctor_list=User.objects.all().order_by('username')
+        doctor_list=Doctor_user.objects.all().order_by('username')
         search = doctor_list.filter(username__icontains=q)
         print(len(search))
         for i in search:
@@ -33,7 +39,7 @@ def pa_search(request):
 #이거 프론트하고 연결 해야 합니다.
 def pa_login(request):
     if request.method == 'POST':
-        form = PatientLoginForm(request, request.POSST)
+        form = PatientLoginForm(request, request.POST)
         if form.is_valid():
             login(request, form.get_user(), backend='django.contrib.auth.backends.ModelBackend')
             return redirect('../main')
@@ -42,6 +48,11 @@ def pa_login(request):
     else:
         form = PatientLoginForm()
     return render(request, 'patient/login.html', {'form': form})
+
+def pa_logout(request):
+    #로그아웃
+    logout(request)
+    return redirect('../main')
 
 def pa_signup(request):
     """
