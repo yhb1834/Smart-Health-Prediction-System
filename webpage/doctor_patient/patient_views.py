@@ -113,29 +113,57 @@ def pa_feedback(request):
 
 #아직 작업중인 부분 
 def pa_details(request):
-    #환자 세부 정보를 작성 하는 부분
+    #환자 세부 정보를 작성 및 보이기.
+    
     if not request.user.is_authenticated:
         return redirect('../login')
-
+    '''
     if request.method == 'POST':
         form = PatientDetailsForm(request.POST)
         if form.is_valid():
             form.save()
 
-    form = PatientDetailsForm()
+    _user_id = request.session.get('user') 
+    obj = Pa_details.objects.get(user = _user_id)
+
+    if obj:
+        # 작성된 것 있다면, 보여주기
+        context = {
+            'form' : form,
+            'patient_name' : obj.age,
+            'PID' : obj.personalID,
+            'patient_email' : obj.email,
+            'age' : obj.age,
+            'sex' : obj.sex,
+            'u_disease' : obj.underlying_disease,
+            'phone_num' : obj.phone_num,
+            'address' : obj.address
+        }
+    else:
+        # 작성하기
+        form = PatientDetailsForm()
+    '''
     context = {
-        'form' : form,
-        'patient_name' : request.user.username,
-        'patient_email' : request.user.email,
-        
-        'age' : form.changed_data.get('age'),
-        'sex' : form.changed_data.get('sex'),
-        'u_disease' : form.changed_data.get('underlying_disease'),
-        'PID' : form.changed_data.get('personalID'),
-        'phone_num' : form.changed_data.get('phone_num'),
-        'address' : form.changed_data.get('address')
+        'form' : "form",
+        'patient_name' : "obj.age",
+        'PID' : "obj.personalID",
+        'patient_email' : "obj.email",
+        'age' : "obj.age",
+        'sex' : "obj.sex",
+        'u_disease' : "obj.underlying_disease",
+        'phone_num' : "obj.phone_num",
+        'address' : "obj.address"
     }
+
     return render(request, 'patient/details.html', context)
+
+def pa_details_show(request):
+    #환자 세부 정보를 작성 및 보이기.
+    
+    if not request.user.is_authenticated:
+        return redirect('../login')
+    
+    return render(request, 'patient/details_show.html')
 
 def pa_report(request):
     #환자 증상을 기술하는 부분 ///중요/// 이게 applicationform 하고 겹치는 내용이네 이걸 이제 알았어 이거
