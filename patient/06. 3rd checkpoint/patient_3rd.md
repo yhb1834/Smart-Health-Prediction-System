@@ -2,7 +2,7 @@
 
   
 ## 00. patient/main 화면 : patient의 메인페이지.  
-![00  patient-home](./00.patient_home.png)  
+![01-1 after-login](./03.patient_after_login.png)  
   
   
 ## 01. patient/login에서 사용자가 시스템을 이용하기 위해 로그인을 진행하게 된다.  
