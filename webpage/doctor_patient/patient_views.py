@@ -117,19 +117,20 @@ def pa_details(request):
     
     if not request.user.is_authenticated:
         return redirect('../login')
-    '''
+    
     if request.method == 'POST':
         form = PatientDetailsForm(request.POST)
         if form.is_valid():
             form.save()
+    
+#    obj = Pa_details.objects.all().filter(username = request.user.username)
 
-    _user_id = request.session.get('user') 
-    obj = Pa_details.objects.get(user = _user_id)
+    '''
 
     if obj:
         # 작성된 것 있다면, 보여주기
         context = {
-            'form' : form,
+            'form' : obj,
             'patient_name' : obj.age,
             'PID' : obj.personalID,
             'patient_email' : obj.email,
@@ -139,10 +140,10 @@ def pa_details(request):
             'phone_num' : obj.phone_num,
             'address' : obj.address
         }
-    else:
-        # 작성하기
-        form = PatientDetailsForm()
-    '''
+#    else:
+#        # 작성하기
+#        form = PatientDetailsForm()
+
     context = {
         'form' : "form",
         'patient_name' : "obj.age",
@@ -156,6 +157,8 @@ def pa_details(request):
     }
 
     return render(request, 'patient/details.html', context)
+    '''
+    return render(request, 'patient/details.html')
 
 def pa_details_show(request):
     #환자 세부 정보를 작성 및 보이기.
