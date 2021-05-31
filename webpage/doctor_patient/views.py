@@ -1,8 +1,12 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from doctor_patient.forms import AdUserForm, AdLoginForm, DoctorUserForm, QuestionForm # 여기 부분에 forms.py에 넣어져 있는 것들 꼭 추가!!!
 from django.utils import timezone
 from .models import User
+import sys,os
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from doctor.models import Feedback
+
 
 # Create your views here.
 
@@ -26,6 +30,16 @@ def ad_login(request):
     else:
         user_form = AdLoginForm()
     return render(request, 'ad/login.html',{'form': user_form})
+
+
+# admin 로그아웃
+def admin_logout(request):
+    user_id = request.session.get('user')
+
+    if user_id:
+        if request.session.get('user'):
+            del (request.session['user'])
+            return render(request, 'ad/logout.html')
 
 # admin 회원가입 페이지
 def ad_signup(request):
@@ -56,7 +70,9 @@ def ad_doctor_certify(request):
 
 # admin feedback 리스트 페이지
 def ad_feedback(request):
-    return render(request, 'ad/feedback.html')
+    feedback_list = Feedback.objects.all()
+    return render(request, 'ad/feedback.html',{"feedback_list":feedback_list})
+
 
 # admin feedback 쓰기 페이지
 def ad_feedback_write(request):
