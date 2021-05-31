@@ -36,7 +36,7 @@
 #### 3. 파트 분배 : admin login, patient login, doctor login
 ```
 0) 공통 : home, main, signup, login, logout -> admin 팀이 대부분 작업함  
-1) patient : search, searchlist, application, report, details, feedback  
+1) patient : search, searchlist, application, prescription, details, feedback  
 2) doctor : patient-list, prescription, reservation, earnings, feedback  
 3) admin : doctorcertify, feedback  
 ```
