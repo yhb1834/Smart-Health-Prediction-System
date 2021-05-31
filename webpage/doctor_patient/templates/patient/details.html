@@ -131,8 +131,8 @@
           <div class="card mb-3">
             <h3 class="card-header">환자 상세 정보</h3>
             <div class="card-body">
-              <h5 class="card-title">*** 님의 상세 정보 입니다.</h5>
-              <h6 class="card-subtitle text-muted">확인 중</h6>
+              <h5 class="card-title">{{patient_name}} 님</h5>
+              <h6 class="card-subtitle text-muted">수정 중</h6>
             </div>
 
             <!-- 백에서 받아온 정보를 넘겨받아야 하는 부분. -->
@@ -140,64 +140,94 @@
                 <div class="form-group row">
                  <label for="staticEmail" class="col-sm-2 col-form-label">Patient ID</label>
                  <div class="col-sm-10">
-                   <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="Patient_1">
+                   <input type="text" 
+                   readonly="" 
+                   class="form-control-plaintext" 
+                   id="staticEmail" 
+                   value="PID">
                  </div>
                </div>
                <div class="form-group row">
                  <label for="staticEmail" class="col-sm-2 col-form-label">First name</label>
                  <div class="col-sm-10">
-                   <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="길동쓰">
+                   <input type="text"
+                   class="form-control-plaintext"
+                   placeholder="Please enter your first name"
+                   id="staticEmail"
+                   value="">
                  </div>
                </div>
                <div class="form-group row">
                  <label for="staticEmail" class="col-sm-2 col-form-label">Last name</label>
                  <div class="col-sm-10">
-                   <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="홍">
+                   <input type="text" 
+                   class="form-control-plaintext" 
+                   placeholder="Please enter your last name"
+                   id="staticEmail" 
+                   value="">
                  </div>
                </div>
                <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Age</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="32">
+                  <input type="text" 
+                  class="form-control-plaintext" 
+                  placeholder="Please enter your age"
+                  id="staticEmail" 
+                  value="">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="aabbcc@annyung.com">
+                  <input type="text" 
+                  readonly="" 
+                  class="form-control-plaintext" 
+                  id="staticEmail" 
+                  value="EMAIL">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Phone No.</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="(+82)010-1234-5678">
+                  <input type="text"  
+                  class="form-control-plaintext" 
+                  placeholder="Please enter your phone number"
+                  id="staticEmail" 
+                  value="">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Address</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="Dongjak-gu, Seoul">
+                  <input type="text" 
+                  readonly="" 
+                  class="form-control-plaintext" 
+                  placeholder="Please enter your address"
+                  id="staticEmail" 
+                  value="">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Underlying Disease</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="hypertension, Diabetes, Rhinitis">
+                  <input type="text"
+                  class="form-control-plaintext"
+                  placeholder="Please enter your underlying disease"
+                  id="staticEmail"
+                  value="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea" class="form-label mt-2">Content</label>
+                    <textarea
+                    class="form-control" 
+                    placeholder="Please enter your additional personal informations that can be useful for your diagnosis"
+                    id="exampleTextarea" 
+                    rows="10">
+                    </textarea>
                 </div>
               </div>
 
-
-               <fieldset class="form-group">
-                 <legend class="mt-4">수정</legend>
-                 <div class="form-check">
-                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                   <label class="form-check-label" for="flexCheckDefault">예약</label>
-                 </div>
-                 <div class="form-check">
-                   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
-                   <label class="form-check-label" for="flexCheckChecked">내원 치료</label>
-                 </div>
-               </fieldset>
             <!--
             <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
                 <rect width="100%" height="100%" fill="#868e96"></rect>
@@ -207,16 +237,15 @@
             <div class="card-body">
               <p class="card-text">CAUnseling은 환자분의 개인정보를 보호합니다.</p>
             </div>
-            <div class="card-body">
-              <a href="#" class="card-link">의사프로필</a>
-            </div>
             <div class="card-footer text-muted">
               2 days ago
             </div>
-            <div style="text-align: right">
-              <button type="button" class="btn btn-danger btn-lg">Cancel</button>
-              <button type="button" class="btn btn-primary btn-lg">Confirm</button>
-            </div>
+            <fieldset class="form-group">
+              <div style="text-align: center">
+                <button type="button" class="btn btn-danger btn-lg">Cancel</button>
+                <button type="button" class="btn btn-primary btn-lg">Confirm</button>
+              </div>
+            </fieldset>
           </div>
         </div>
       </section>
