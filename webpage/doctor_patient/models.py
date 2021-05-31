@@ -118,7 +118,7 @@ class Pa_details(models.Model):
     #sex = models.BooleanField(null=False, blank=False, default=False)
     underlying_disease = models.CharField(null=True, max_length=200)
     phone_num = models.CharField(null=True, max_length=20, default=False)
-
+    address = models.CharField(null=True, max_length=200, default=False)
     personalID = models.CharField(max_length=13)
 
 
