@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.forms import fields
 from .models import User, Question, Pa_apllicationForm
 
+### 사용하지 않는 form임. 일단 남겨둠. ###
+
 # UserCreationForm 상속 후 email attribute 추가
 # username, password1, password, email 이라는 attribute들을 가지는 class.
 class PatientForm(UserCreationForm):
@@ -39,3 +41,7 @@ class QuestionForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control', 'rows': 10}),
         }
+
+#class PatientDetailForm(forms.ModelForm):
+#    class Meta:
+#        model = 

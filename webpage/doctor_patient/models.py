@@ -111,28 +111,19 @@ class Pa_apllication(models.Model):
         return "<%d %s %s>" % (self.pk, self.name, self.personalNuber)
 
 class Pa_details(models.Model):
-    #환자 세부 정보 모델
+    #환자 세부 정보 모델 (따로 테이블을 만드는거)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    birthday = models.IntegerField(default=0)
+    age = models.IntegerField(null=True, blank=False, default=False)
     sex = models.CharField(max_length=50)
-    '''
-    MAN = 'MAN'
-    WOMAN = 'WOMAN'
-    SEX = [
-        (MAN, 'man'),
-        (WOMAN, 'woman'),
-    ]
-    sex = models.CharField(
-        max_length=50,
-        choices=SEX,
-        default=MAN,
-    )
-    '''
+    #sex = models.BooleanField(null=False, blank=False, default=False)
+    underlying_disease = models.CharField(null=True, max_length=200)
+    phone_num = models.CharField(null=True, max_length=20, default=False)
+    address = models.CharField(null=True, max_length=200, default=False)
     personalID = models.CharField(max_length=13)
 
 
 
 class Pa_report(models.Model):
-    #증상 작성하는 모델
+    #증상 작성하는 모델 (따로 테이블을 만드는거)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     context = models.TextField()

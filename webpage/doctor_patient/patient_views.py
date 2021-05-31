@@ -125,6 +125,15 @@ def pa_details(request):
     form = PatientDetailsForm()
     context = {
         'form' : form,
+        'patient_name' : request.user.username,
+        'patient_email' : request.user.email,
+        
+        'age' : form.changed_data.get('age'),
+        'sex' : form.changed_data.get('sex'),
+        'u_disease' : form.changed_data.get('underlying_disease'),
+        'PID' : form.changed_data.get('personalID'),
+        'phone_num' : form.changed_data.get('phone_num'),
+        'address' : form.changed_data.get('address')
     }
     return render(request, 'patient/details.html', context)
 
