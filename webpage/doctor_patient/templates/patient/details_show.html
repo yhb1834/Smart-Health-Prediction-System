@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Admin::Doctor Certificate</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'assets/img/favicons/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'assets/img/favicons/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'assets/img/favicons/favicon-16x16.png' %}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'assets/img/favicons/favicon.ico' %}"
+    />
+    <link rel="manifest" href="{% static 'assets/img/favicons/manifest.json' %}" />
+    <meta
+      name="msapplication-TileImage"
+      content="{% static 'assets/img/favicons/mstile-150x150.png' %}"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav
+        class="navbar navbar-expand-lg navbar-light fixed-top py-4"
+        data-navbar-on-scroll="data-navbar-on-scroll"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center fw-bold fs-2"
+            href="../../home"
+            ><img
+              class="d-inline-block me-3"
+              alt=""
+            />2021SWE::CAUnseling</a
+          >
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" aria-current="page" href="../main"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item"><a class="nav-link" href="../doctorcertify">Doctor certify</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="../feedback">Feedback</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="py-8">
+        <div
+          class="bg-holder"
+          style="
+            background-image: url({% static 'assets/img/illustrations/services-bg.png' %});
+            background-position: center left;
+            background-size: auto;
+          "
+        ></div>
+        <!--/.bg-holder-->
+
+        <div
+          class="bg-holder"
+          style="
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
+            background-position: center right;
+            background-size: auto;
+            margin-left: -180px;
+            margin-top: 20px;
+          "
+        ></div>
+        <!--/.bg-holder-->
+
+            <div class="container-lg">
+          <div class="row justify-content-center">
+            <div class="col-3 text-center">
+              <h2 class="fw-bold">Patient Details</h2>
+              <hr class="w-25 mx-auto text-dark" style="height: 2px" />
+            </div>
+          </div>
+          <div class="card mb-3">
+            <h3 class="card-header">환자 상세 정보</h3>
+            <div class="card-body">
+              <h5 class="card-title">{{patient_name}} 님</h5>
+              <h6 class="card-subtitle text-muted">수정 중</h6>
+            </div>
+
+            <!-- 백에서 받아온 정보를 넘겨받아야 하는 부분. -->
+            <fieldset>
+                <div class="form-group row">
+                 <label for="staticEmail" class="col-sm-2 col-form-label">Patient ID</label>
+                 <div class="col-sm-10">
+                   <input type="text" 
+                   readonly="" 
+                   class="form-control-plaintext" 
+                   id="staticEmail" 
+                   value="PID">
+                 </div>
+               </div>
+               <div class="form-group row">
+                 <label for="staticEmail" class="col-sm-2 col-form-label">First name</label>
+                 <div class="col-sm-10">
+                   <input type="text"
+                   class="form-control-plaintext"
+                   placeholder="Please enter your first name"
+                   id="staticEmail"
+                   value="">
+                 </div>
+               </div>
+               <div class="form-group row">
+                 <label for="staticEmail" class="col-sm-2 col-form-label">Last name</label>
+                 <div class="col-sm-10">
+                   <input type="text" 
+                   class="form-control-plaintext" 
+                   placeholder="Please enter your last name"
+                   id="staticEmail" 
+                   value="">
+                 </div>
+               </div>
+               <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Age</label>
+                <div class="col-sm-10">
+                  <input type="text" 
+                  class="form-control-plaintext" 
+                  placeholder="Please enter your age"
+                  id="staticEmail" 
+                  value="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="text" 
+                  readonly="" 
+                  class="form-control-plaintext" 
+                  id="staticEmail" 
+                  value="EMAIL">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Phone No.</label>
+                <div class="col-sm-10">
+                  <input type="text"  
+                  class="form-control-plaintext" 
+                  placeholder="Please enter your phone number"
+                  id="staticEmail" 
+                  value="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-10">
+                  <input type="text" 
+                  readonly="" 
+                  class="form-control-plaintext" 
+                  placeholder="Please enter your address"
+                  id="staticEmail" 
+                  value="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Underlying Disease</label>
+                <div class="col-sm-10">
+                  <input type="text"
+                  class="form-control-plaintext"
+                  placeholder="Please enter your underlying disease"
+                  id="staticEmail"
+                  value="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea" class="form-label mt-2">Content</label>
+                    <textarea
+                    class="form-control" 
+                    placeholder="Please enter your additional personal informations that can be useful for your diagnosis"
+                    id="exampleTextarea" 
+                    rows="10">
+                    </textarea>
+                </div>
+              </div>
+
+            <!--
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+                <rect width="100%" height="100%" fill="#868e96"></rect>
+                <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Doctor 면허증</text>
+              </svg>
+            -->
+            <div class="card-body">
+              <p class="card-text">CAUnseling은 환자분의 개인정보를 보호합니다.</p>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+            <fieldset class="form-group">
+              <div style="text-align: center">
+                <button type="button" class="btn btn-danger btn-lg">Cancel</button>
+                <button type="button" class="btn btn-primary btn-lg">Confirm</button>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="py-6 pt-7 bg-primary-gradient">
+        <div
+          class="bg-holder"
+          style="
+            background-image: url({% static 'assets/img/illustrations/dot.png' %});
+            background-position: left bottom;
+            background-size: auto;
+            filter: contrast(1.5);
+          "
+        ></div>
+        <!--/.bg-holder-->
+
+        <div
+          class="bg-holder"
+          style="
+            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
+            background-position: right top;
+            background-size: auto;
+            margin-top: -75px;
+          "
+        ></div>
+        <!--/.bg-holder-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 order-0 order-sm-0 pe-6">
+              <a class="text-decoration-none" href="#"
+                ><img
+                  class="img-fluid me-2"
+                  src="{% static 'assets/img/icons/footer-logo.png' %}"
+                  alt=""
+                /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
+              >
+              
+            </div>
+            
+  </body>
+</html>

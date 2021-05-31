@@ -157,6 +157,14 @@ def pa_details(request):
 
     return render(request, 'patient/details.html', context)
 
+def pa_details_show(request):
+    #환자 세부 정보를 작성 및 보이기.
+    
+    if not request.user.is_authenticated:
+        return redirect('../login')
+    
+    return render(request, 'patient/details_show.html')
+
 def pa_report(request):
     #환자 증상을 기술하는 부분
     if not request.user.is_authenticated:

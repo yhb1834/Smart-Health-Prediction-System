@@ -45,6 +45,7 @@ urlpatterns = [
     
     
     path('patient/details/', patient_views.pa_details),
+    path('patient/details_show/', patient_views.pa_details_show),
     path('patient/report/', patient_views.pa_report),
     path('patient/prescription/', patient_views.pa_prescription),
     path('patient/search/', patient_views.pa_search),
