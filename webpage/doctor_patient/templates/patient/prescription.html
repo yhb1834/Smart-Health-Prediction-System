@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Admin::Doctor Certificate</title>
+    <title>Admin::Feedback Board</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -48,8 +48,8 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/admin.css' %}" rel="stylesheet" />
   </head>
-
   <body>
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -100,55 +100,36 @@
 
       <section class="py-8">
 
+        
 
-            <div class="container-lg">
-          <div class="row justify-content-center">
-            <div class="col-3 text-center">
-              <h3 class="fw-bold">Doctor Certificate</h3>
-              <hr class="w-25 mx-auto text-dark" style="height: 2px" />
-            </div>
-          </div>
-          <div class="card mb-3">
-            <h3 class="card-header">의사 면허 확인</h3>
-            <div class="card-body">
-              <h5 class="card-title">의사 면허 진위 여부를 확인 중입니다.</h5>
-              <h6 class="card-subtitle text-muted">확인 중</h6>
-            </div>
-            <center>
-              <img src="{% static 'assets/img/image02.png' %}" width="80%" height="80%">
-              <div class="card-body">
-                <p class="card-text">CAUnseling은 의사의 개인정보를 보호합니다.</p>
-              </div>
-            </center>
-            <div style="text-align: right">
-              <button type="button" class="btn btn-danger btn-lg" onclick="alert('의사 면허 인증을 거부했습니다.');" style="cursor:pointer">Cancel</button>
-              <button type="button" class="btn btn-primary btn-lg" onclick="alert('의사 면허가 인증되었습니다.');" style="cursor:pointer">Confirm</button>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- 게시판-->
+<div class="container position-relative">
+  <div class="row align-items-center">
+    <div class="container my-3">
+      <table class="table">
+          <thead>
+          <tr class="thead-dark">
+              <th>이름</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% if form %}
+          {% for prediscription in form %}
+          <tr>
+            <th scope="row">{{ prescription. }}</th>
+          </tr>
+          {% endfor %}
+          {% else %}
+          <tr>
+              <td colspan="3" >There is no prescriptions for you yet.</td>
+          </tr>
+          {% endif %}
+          </tbody>
+      </table>
+  </div>
+</div>
+
       <section class="py-6 pt-7 bg-primary-gradient">
-        <div
-          class="bg-holder"
-          style="
-            background-image: url({% static 'assets/img/illustrations/dot.png' %});
-            background-position: left bottom;
-            background-size: auto;
-            filter: contrast(1.5);
-          "
-        ></div>
-        <!--/.bg-holder-->
-
-        <div
-          class="bg-holder"
-          style="
-            background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
-            background-position: right top;
-            background-size: auto;
-            margin-top: -75px;
-          "
-        ></div>
-        <!--/.bg-holder-->
 
         <div class="container">
           <div class="row">
@@ -160,8 +141,8 @@
                   alt=""
                 /><span class="fw-bold fs-1 text-light">CAUnseling</span></a
               >
-              
+
             </div>
-            
+
   </body>
 </html>

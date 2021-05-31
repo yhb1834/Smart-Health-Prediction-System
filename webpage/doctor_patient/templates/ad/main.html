@@ -90,6 +90,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="../feedback">Feedback</a>
               </li>
+              {% if login %}
+              <button type="button" onclick="location.href='../logout'" class="btn btn-outline-dark btn-sm ">Logout</button>
+              {% else %}
+              <button type="button" onclick="location.href='../login'" class="btn btn-outline-dark btn-sm">Login</button>
+              {% endif %}
             </ul>
           </div>
         </div>
@@ -228,15 +233,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="text-center py-4">
-              <button
-                class="btn btn-lg btn-outline-primary rounded-pill"
-                type="submit"
-              >
-                Log out
-              </button>
             </div>
           </div>
         </div>

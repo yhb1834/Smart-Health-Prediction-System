@@ -21,6 +21,7 @@ urlpatterns = [
     #admin urls
     path('admin/', admin.site.urls),
     path('home/', views.home), # admin 메인 페이지
+    path('', views.home),
 
     path('ad/main/', views.ad_main), # admin 메인 페이지
     path('ad/login/', views.ad_login), # admin 로그인

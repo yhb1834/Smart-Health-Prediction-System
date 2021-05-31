@@ -6,7 +6,7 @@ from django.utils import timezone
 from .models import User, Pa_details, Pa_report
 import sys,os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-from doctor.models import Doctor_user
+from doctor.models import Doctor_user, Prescription
 
 def pa_main(request):
     context = {
@@ -166,7 +166,7 @@ def pa_details_show(request):
     return render(request, 'patient/details_show.html')
 
 def pa_report(request):
-    #환자 증상을 기술하는 부분
+    #환자 증상을 기술하는 부분 ///중요/// 이게 applicationform 하고 겹치는 내용이네 이걸 이제 알았어 이거
     if not request.user.is_authenticated:
         return redirect('../login')
     if request.method == 'POST':
@@ -181,11 +181,15 @@ def pa_report(request):
 
     return render(request, 'patient/report.html', context)
 
-def pa_prescription(request, id):
-    #환자가 작성한 reportfrom을 보여주는 부분
-    prediscription = Pa_report.objects.all(userid = id)
+def pa_prescription(request):
+    #의사가 작성한 단서 리스트를 보여 주는 부분
+    if not request.user.is_authenticated:
+        return redirect('../login')
+
+    prediscription = Prescription.objects.all().filter(patient_name = request.user.username)
     form = prediscription
     context = {
         'form' : form,
     }
+    #환자 이름과 같은 처방전 리스트를 html에 전달
     return render(request, 'patient/prescription.html', context)
