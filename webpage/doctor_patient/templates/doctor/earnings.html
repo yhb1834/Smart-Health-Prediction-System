@@ -75,15 +75,26 @@
                             <li class="nav-item">
                                 <a class="nav-link fw-bold active" aria-current="page" href="#">Home</a >
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="../patient-list">Patient list</a></li>
-                              <li class="nav-item"><a class="nav-link" href="../prescription">Prescription</a></li>
-                              <li class="nav-item"><a class="nav-link" href="../reservation">Reservation</a></li>
-                              <li class="nav-item"><a class="nav-link" href="../earnings">Earnings</a></li>
-                              <li class="nav-item">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../patient-list">Patient list</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../prescription">Prescription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../reservation">Reservation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../earnings">Earnings</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="../feedback">Feedback</a>
-                              </li>
+                            </li>
 
-                              <button type="button" onclick="location.href='../logout'" class="btn btn-outline-dark btn-sm ">Logout</button>
+                            <button
+                                type="button"
+                                onclick="location.href='../logout'"
+                                class="btn btn-outline-dark btn-sm ">Logout</button>
 
                         </ul>
                     </div>
@@ -123,99 +134,98 @@
                             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                                 <div class="card card-signin my-5">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center">수익</h5>
+                                        <h4 class="fw-bold card-title text-center">진료비 수익</h4>
                                         <div class="row mt-5">
                                             <div class="col-12">
-                                              {{error}}
-                                            </div>
-                                          </div>
-                                        <div class="form-group">
-                                            <form class="form-signin" method="POST" action=".">
-                                                {% csrf_token %}
-                                                <label class="form-label mt-4"></label>
-                                                <div class="form-floating mb-3">
-                                                    <input
-                                                        name="username"
-                                                        type="username"
-                                                        class="form-control"
-                                                        id="username"
-                                                        placeholder="username">
-                                                        <label for="username">username</label>
-                                                    </div>
-                                                </div>
-                                                <div class="form-floating mb-3">
-                                                    <input
-                                                        name="email"
-                                                        type="email"
-                                                        class="form-control"
-                                                        id="floatingInput"
-                                                        placeholder="name@example.com">
-                                                        <label for="floatingInput">계좌번호</label>
-                                                    </div>
-                                                    <div class="form-floating">
-                                                        <input
-                                                            name="password1"
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="floatingPassword"
-                                                            placeholder="Password">
-                                                            <label for="floatingPassword">총 코인</label>
-                                                        </div>
-                                                        <br/>
-                                                        <div class="form-floating">
-                                                            <input
-                                                                name="password2"
-                                                                type="text"
-                                                                class="form-control"
-                                                                id="floatingPassword"
-                                                                placeholder="Password Again">
-                                                                <label for="floatingPassword">받을 코인</label>
-                                                            </div>
-                                                        </div>
-                                                        <br/>
-                                                        <div style="text-align: center">
-                                                            <button type="submit" class="btn btn-danger">송금 요청</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                                {{error}}
                                             </div>
                                         </div>
+                                        <form method="POST" action=".">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label class="form-label mt-4"></label>
+                                                <label for="username">Doctor Name</label>
+                                                <div class=" mb-3">
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="username"
+                                                        readonly=""
+                                                        style="background-color: #ffffff;"
+                                                        value={{doctor_name}}>
+                                                </div>
+                                            </div>
+                                            <label for="username">Total Coin</label>
+                                            <div class=" mb-3">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="username"
+                                                    readonly=""
+                                                    style="background-color: #ffffff;"
+                                                    value={{total_money}}>
+                                            </div>
+                                            <br/>
+                                            <div class="form-floating">
+                                                <input name="bank" type="text" class="form-control" id="floatingPassword">
+                                                <label for="floatingPassword">Bank</label>
+                                            </div>
+                                            <br/>
+                                        <div class="form-floating">
+                                            <input name="account" type="text" class="form-control" id="floatingPassword">
+                                            <label for="floatingPassword">Account</label>
+                                        </div>
+                                        <br/>
+                                        <div class="form-floating">
+                                            <input name="money" type="text" class="form-control" id="floatingPassword">
+                                            <label for="floatingPassword">Coin</label>
+                                        </div>
                                     </div>
-                                </div>
+                                    </div>
+                                    <br/>
+                                    <div style="text-align: center">
+                                        <button type="submit" class="btn btn-danger">송금 요청</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="py-6 pt-7 bg-primary-gradient">
-            <div
-                class="bg-holder"
-                style="
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-6 pt-7 bg-primary-gradient">
+<div
+class="bg-holder"
+style="
             background-image: url({% static 'assets/img/illustrations/dot.png' %});
             background-position: left bottom;
             background-size: auto;
             filter: contrast(1.5);
           "></div>
-            <!--/.bg-holder-->
-            <div
-                class="bg-holder"
-                style="
+<!--/.bg-holder-->
+<div
+class="bg-holder"
+style="
             background-image: url({% static 'assets/img/illustrations/dot-2.png' %});
             background-position: right top;
             background-size: auto;
             margin-top: -75px;
           "></div>
-            <!--/.bg-holder-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-4 order-0 order-sm-0 pe-6">
-                        <a class="text-decoration-none" href="#"><img
-                            class="img-fluid me-2"
-                            src="{% static 'assets/img/icons/footer-logo.png' %}"
-                            alt=""/>
-                            <span class="fw-bold fs-1 text-light">Caunseling</span>
-                        </a >
-                    </div>
-                </body>
-            </html>
+<!--/.bg-holder-->
+<div class="container">
+<div class="row">
+<div class="col-12 col-lg-4 order-0 order-sm-0 pe-6">
+    <a class="text-decoration-none" href="#"><img
+        class="img-fluid me-2"
+        src="{% static 'assets/img/icons/footer-logo.png' %}"
+        alt=""/>
+        <span class="fw-bold fs-1 text-light">Caunseling</span>
+    </a >
+</div>
+</body>
+</html>
