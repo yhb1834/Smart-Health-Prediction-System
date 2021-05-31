@@ -113,16 +113,15 @@
           </tr>
           </thead>
           <tbody>
-          {% if doctors %}
-          {% for doctor in doctors %}
+          {% if form %}
+          {% for prediscription in form %}
           <tr>
-            <th scope="row">{{ doctor.username }}</th>
-            
+            <th scope="row">{{ prescription. }}</th>
           </tr>
           {% endfor %}
           {% else %}
           <tr>
-              <td colspan="3">There is no doctor with that name.</td>
+              <td colspan="3" >There is no prescriptions for you yet.</td>
           </tr>
           {% endif %}
           </tbody>
