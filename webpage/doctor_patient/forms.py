@@ -55,7 +55,7 @@ class PatientApplicationForm(forms.ModelForm):
 class PatientDetailsForm(forms.ModelForm):
     class Meta:
         model = Pa_details
-        fields = ['birthday','sex','personalID']
+        fields = ['age','sex','underlying_disease','phone_num','personalID']
 
 #환자 피로트 폼
 class PatientReportForm(forms.ModelForm):
