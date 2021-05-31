@@ -7,5 +7,7 @@ doctor팀 프런트 html 파일
 - doctor/prescription(의사가 입력할 수 있도록 폼)
 - doctor/feedback(Doctor가 제출하는 feedback)
 - doctor/reservation(실시간 상담 및 예약 페이지)
-
-- doctor/medical-expense(진료비 받는 페이지)
+- doctor/earnings(진료비 받는 페이지)
+- doctor/logout(로그아웃 하는 페이지)
+- doctor/login-success(로그인 성공시)
+- doctor/no-permission(로그인 권한이 없을 경우)
