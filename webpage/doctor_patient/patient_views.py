@@ -129,9 +129,11 @@ def pa_details(request):
         obj = Pa_details.objects.get(user_id = request.user.id)
         context = {
             'form' : obj,
-            'patient_name' : obj.age,
-            'PID' : obj.personalID,
-            'patient_email' : obj.email,
+            'patient_name' : request.user.username,
+            'PID' : request.user.id,
+            'patient_email' : request.user.email,
+            
+            
             'age' : obj.age,
             'sex' : obj.sex,
             'u_disease' : obj.underlying_disease,
