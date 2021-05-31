@@ -125,6 +125,30 @@ def pa_details(request):
     
 #    obj = Pa_details.objects.all().filter(username = request.user.username)
 
+    try:
+        obj = Pa_details.objects.get(user_id = request.user.id)
+        context = {
+            'form' : obj,
+            'patient_name' : obj.age,
+            'PID' : obj.personalID,
+            'patient_email' : obj.email,
+            'age' : obj.age,
+            'sex' : obj.sex,
+            'u_disease' : obj.underlying_disease,
+            'phone_num' : obj.phone_num,
+            'address' : obj.address
+        }
+        return render(request, 'patient/details.html', context)
+    except:
+        form = PatientDetailsForm()
+    
+    context = {
+        'form' : form,
+        'patient_name' : request.user.username,
+        'PID' : request.user.id,
+        'patient_email' : request.user.email,
+    }
+
     '''
 
     if obj:
@@ -158,7 +182,7 @@ def pa_details(request):
 
     return render(request, 'patient/details.html', context)
     '''
-    return render(request, 'patient/details.html')
+    return render(request, 'patient/details.html', context)
 
 def pa_details_show(request):
     #환자 세부 정보를 작성 및 보이기.
