@@ -11,7 +11,7 @@ class Doctor_user(models.Model):
     #verbose_name : 관리자 페이지에서 보여지는 이름
     #user_id = models.CharField(max_length=20,verbose_name = 'userid')
     username = models.CharField(max_length=20,verbose_name = 'username',blank=True)
-    password = models.CharField(max_length=20,verbose_name = 'password')
+    password = models.CharField(max_length=120,verbose_name = 'password')
     #auto_now_ADD = Ture : 현재 시간 자동으로 사용
     registered_date = models.DateTimeField(auto_now_add=True,verbose_name='register_date') 
     email = models.EmailField(max_length=50,unique=True,verbose_name = 'email')
@@ -28,7 +28,7 @@ class Doctor_user(models.Model):
 #환자 대기목록 
 class Patient_list(models.Model):
     doctor_name = models.ForeignKey('doctor.doctor_user', on_delete=models.CASCADE, verbose_name="doctor_name")
-    patient_name = models.ForeignKey('User', on_delete=models.CASCADE, verbose_name="patient")
+    #patient_name = models.ForeignKey('User', on_delete=models.CASCADE, verbose_name="patient")
     patient_name = models.CharField(max_length=20, verbose_name="patient",blank=True)
     symptom  = models.TextField(verbose_name="symptom",blank=True)
     date = models.DateTimeField(verbose_name="date",blank=True)
@@ -96,4 +96,17 @@ class Reservation(models.Model):
         verbose_name_plural = 'reservation'
 
 
+class Earnings(models.Model):
+    doctor_name = models.ForeignKey('doctor.doctor_user', on_delete=models.CASCADE, verbose_name="doctor_name")
+    bank = models.CharField(verbose_name='bank',blank=True,max_length=10)
+    account = models.IntegerField(verbose_name="accounts",blank=True,default=0)
+    money = models.IntegerField(verbose_name="money",blank=True,default=0)
+
+    def __str__(self):
+        return str(self.doctor_name)
+
+    class Meta:
+        db_table            = 'earnings'
+        verbose_name        = 'earnings'
+        verbose_name_plural = 'earnings'
 

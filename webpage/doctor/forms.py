@@ -28,14 +28,18 @@ class LoginForm(forms.Form):
         cleaned_data = super().clean()
         email = cleaned_data.get('email')
         password = cleaned_data.get('password')
-
-        if email and password:
-            member = Doctor_user.objects.get(email=email)
-
-            if not check_password(password, member.password):
-                self.add_error('password', '비밀번호가 다릅니다!')
-            else:
-                self.user_id = member.id
+        try:
+            if email and password:
+                member = Doctor_user.objects.get(email=email)
+                if member:
+                    if not check_password(password, member.password):
+                        self.add_error('password', '비밀번호가 다릅니다!')
+                    else:
+                        self.user_id = member.id
+            
+        except:
+            self.add_error('password', '존재하지 않는 이메일 입니다.')
+            
 
 #처방전 용
 class PrescriptionForm(forms.Form):
@@ -53,3 +57,16 @@ class FeedbackForm(forms.Form):
                                 widget=forms.Textarea, 
                                 label="Content")
     
+'''
+#송금용
+class EarningsForm(forms.Form):
+    bank = forms.CharField(error_messages={'required': '송금을 보낼 은행을 입력하세요.'}, 
+                                max_length=10,
+                                label="Bank")
+    
+    account = forms.IntegerField(error_messages={'required': '계좌번호를 입력하세요.'}, 
+                                label="Account")
+    
+    money = forms.IntegerField(error_messages={'required': '금액을 입력하세요.'}, 
+                                label="Medical Expenses")
+'''
