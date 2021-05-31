@@ -14,7 +14,8 @@
   
   
 ## 03. patient/details 화면 : 환자가 본인의 정보를 확인/수정할 수 있는 페이지.  
-![03  patient-details](./04.patient_details.png)  
+![04 patient_details_without_info](https://user-images.githubusercontent.com/69781815/120204020-50517a80-c263-11eb-914d-b780733b74cc.png)
+![04-1 patient_details_with_info](https://user-images.githubusercontent.com/69781815/120204025-5182a780-c263-11eb-8a68-439cf19ef20a.png)
   
   
 ## 04. patient/prescription 화면 : 환자가 본인의 처방전을 조회할 수 있는 페이지.  
