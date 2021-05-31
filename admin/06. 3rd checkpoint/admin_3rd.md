@@ -1,8 +1,5 @@
 # admin 페이지 소개  
 
-00. home 화면 : 전체 랜딩페이지이다.  
-![00  home](https://user-images.githubusercontent.com/69781815/120157895-76a8f300-c22e-11eb-838e-31fa2dcfaad8.png)  
-  
   
 01. ad/main 화면 : admin의 메인페이지이다.  
 ![01  ad-main](https://user-images.githubusercontent.com/69781815/120157927-81638800-c22e-11eb-8f5c-bc059a42bf30.png)  

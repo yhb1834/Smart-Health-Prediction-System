@@ -76,7 +76,7 @@
 
 #### 6. The 3rd Checkpoint
 - Before you check 3rd checkpoint, please read 장고 환경 세팅 방법.docx
-- [랜딩페이지](admin/06.%203rd%20checkpoint/00.%20home.png)
+- [랜딩페이지](admin/06.%203rd%20checkpoint/landing_page.md)
 - [Admin](admin/06.%203rd%20checkpoint/admin_3rd.md)  
 - [Doctor](doctor/06.%203rd%20checkpoint)  
 - [Patient](patient/06.%203rd%20checkpoint)  
