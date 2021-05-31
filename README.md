@@ -1,7 +1,7 @@
-# Smart Health Prediction System
+# CAUnseling
 #### [소프트웨어 공학 1분반]
-#### 0. 프로젝트명 : Smart Health Prediction System  
-(사이트 : https://nevonprojects.com/smart-health-prediction-using-data-mining/)
+#### 0. 프로젝트명 : CAUnseling
+(참고 사이트 : https://nevonprojects.com/smart-health-prediction-using-data-mining/)
 
 #### 1. 팀원
 
@@ -77,7 +77,7 @@
 #### 6. The 3rd Checkpoint
 - Before you check 3rd checkpoint, please read 장고 환경 세팅 방법.docx
 - [랜딩페이지](admin/06.%203rd%20checkpoint/00.%20home.png)
-- [Admin](admin/06.%203rd%20checkpoint)  
+- [Admin](admin/06.%203rd%20checkpoint/admin_3rd.md)  
 - [Doctor](doctor/06.%203rd%20checkpoint)  
 - [Patient](patient/06.%203rd%20checkpoint)  
   
